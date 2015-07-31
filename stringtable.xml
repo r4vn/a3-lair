@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="eX">
+<Package name="Missions">
+
+<Container name="DustyLair">
+
+	<Key ID="STR_missionTitle_DustyLair">
+		<Original>Dusty Lair</Original>
+		<German>Dusty Lair</German>
+	</Key>
+
+	<Key ID="STR_briefingName_DustyLair">
+		<Original>ACE RHS S&amp;D[S-8]: Dusty Lair</Original>
+		<German>ACE RHS S&amp;D[S-8]: Dusty Lair</German>
+	</Key>
+
+	<Key ID="STR_briefingDescription_SAD">
+		<Original>Search and Destroy</Original>
+		<German>Suchen und Zerstören</German>
+	</Key>
+
+	<Key ID="STR_taskTitle_SAD">
+		<Original>Destroy Cache</Original>
+		<German>Zerstöre Waffenlager</German>
+	</Key>
+
+	<Key ID="STR_taskDesc_SAD">
+		<Original>A new weapon cache has been revealed. Search and destroy it.</Original>
+		<German>Ein neues Waffenlager wurde entdeckt. Suche und zerstöre es.</German>
+	</Key>
+
+	<Key ID="STR_taskDescShort_SAD">
+		<Original>Destroy Cache</Original>
+		<German>Zerstöre Waffenlager</German>
+	</Key>
+
+</Container>
+
+</Package>
+</Project>

@@ -1,0 +1,55 @@
+onLoadName=$STR_missionTitle_DustyLair;
+onLoadMission=$STR_briefingDescription_SAD;
+author="r4vn";
+
+respawn = 3;
+respawndelay = 15;
+respawnTemplates[] = {"MenuInventory","MenuPosition"};
+
+showHUD = 1;
+disabledAI = 1;
+
+class Header
+{
+    gameType = Coop; // Game type, see 'class' columns in the table below
+    minPlayers = 2; //min # of players the mission supports
+    maxPlayers = 8; //max # of players the mission supports
+};
+
+class CfgUnitInsignia
+{
+    class eX
+    {
+        displayName = "Experienced Cross Role Division";
+        author = "r4vn"; // Author displayed in Arsenal
+        texture = "images\eX_insignia.jpg"; // Image path
+    };
+};
+
+class CfgRespawnInventory
+{
+    class SL
+    {
+        vehicle = "rhsusf_army_ocp_squadleader";
+    };
+    class RM
+    {
+        vehicle = "rhsusf_army_ocp_rifleman";
+    };
+    class ENG
+    {
+        vehicle = "rhsusf_army_ocp_engineer";
+    };
+    class MED
+    {
+        vehicle = "rhsusf_army_ocp_medic";
+    };
+    class LAT
+    {
+        vehicle = "rhsusf_army_ocp_riflemanat";
+    };
+    class PLT
+    {
+        vehicle = "rhsusf_army_ocp_helipilot";
+    };
+};

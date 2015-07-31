@@ -1,2 +1,2 @@
-# dusty-lair
-An Arma 3 cooperative search and destroy multiplayer mission
+# ACE RHS S&D[S-8]: Dusty Lair
+An Arma 3 cooperative search and destroy multiplayer mission.

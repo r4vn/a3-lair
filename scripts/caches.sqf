@@ -1,4 +1,4 @@
-#include "settings.hpp"
+#include "defines.hpp"
 #include "util.sqf"
 #include "tasks.sqf"
 #include "insurgents.sqf"

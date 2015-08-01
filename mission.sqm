@@ -1608,7 +1608,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={889.56549,4.4943314,1024.3494};
+					position[]={890.39264,4.4844861,1025.5903};
 					class args
 					{
 						items=4;
@@ -1656,7 +1656,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={873.95068,4.338768,1047.0123};
+					position[]={876.01837,4.3731589,1047.5641};
 					class args
 					{
 						items=4;
@@ -1699,7 +1699,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=40;
+		items=39;
 		class Item0
 		{
 			position[]={915.19922,4.2397594,1076.7526};
@@ -2069,16 +2069,6 @@ class Mission
 			skill=0.60000002;
 			syncId=3;
 			synchronizations[]={1};
-		};
-		class Item39
-		{
-			position[]={909.3512,4.5703421,1039.2679};
-			azimut=51.401772;
-			id=79;
-			side="EMPTY";
-			vehicle="MELB_H6M";
-			leader=1;
-			skill=0.60000002;
 		};
 	};
 	class Markers

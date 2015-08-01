@@ -4,6 +4,11 @@ An Arma 3 cooperative search and destroy multiplayer mission.
 Multiplayer compatible: Only
 
 
+## Description
+
+This mission aims to deliver tactical search and destroy gameplay to a small group of players.
+
+
 ## Requirements
 
 - Arma 3
@@ -22,4 +27,4 @@ Extract the supplied files into the Arma 3 multiplayer folder "Arma3/MPMissions"
 
 ## Version History
 
-- 0.1 Initial Developemnt Build
+- 0.1 Initial Development Build

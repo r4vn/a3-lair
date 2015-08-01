@@ -28,7 +28,7 @@ class CfgUnitInsignia
 
 class CfgRespawnInventory
 {
-    class SL
+    class WEST1
     {
         vehicle = "rhsusf_army_ocp_squadleader";
     };

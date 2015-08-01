@@ -1,12 +1,13 @@
 #include "util.sqf"
 
-SAD_currentTask = nil;
-SAD_currentMarker = nil;
+SAD_tasks = [];
 
 SAD_fnc_setTaskSucceeded = {
-    private ["_task"];
+    private ["_taskId", "_task"];
 
-    _task = _this select 0;
+    _taskId = _this select 0;
+
+    _task = SAD_tasks select _taskId;
     _task setTaskState "Succeeded";
 
     ["TaskSucceeded",["", localize "STR_taskTitle_SAD"]] call
@@ -14,49 +15,51 @@ SAD_fnc_setTaskSucceeded = {
 };
 
 SAD_fnc_createNewTask = {
-    private ["_taskDesc", "_taskDescShort", "_taskDescHUD"];
+    private ["_position", "_task", "_desc", "_descShort", "_descHUD"];
 
-    _markerPosition = _this select 0;
-    _markerPosition = [_markerPosition, SAD_minCacheMarkerOffset,
-            SAD_maxCacheMarkerOffset] call SAD_fnc_randomizePosition;
+    _position = _this select 0;
 
-    _taskDesc = localize "STR_taskDesc_SAD";
-    _taskDescShort = localize "STR_taskDescShort_SAD";
-    _taskDescHUD = localize "STR_taskTitle_SAD";
+    _desc = localize "STR_taskDesc_SAD";
+    _descShort = localize "STR_taskDescShort_SAD";
+    _descHUD = localize "STR_taskTitle_SAD";
 
-    SAD_currentTask = player createSimpleTask [_taskDescHUD];
-    SAD_currentTask setSimpleTaskDescription [
-        _taskDesc,
-        _taskDescShort,
-        _taskDescHUD
+    _task = player createSimpleTask [_descHUD];
+    _task setSimpleTaskDescription [
+        _desc,
+        _descShort,
+        _descHUD
     ];
 
-    SAD_currentTask setSimpleTaskDestination _markerPosition;
+    _task setSimpleTaskDestination _position;
 
-    SAD_currentTask setTaskState "Assigned";
-    player setCurrentTask SAD_currentTask;
+    _task setTaskState "Assigned";
+    player setCurrentTask _task;
 
-    ["TaskAssigned",["", _taskDescHUD]] call BIS_fnc_showNotification;
+    SAD_tasks = SAD_tasks + [_task];
+
+    ["TaskAssigned",["", _descHUD]] call BIS_fnc_showNotification;
 };
 
 SAD_fnc_createCacheMarker = {
-    private ["_markerPosition", "_markerName"];
+    private ["_marker", "_markerPosition"];
 
     _markerPosition = _this select 0;
 
-    _markerName = format ["cache_area_%1", SAD_destroyedCachesCount + 1];
-    SAD_currentMarker = createMarker [_markerName, _markerPosition];
-    SAD_currentMarker setMarkerShape "Ellipse";
-    SAD_currentMarker setMarkerSize [SAD_maxCacheMarkerOffset,
-            SAD_maxCacheMarkerOffset];
-    SAD_currentMarker setMarkerBrush "DiagGrid";
-    SAD_currentMarker setMarkerColor "ColorOPFOR";
+    _marker = createMarker [GET_MARKER_ID(count SAD_activeCaches - 1),
+            _markerPosition];
+    _marker setMarkerShape "Ellipse";
+    _marker setMarkerSize [SAD_MAX_CACHE_MARKER_OFFSET,
+            SAD_MAX_CACHE_MARKER_OFFSET];
+    _marker setMarkerBrush "DiagGrid";
+    _marker setMarkerColor "ColorOPFOR";
+
+    _marker;
 };
 
 SAD_fnc_setCacheMarkerDestroyed = {
-    private ["_markerName"];
+    private ["_marker"];
 
-    _markerName = _this select 0;
+    _marker = _this select 0;
 
-    _markerName setMarkerColor "ColorBLUFOR";
+    _marker setMarkerColor "ColorGrey";
 };

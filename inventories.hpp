@@ -18,6 +18,8 @@ class CfgRespawnInventory
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+            "HandGrenade",
+            "HandGrenade",
             "SmokeShell",
             "SmokeShell",
             "SmokeShellPurple",
@@ -53,6 +55,8 @@ class CfgRespawnInventory
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+            "HandGrenade",
+            "HandGrenade",
             "SmokeShell",
             "SmokeShell"
         };
@@ -154,8 +158,10 @@ class CfgRespawnInventory
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
-            "APERSMine_Range_Mag",
-            "APERSMine_Range_Mag"
+            "HandGrenade",
+            "HandGrenade",
+            "SatchelCharge_Remote_Mag",
+            "SatchelCharge_Remote_Mag"
         };
         items[] = {
             "FirstAidKit"

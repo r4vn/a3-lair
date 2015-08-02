@@ -7,9 +7,6 @@ SAD_fnc_createInsurgents = {
     _cachePosition = position _cache;
     _groupCount = 1 + random SAD_MAX_INS_GROUP_COUNT;
 
-    createCenter east;
-    east setFriend [west, 0];
-
     for "_i" from 0 to _groupCount do {
         _group = SAD_INS_GROUPS select (random count SAD_INS_GROUPS);
 

@@ -4,13 +4,3 @@ author="r4vn";
 
 #include "settings.hpp"
 #include "inventories.hpp"
-
-class CfgUnitInsignia
-{
-    class eX
-    {
-        displayName = "Experienced Cross Role Division";
-        author = "r4vn"; // Author displayed in Arsenal
-        texture = "images\eX_insignia.jpg"; // Image path
-    };
-};

@@ -125,7 +125,7 @@ SAD_fnc_createNewCache = {
     };
 };
 
-SAD_fnc_init = {
+SAD_fnc_init_caches = {
     if (isServer) then {
         uiSleep 10;
 

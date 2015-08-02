@@ -1,4 +1,4 @@
-#define SAD_CACHE_VEHICLE "rhs_weapons_crate_ak"
+#define SAD_CACHE_VEHICLE "Land_Pallet_MilBoxes_F"
 #define SAD_MAX_CACHES 10
 #define SAD_NEEDED_CACHES 2
 
@@ -45,3 +45,5 @@
     (configFile >> "CfgGroups" >>  "Indep" >> "rhs_faction_insurgents" >>\
             "rhs_group_indp_ins_ural" >> "rhs_group_chdkz_ural_chq")\
 ]
+
+#define SAD_BASE_MARKER_NAME "west_base"

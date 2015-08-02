@@ -26,8 +26,5 @@ SAD_fnc_spawnGroup = {
 
     _position = _position findEmptyPosition [0, 100];
 
-    DEBUG_pos = _position;
-    DEBUG_group = _group;
-
     [_position, _side, _group] call BIS_fnc_spawnGroup;
 };

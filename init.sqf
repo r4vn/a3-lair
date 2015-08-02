@@ -1,3 +1,4 @@
+#include "scripts\base.sqf"
 #include "scripts\caches.sqf"
 
 [west, "SQL"] call BIS_fnc_addRespawnInventory;
@@ -8,4 +9,5 @@
 [west, "MAM"] call BIS_fnc_addRespawnInventory;
 [west, "PLT"] call BIS_fnc_addRespawnInventory;
 
-call SAD_fnc_init;
+call SAD_fnc_init_base;
+call SAD_fnc_init_caches;

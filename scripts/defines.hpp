@@ -33,15 +33,15 @@
 #define SAD_MAX_INS_GROUP_COUNT 5
 #define SAD_INS_GROUPS [\
     (configFile >> "CfgGroups" >>  "Indep" >>\
-        "rhs_faction_insurgents" >> "Infantry" >> "IRG_ReconSentry"),\
+            "rhs_faction_insurgents" >> "Infantry" >> "IRG_ReconSentry"),\
     (configFile >> "CfgGroups" >>  "Indep" >>\
-        "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfSentry"),\
+            "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfSentry"),\
     (configFile >> "CfgGroups" >>  "Indep" >>\
-        "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfTeam"),\
+            "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfTeam_AT"),\
     (configFile >> "CfgGroups" >>  "Indep" >>\
-        "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfTeam_AT"),\
+            "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfTeam_MG"),\
     (configFile >> "CfgGroups" >>  "Indep" >>\
-        "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfTeam_MG"),\
-    (configFile >> "CfgGroups" >>  "Indep" >>\
-        "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfSquad")\
+            "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfSquad"),\
+    (configFile >> "CfgGroups" >>  "Indep" >> "rhs_faction_insurgents" >>\
+            "rhs_group_indp_ins_ural" >> "rhs_group_chdkz_ural_chq")\
 ]

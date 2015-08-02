@@ -110,6 +110,8 @@ SAD_fnc_createNewCache = {
         _cache addEventHandler ["killed", "call SAD_fnc_cacheDestroyed"];
         SAD_activeCaches = SAD_activeCaches + [_cache];
 
+        [_cache] call SAD_fnc_createInsurgents;
+
         _markerPosition = [_position, SAD_MIN_CACHE_MARKER_OFFSET,
                 SAD_MAX_CACHE_MARKER_OFFSET] call SAD_fnc_randomizePosition2D;
         _marker = [_markerPosition] call SAD_fnc_createCacheMarker;

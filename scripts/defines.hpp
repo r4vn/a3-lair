@@ -29,3 +29,15 @@
     "Land_jbad_House_8_old",\
     "Land_jbad_House_9_old"\
 ]
+
+#define SAD_MAX_INS_GROUP_COUNT 5
+#define SAD_GET_GROUP_CFG(insClass) (configFile >> "CfgGroups" >>  "Indep" >>\
+        "rhs_faction_insurgents" >> "Infantry" >> insClass)
+#define SAD_INS_GROUPS [\
+    "IRG_ReconSentry",\
+    "IRG_InfSentry",\
+    "IRG_InfTeam",\
+    "IRG_InfTeam_AT",\
+    "IRG_InfTeam_MG",\
+    "IRG_InfSquad"\
+]

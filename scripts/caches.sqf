@@ -43,7 +43,7 @@ SAD_fnc_checkCacheDistance = {
         if (_distance < SAD_MIN_CACHE_DISTANCE) then {
             _result = false;
             breakOut "for";
-        } else {};
+        };
     };
 
     _result;
@@ -65,7 +65,7 @@ SAD_fnc_findNewCacheLocation = {
 
         if (not _isValidDistance) then {
             _buildingPosition = nil;
-        } else {};
+        };
     };
 
     _cachePosition = _buildingPosition findEmptyPosition [0, 100,
@@ -78,9 +78,6 @@ SAD_fnc_cacheDestroyed = {
     private ["_cacheId", "_cache", "_marker"];
 
     _cache = _this select 0;
-
-    DEBUG_this = _this;
-    DEBUG_cache = _cache;
 
     _cacheId = SAD_activeCaches find _cache;
     _marker = GET_MARKER_ID(_cacheId);

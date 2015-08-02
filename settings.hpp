@@ -1,5 +1,6 @@
 respawn = 3;
-respawndelay = 15;
+respawnDelay = 15;
+respawnVehicleDelay = 30;
 respawnTemplates[] = {
     "MenuInventory",
     "MenuPosition"

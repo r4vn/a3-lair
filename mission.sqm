@@ -33,7 +33,9 @@ class Mission
 		"A3_Weapons_F_Ammoboxes",
 		"ace_common",
 		"MELB",
-		"A3_Modules_F_GroupModifiers"
+		"A3_Modules_F_GroupModifiers",
+		"rhs_c_weapons",
+		"A3_Supplies_F_Heli_CargoNets"
 	};
 	addOnsAuto[]=
 	{
@@ -56,6 +58,10 @@ class Mission
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
 		"MELB",
+		"ace_ballistics",
+		"rhs_c_weapons",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Supplies_F_Heli_CargoNets",
 		"pra3_kz"
 	};
 	randomSeed=9739285;
@@ -987,7 +993,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=39;
+		items=55;
 		class Item0
 		{
 			position[]={915.19922,4.2397594,1076.7526};
@@ -1357,6 +1363,134 @@ class Mission
 			skill=0.60000002;
 			syncId=3;
 			synchronizations[]={1};
+		};
+		class Item39
+		{
+			position[]={907.43658,4.1287489,1087.0603};
+			id=63;
+			side="EMPTY";
+			vehicle="ACE_Box_Misc";
+			skill=0.60000002;
+		};
+		class Item40
+		{
+			position[]={909.72583,4.2576599,1086.0269};
+			id=64;
+			side="EMPTY";
+			vehicle="ACE_Box_Ammo";
+			skill=0.60000002;
+		};
+		class Item41
+		{
+			position[]={907.35712,4.1218166,1085.1685};
+			id=65;
+			side="EMPTY";
+			vehicle="ACE_medicalSupplyCrate";
+			skill=0.60000002;
+		};
+		class Item42
+		{
+			position[]={909.45557,4.1796336,1084.1986};
+			id=66;
+			side="EMPTY";
+			vehicle="rhs_weapons_crate_ak_ammo_545x39_standard";
+			skill=0.60000002;
+		};
+		class Item43
+		{
+			position[]={907.05505,4.0360742,1083.8489};
+			id=67;
+			side="EMPTY";
+			vehicle="rhs_weapons_crate_ak_standard";
+			skill=0.60000002;
+		};
+		class Item44
+		{
+			position[]={908.58124,3.9991994,1082.4978};
+			id=68;
+			side="EMPTY";
+			vehicle="TF_NATO_Radio_Crate";
+			skill=0.60000002;
+		};
+		class Item45
+		{
+			position[]={904.89294,4.1434193,1085.5337};
+			id=69;
+			side="EMPTY";
+			vehicle="Box_NATO_WpsLaunch_F";
+			skill=0.60000002;
+		};
+		class Item46
+		{
+			position[]={904.46375,3.9553618,1082.7679};
+			id=70;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+		};
+		class Item47
+		{
+			position[]={906.67346,3.9292252,1080.6533};
+			id=71;
+			side="EMPTY";
+			vehicle="Box_NATO_AmmoVeh_F";
+			skill=0.60000002;
+		};
+		class Item48
+		{
+			position[]={902.38123,3.9797466,1084.5803};
+			id=72;
+			side="EMPTY";
+			vehicle="Box_NATO_Support_F";
+			skill=0.60000002;
+		};
+		class Item49
+		{
+			position[]={904.57513,4.073657,1084.4849};
+			id=73;
+			side="EMPTY";
+			vehicle="Box_NATO_Wps_F";
+			skill=0.60000002;
+		};
+		class Item50
+		{
+			position[]={906.37152,3.9386983,1082.4176};
+			id=74;
+			side="EMPTY";
+			vehicle="Box_NATO_Ammo_F";
+			skill=0.60000002;
+		};
+		class Item51
+		{
+			position[]={905.27454,4.1448355,1086.7581};
+			id=75;
+			side="EMPTY";
+			vehicle="Box_NATO_WpsSpecial_F";
+			skill=0.60000002;
+		};
+		class Item52
+		{
+			position[]={904.33655,3.9487493,1080.8604};
+			id=76;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.60000002;
+		};
+		class Item53
+		{
+			position[]={902.1427,3.9725449,1082.8156};
+			id=77;
+			side="EMPTY";
+			vehicle="Box_NATO_AmmoOrd_F";
+			skill=0.60000002;
+		};
+		class Item54
+		{
+			position[]={908.62891,3.9988713,1080.5261};
+			id=78;
+			side="EMPTY";
+			vehicle="Box_NATO_Grenades_F";
+			skill=0.60000002;
 		};
 	};
 	class Markers

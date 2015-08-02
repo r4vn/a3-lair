@@ -90,12 +90,15 @@ SAD_fnc_cacheDestroyed = {
     SAD_destroyedCaches = SAD_destroyedCaches + [_cache];
 
     [_marker] call SAD_fnc_setCacheMarkerDestroyed;
-    [[_cacheId], "SAD_fnc_setTaskSucceeded", true, true] spawn BIS_fnc_MP;
+
+    if (isServer) then {
+        [[_cacheId], "SAD_fnc_setTaskSucceeded", west, true] call BIS_fnc_MP;
+    };
 
     if (count SAD_destroyedCaches < SAD_NEEDED_CACHES) then {
         call SAD_fnc_createNewCache;
     } else {
-        [["end1", true, true], "BIS_fnc_endMission", true, true] spawn
+        [["end1", true, true], "BIS_fnc_endMission", true, false] call
                 BIS_fnc_MP;
     };
 };
@@ -116,15 +119,19 @@ SAD_fnc_createNewCache = {
                 SAD_MAX_CACHE_MARKER_OFFSET] call SAD_fnc_randomizePosition2D;
         _marker = [_markerPosition] call SAD_fnc_createCacheMarker;
 
-        [[_markerPosition], "SAD_fnc_createNewTask", true, true] spawn
+        if (isServer) then {
+            [[_markerPosition], "SAD_fnc_createNewTask", west, true] call
                 BIS_fnc_MP;
+        };
     } else {
         hint "Maximum cache amount exceeded.";
     };
 };
 
 SAD_fnc_init = {
-    uiSleep 10;
+    if (isServer) then {
+        uiSleep 10;
 
-    call SAD_fnc_createNewCache;
+        call SAD_fnc_createNewCache;
+    };
 };

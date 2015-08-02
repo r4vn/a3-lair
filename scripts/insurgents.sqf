@@ -18,13 +18,26 @@ SAD_fnc_createInsurgents = {
 };
 
 SAD_fnc_spawnGroup = {
-    private["_position", "_side", "_group"];
+    private["_position", "_side", "_group", "_groupConfig"];
 
     _position = _this select 0;
     _side = _this select 1;
-    _group = _this select 2;
+    _groupConfig = _this select 2;
 
     _position = _position findEmptyPosition [0, 100];
 
-    [_position, _side, _group] call BIS_fnc_spawnGroup;
+    _group = [_position, _side, _groupConfig] call BIS_fnc_spawnGroup;
+
+    [_group, _position] call SAD_fnc_createGroupWaypoint;
+};
+
+SAD_fnc_createGroupWaypoint = {
+    private["_group", "_position", "_waypoint"];
+
+    _group = _this select 0;
+    _position = _this select 1;
+
+    _waypoint = _group addWaypoint [_position, 50];
+    _waypoint setWaypointType "LOITER";
+    _waypoint setWaypointLoiterType "CIRCLE_L";
 };

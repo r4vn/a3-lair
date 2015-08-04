@@ -32,6 +32,7 @@ class CfgRespawnInventory
             "rhsusf_iotv_ucp_squadleader",
             "rhsusf_ach_helmet_headset_ucp",
             "ItemMap",
+            "ItemGPS",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"
@@ -67,6 +68,40 @@ class CfgRespawnInventory
             "rhsusf_iotv_ucp_rifleman",
             "rhsusf_ach_helmet_ucp",
             "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "ItemRadio"
+        };
+        uniformClass = "rhs_uniform_cu_ucp";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+    };
+    class LMG
+    {
+        displayName = "Automatic Rifleman";
+        icon = "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa";
+        weapons[] = {
+            "rhs_weap_m249_pip_elcan",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "rhsusf_100Rnd_556x45_soft_pouch",
+            "rhsusf_100Rnd_556x45_soft_pouch",
+            "rhsusf_100Rnd_556x45_soft_pouch",
+            "HandGrenade",
+            "HandGrenade",
+            "SmokeShell",
+            "SmokeShell"
+        };
+        items[] = {
+            "FirstAidKit"
+        };
+        linkedItems[] = {
+            "rhsusf_iotv_ucp_rifleman",
+            "rhsusf_ach_helmet_ucp",
+            "ItemMap",
+            "ItemGPS",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"
@@ -102,6 +137,7 @@ class CfgRespawnInventory
             "rhsusf_iotv_ucp_medic",
             "rhsusf_ach_helmet_ucp",
             "ItemMap",
+            "ItemGPS",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"
@@ -135,6 +171,7 @@ class CfgRespawnInventory
             "rhsusf_iotv_ucp_rifleman",
             "rhsusf_ach_helmet_ESS_ucp",
             "ItemMap",
+            "ItemGPS",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"
@@ -170,6 +207,7 @@ class CfgRespawnInventory
             "rhsusf_iotv_ucp_repair",
             "rhsusf_ach_helmet_ucp",
             "ItemMap",
+            "ItemGPS",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"
@@ -205,6 +243,7 @@ class CfgRespawnInventory
             "rhsusf_iotv_ucp_rifleman",
             "rhsusf_ach_helmet_ucp",
             "ItemMap",
+            "ItemGPS",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"
@@ -234,6 +273,7 @@ class CfgRespawnInventory
             "V_TacVest_blk",
             "H_PilotHelmetHeli_B",
             "ItemMap",
+            "ItemGPS",
             "ItemCompass",
             "ItemWatch",
             "ItemRadio"

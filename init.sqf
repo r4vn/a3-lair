@@ -3,6 +3,7 @@
 
 [west, "SQL"] call BIS_fnc_addRespawnInventory;
 [west, "RFM"] call BIS_fnc_addRespawnInventory;
+[west, "LMG"] call BIS_fnc_addRespawnInventory;
 [west, "ENG"] call BIS_fnc_addRespawnInventory;
 [west, "MED"] call BIS_fnc_addRespawnInventory;
 [west, "LAT"] call BIS_fnc_addRespawnInventory;

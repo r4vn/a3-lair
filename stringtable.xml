@@ -4,39 +4,79 @@
 
 <Container name="DustyLair">
 
-	<Key ID="STR_missionTitle_DustyLair">
+	<Key ID="STR_SAD_missionTitle">
 		<Original>Dusty Lair</Original>
 		<German>Dusty Lair</German>
 	</Key>
 
-	<Key ID="STR_briefingName_DustyLair">
+	<Key ID="STR_SAD_briefingName">
 		<Original>ACE RHS S&amp;D[S-8]: Dusty Lair</Original>
 		<German>ACE RHS S&amp;D[S-8]: Dusty Lair</German>
 	</Key>
 
-	<Key ID="STR_briefingDescription_SAD">
+	<Key ID="STR_SAD_briefingDescription">
 		<Original>Search and Destroy</Original>
 		<German>Suchen und Zerstören</German>
 	</Key>
 
-	<Key ID="STR_taskTitle_SAD">
+	<Key ID="STR_SAD_taskTitle">
 		<Original>Destroy Cache</Original>
 		<German>Zerstöre Waffenlager</German>
 	</Key>
 
-	<Key ID="STR_taskDesc_SAD">
+	<Key ID="STR_SAD_taskDesc">
 		<Original>A new weapon cache has been revealed. Search and destroy it.</Original>
 		<German>Ein neues Waffenlager wurde entdeckt. Suche und zerstöre es.</German>
 	</Key>
 
-	<Key ID="STR_taskDescShort_SAD">
+	<Key ID="STR_SAD_taskDescShort">
 		<Original>Destroy Cache</Original>
 		<German>Zerstöre Waffenlager</German>
 	</Key>
 
-	<Key ID="STR_vehicleRespawn">
+	<Key ID="STR_SAD_vehicleRespawn">
 		<Original>VEHICLE AVAILABLE</Original>
 		<German>FAHRZEUG VERFÜGBAR</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitOfficer">
+		<Original>Officer</Original>
+		<German>Offizier</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitRifleman">
+		<Original>Rifleman</Original>
+		<German>Schütze</German>
+	</Key>
+
+		<Key ID="STR_SAD_kitAutomaticRifleman">
+		<Original>Automatic Rifleman</Original>
+		<German>Automatikschütze</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitMedic">
+		<Original>Medic</Original>
+		<German>Sanitäter</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitRiflemanAntiTank">
+		<Original>Rifleman Anti Tank</Original>
+		<German>Panzerabwehrschütze</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitEngineer">
+		<Original>Engineer</Original>
+		<German>Pionier</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitMarksman">
+		<Original>Marksman</Original>
+		<German>Präzisionsschütze</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitPilot">
+		<Original>Pilot</Original>
+		<German>Pilot</German>
 	</Key>
 
 </Container>

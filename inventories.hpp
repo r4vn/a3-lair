@@ -1,6 +1,6 @@
 class CfgRespawnInventory {
     class SQL {
-        displayName = "Officer";
+        displayName = $STR_SAD_kitOfficer;
         icon = "\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa";
         weapons[] = {
             "rhs_weap_m16a4_grip_compm4",
@@ -39,7 +39,7 @@ class CfgRespawnInventory {
         backpack = "tf_rt1523g";
     };
     class RFM {
-        displayName = "Rifleman";
+        displayName = $STR_SAD_kitRifleman;
         icon = "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa";
         weapons[] = {
             "rhs_weap_m16a4_grip_compm4",
@@ -74,7 +74,7 @@ class CfgRespawnInventory {
         backpack = "rhsusf_assault_eagleaiii_ucp";
     };
     class LMG {
-        displayName = "Automatic Rifleman";
+        displayName = $STR_SAD_kitAutomaticRifleman;
         icon = "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa";
         weapons[] = {
             "rhs_weap_m249_pip_elcan",
@@ -106,7 +106,7 @@ class CfgRespawnInventory {
         backpack = "rhsusf_assault_eagleaiii_ucp";
     };
     class MED {
-        displayName = "Medic";
+        displayName = $STR_SAD_kitMedic;
         icon = "\a3\characters_f\data\ui\icon_medic_ca.paa";
         weapons[] = {
             "rhs_weap_m16a4_grip_compm4",
@@ -141,7 +141,7 @@ class CfgRespawnInventory {
         backpack = "rhsusf_assault_eagleaiii_ucp_medic";
     };
     class LAT {
-        displayName = "Rifleman Anti Tank";
+        displayName = $STR_SAD_kitRiflemanAntiTank;
         icon = "\a3\characters_f\data\ui\icon_expl_specialist_ca.paa";
         weapons[] = {
             "rhs_m4_compm4",
@@ -174,7 +174,7 @@ class CfgRespawnInventory {
         backpack = "rhsusf_assault_eagleaiii_ucp_at";
     };
     class ENG {
-        displayName = "Engineer";
+        displayName = $STR_SAD_kitEngineer;
         icon = "\a3\characters_f\data\ui\icon_repair_ca.paa";
         weapons[] = {
             "rhs_m4_compm4",
@@ -209,7 +209,7 @@ class CfgRespawnInventory {
         backpack = "rhsusf_assault_eagleaiii_ucp_engineer";
     };
     class MAM {
-        displayName = "Marksman";
+        displayName = $STR_SAD_kitMarksman;
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
         weapons[] = {
             "rhs_weap_m14ebrri_leu",
@@ -244,7 +244,7 @@ class CfgRespawnInventory {
         backpack = "";
     };
     class PLT {
-        displayName = "Pilot";
+        displayName = $STR_SAD_kitPilot;
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa";
         weapons[] = {
             "rhsusf_weap_m1911a1",

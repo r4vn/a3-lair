@@ -28,7 +28,7 @@ SAD_fnc_spawnGroup = {
     _side = _this select 1;
     _groupConfig = _this select 2;
 
-    _position = _position findEmptyPosition [0, 100];
+    _position = _position findEmptyPosition [0, SAD_MIN_CACHE_MARKER_OFFSET];
 
     _group = [_position, _side, _groupConfig] call BIS_fnc_spawnGroup;
 

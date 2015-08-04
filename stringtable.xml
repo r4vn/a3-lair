@@ -24,6 +24,16 @@
 		<German>Spieler</German>
 	</Key>
 
+	<Key ID="STR_SAD_neededCaches">
+		<Original>Amount Caches</Original>
+		<German>Anzahl Waffenlager</German>
+	</Key>
+
+	<Key ID="STR_SAD_maxCacheGroups">
+		<Original>Maximum Amount of Cache Insurgent Groups</Original>
+		<German>Maximale Anzahl von Waffenlager-Wiederstandsgruppen</German>
+	</Key>
+
 	<Key ID="STR_SAD_taskTitle">
 		<Original>Destroy Cache</Original>
 		<German>Waffenlager zerstören</German>

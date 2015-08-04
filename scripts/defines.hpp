@@ -1,6 +1,6 @@
 #define SAD_CACHE_VEHICLE "Box_FIA_Ammo_F"
 #define SAD_MAX_CACHES 10
-#define SAD_NEEDED_CACHES 2
+#define SAD_NEEDED_CACHES (paramsArray select 0)
 
 #define SAD_MIN_CACHE_DISTANCE 1000
 
@@ -30,7 +30,7 @@ SAD_CACHE_BUILDINGS = [
     "Land_jbad_House_9_old"
 ];
 
-#define SAD_MAX_INS_GROUP_COUNT 5
+#define SAD_MAX_INS_GROUP_COUNT (paramsArray select 1)
 SAD_INS_GROUPS = [
     (configFile >> "CfgGroups" >>  "Indep" >> "rhs_faction_insurgents" >>
             "Infantry" >> "IRG_ReconSentry"),

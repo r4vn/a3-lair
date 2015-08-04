@@ -5,5 +5,6 @@ author="r4vn";
 enableDebugConsole = 1;
 
 #include "settings.hpp"
+#include "params.hpp"
 #include "notifications.hpp"
 #include "inventories.hpp"

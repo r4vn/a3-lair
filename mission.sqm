@@ -35,7 +35,9 @@ class Mission
 		"MELB",
 		"rhs_c_weapons",
 		"A3_Supplies_F_Heli_CargoNets",
-		"ace_hearing"
+		"ace_hearing",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
@@ -48,7 +50,8 @@ class Mission
 		"task_force_radio_items",
 		"ace_advanced_ballistics",
 		"ace_common",
-		"rhsusf_c_troops",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
 		"ace_viewdistance",
 		"ace_hearing",
 		"rhsusf_c_rg33",
@@ -712,151 +715,19 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={914.87604,4.2309918,1080.9689};
+					position[]={914.21692,4.2362647,1082.8475};
 					azimut=-131.575;
 					id=13;
 					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAY CDG";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
 				};
 			};
 		};
 		class Item14
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={915.61108,4.225111,1080.4482};
-					azimut=-131.575;
-					id=14;
-					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item15
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={914.21698,4.2362642,1081.5786};
-					azimut=-131.575;
-					id=15;
-					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item16
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={913.53833,4.241693,1082.1692};
-					azimut=-131.575;
-					id=16;
-					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item17
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={914.21692,4.2362647,1082.8475};
-					azimut=-131.575;
-					id=17;
-					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item18
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={914.89575,4.2308335,1082.2968};
-					azimut=-131.575;
-					id=18;
-					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item19
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={915.52533,4.2257972,1081.7559};
-					azimut=-131.575;
-					id=19;
-					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item20
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={916.27301,4.2198157,1081.0665};
-					azimut=-131.575;
-					id=20;
-					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item21
 		{
 			side="LOGIC";
 			class Vehicles
@@ -881,7 +752,7 @@ class Mission
 							typeName="moduleViewDistanceLimit";
 						};
 					};
-					id=21;
+					id=14;
 					side="LOGIC";
 					vehicle="ace_viewdistance_ModuleSettings";
 					leader=1;
@@ -890,7 +761,7 @@ class Mission
 				};
 			};
 		};
-		class Item22
+		class Item15
 		{
 			side="LOGIC";
 			class Vehicles
@@ -909,12 +780,152 @@ class Mission
 							typeName="EnableCombatDeafness";
 						};
 					};
-					id=22;
+					id=15;
 					side="LOGIC";
 					vehicle="ACE_ModuleHearing";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+				};
+			};
+		};
+		class Item16
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={914.89349,4.2308521,1082.2817};
+					azimut=-131.575;
+					id=16;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
+				};
+			};
+		};
+		class Item17
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={915.64771,4.2248182,1081.6493};
+					azimut=-131.575;
+					id=17;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
+				};
+			};
+		};
+		class Item18
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={916.32428,4.2194057,1081.0835};
+					azimut=-131.575;
+					id=18;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
+				};
+			};
+		};
+		class Item19
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={913.57379,4.2414093,1082.1823};
+					azimut=-131.575;
+					id=19;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
+				};
+			};
+		};
+		class Item20
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={914.25037,4.2359967,1081.6165};
+					azimut=-131.575;
+					id=20;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
+				};
+			};
+		};
+		class Item21
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={915.00458,4.2299633,1080.984};
+					azimut=-131.575;
+					id=21;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
+				};
+			};
+		};
+		class Item22
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={915.68115,4.2245507,1080.4182};
+					azimut=-131.575;
+					id=22;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="@STR_SAD_mpTablePlayerName";
 				};
 			};
 		};

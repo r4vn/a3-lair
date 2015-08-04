@@ -19,6 +19,11 @@
 		<German>Suchen und Zerstören</German>
 	</Key>
 
+	<Key ID="STR_SAD_mpTablePlayerName">
+		<Original>Player</Original>
+		<German>Spieler</German>
+	</Key>
+
 	<Key ID="STR_SAD_taskTitle">
 		<Original>Destroy Cache</Original>
 		<German>Waffenlager zerstören</German>

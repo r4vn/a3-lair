@@ -1,4 +1,4 @@
-#define SAD_CACHE_VEHICLE "Land_Pallet_MilBoxes_F"
+#define SAD_CACHE_VEHICLE "Box_FIA_Ammo_F"
 #define SAD_MAX_CACHES 10
 #define SAD_NEEDED_CACHES 2
 

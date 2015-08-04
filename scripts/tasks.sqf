@@ -2,6 +2,16 @@
 
 SAD_tasks = [];
 
+SAD_fnc_createTaskAssignedNotification = {
+    ["TaskAssigned", ["", localize "STR_SAD_taskTitle"]] call
+            BIS_fnc_showNotification;
+};
+
+SAD_fnc_createTaskSucceededNotification = {
+    ["TaskSucceeded", ["", localize "STR_SAD_taskTitle"]] call
+            BIS_fnc_showNotification;
+};
+
 SAD_fnc_setTaskSucceeded = {
     private ["_taskId", "_task"];
 
@@ -9,9 +19,6 @@ SAD_fnc_setTaskSucceeded = {
 
     _task = SAD_tasks select _taskId;
     _task setTaskState "Succeeded";
-
-    ["TaskSucceeded", ["", localize "STR_taskTitle_SAD"]] call
-            BIS_fnc_showNotification;
 };
 
 SAD_fnc_createNewTask = {
@@ -36,8 +43,6 @@ SAD_fnc_createNewTask = {
     player setCurrentTask _task;
 
     SAD_tasks = SAD_tasks + [_task];
-
-    ["TaskAssigned", ["", _descHUD]] call BIS_fnc_showNotification;
 };
 
 SAD_fnc_createCacheMarker = {

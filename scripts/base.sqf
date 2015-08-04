@@ -8,8 +8,6 @@ SAD_fnc_vehicleRespawnHandler = {
 
     _unit = _this select 0;
 
-    DEBUG_unit = _unit;
-
     _vehicleName = getText (configFile >> "CfgVehicles" >> (typeof _unit) >>
             "displayName");
 

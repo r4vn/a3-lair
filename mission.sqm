@@ -14,7 +14,6 @@ class Mission
 		"ace_medical",
 		"task_force_radio_items",
 		"pra3_kz",
-		"rhsusf_c_troops",
 		"A3_Air_F_Heli_Light_01",
 		"rhsusf_c_fmtv",
 		"rhsusf_c_rg33",
@@ -34,7 +33,6 @@ class Mission
 		"ace_common",
 		"MELB",
 		"rhs_c_weapons",
-		"A3_Supplies_F_Heli_CargoNets",
 		"ace_hearing",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f"
@@ -537,7 +535,7 @@ class Mission
 						items=2;
 						class Item0
 						{
-							value="B_Soldier_F";
+							value="[""B_Soldier_F""]";
 							parentCls="ACE_moduleAssignMedicRoles";
 							typeName="EnableList";
 						};

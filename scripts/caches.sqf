@@ -82,18 +82,20 @@ SAD_fnc_cacheDestroyed = {
     _cacheId = SAD_activeCaches find _cache;
     _marker = GET_MARKER_ID(_cacheId);
 
-    DEBUG_marker = _marker;
+    _cache hideObject true;
 
     SAD_destroyedCaches = SAD_destroyedCaches + [_cache];
 
     [_marker] call SAD_fnc_setCacheMarkerDestroyed;
 
     [[_cacheId], "SAD_fnc_setTaskSucceeded", west, true] call BIS_fnc_MP;
+    [[], "SAD_fnc_createTaskSucceededNotification", west, false] call
+            BIS_fnc_MP;
 
     if (count SAD_destroyedCaches < SAD_NEEDED_CACHES) then {
         call SAD_fnc_createNewCache;
     } else {
-        [["end1", true, true], "BIS_fnc_endMission", true, false] call
+        [["end1", true, true], "BIS_fnc_endMission", west, true] call
                 BIS_fnc_MP;
     };
 };
@@ -115,6 +117,8 @@ SAD_fnc_createNewCache = {
         _marker = [_markerPosition] call SAD_fnc_createCacheMarker;
 
         [[_markerPosition], "SAD_fnc_createNewTask", west, true] call
+            BIS_fnc_MP;
+        [[], "SAD_fnc_createTaskAssignedNotification", west, false] call
             BIS_fnc_MP;
     } else {
         hint "Maximum cache amount exceeded.";

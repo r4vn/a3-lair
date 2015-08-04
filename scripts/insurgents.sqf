@@ -13,8 +13,8 @@ SAD_fnc_createInsurgents = {
         if (_i == 0) then {
             _groupPosition = _cachePosition;
         } else {
-            _groupPosition = [_cachePosition, SAD_MIN_CACHE_MARKER_OFFSET,
-                SAD_MAX_CACHE_MARKER_OFFSET] call SAD_fnc_randomizePosition2D;
+            _groupPosition = [_cachePosition, 0, SAD_MAX_CACHE_MARKER_OFFSET /
+                    2] call SAD_fnc_randomizePosition2D;
         };
 
         [_groupPosition, east, _group] call SAD_fnc_spawnGroup;
@@ -41,7 +41,7 @@ SAD_fnc_createGroupWaypoint = {
     _group = _this select 0;
     _position = _this select 1;
 
-    _waypoint = _group addWaypoint [_position, 50];
+    _waypoint = _group addWaypoint [_position, SAD_MIN_CACHE_MARKER_OFFSET / 2];
     _waypoint setWaypointType "LOITER";
     _waypoint setWaypointLoiterType "CIRCLE_L";
 };

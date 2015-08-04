@@ -35,10 +35,10 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
-        backpack = "B_AssaultPack_mcamo";
+        backpack = "tf_rt1523g";
     };
     class RFM
     {
@@ -71,7 +71,7 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp";
@@ -104,7 +104,7 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp";
@@ -140,7 +140,7 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_medic";
@@ -174,7 +174,7 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_at";
@@ -210,7 +210,7 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_engineer";
@@ -246,7 +246,7 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "";
@@ -276,7 +276,7 @@ class CfgRespawnInventory
             "ItemGPS",
             "ItemCompass",
             "ItemWatch",
-            "ItemRadio"
+            "tf_rf7800str"
         };
         uniformClass = "U_B_HeliPilotCoveralls";
         backpack = "";

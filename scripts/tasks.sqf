@@ -10,7 +10,7 @@ SAD_fnc_setTaskSucceeded = {
     _task = SAD_tasks select _taskId;
     _task setTaskState "Succeeded";
 
-    ["TaskSucceeded",["", localize "STR_taskTitle_SAD"]] call
+    ["TaskSucceeded", ["", localize "STR_taskTitle_SAD"]] call
             BIS_fnc_showNotification;
 };
 
@@ -37,7 +37,7 @@ SAD_fnc_createNewTask = {
 
     SAD_tasks = SAD_tasks + [_task];
 
-    ["TaskAssigned",["", _descHUD]] call BIS_fnc_showNotification;
+    ["TaskAssigned", ["", _descHUD]] call BIS_fnc_showNotification;
 };
 
 SAD_fnc_createCacheMarker = {

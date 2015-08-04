@@ -34,6 +34,11 @@
 		<German>Zerstöre Waffenlager</German>
 	</Key>
 
+	<Key ID="STR_vehicleRespawn">
+		<Original>VEHICLE AVAILABLE</Original>
+		<German>FAHRZEUG VERFÜGBAR</German>
+	</Key>
+
 </Container>
 
 </Package>

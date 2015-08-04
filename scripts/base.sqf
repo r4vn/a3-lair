@@ -2,6 +2,23 @@
 
 SAD_vehicleRespawns = [];
 
+// check for locality
+SAD_fnc_vehicleRespawnHandler = {
+    private ["_unit", "_vehicleName"];
+
+    _unit = _this select 0;
+
+    DEBUG_unit = _unit;
+
+    _vehicleName = getText (configFile >> "CfgVehicles" >> (typeof _unit) >>
+            "displayName");
+
+    [["VehicleRespawn", [_vehicleName]], "BIS_fnc_showNotification",
+            west, false] call BIS_fnc_MP;
+
+    _unit setDir (markerDir (format ["respawn_%1", vehicleVarName _unit]));
+};
+
 SAD_fnc_createVehiclesRespawnMarker = {
     private ["_vehicle", "_marker"];
     scopeName "SAD_fnc_createVehiclesRespawnMarker";
@@ -18,6 +35,8 @@ SAD_fnc_createVehiclesRespawnMarker = {
     _marker setMarkerShape "Icon";
 
     _vehicle respawnVehicle [-1];
+    _vehicle addMPEventHandler ["mprespawn",
+            "call SAD_fnc_vehicleRespawnHandler"];
     addToRemainsCollector [_vehicle];
 
     SAD_vehicleRespawns = SAD_vehicleRespawns + [_marker];

@@ -1,7 +1,5 @@
-class CfgRespawnInventory
-{
-    class SQL
-    {
+class CfgRespawnInventory {
+    class SQL {
         displayName = "Officer";
         icon = "\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa";
         weapons[] = {
@@ -9,7 +7,7 @@ class CfgRespawnInventory
             "rhsusf_weap_m1911a1",
             "Throw",
             "Put",
-            "Binocular"
+            "Rangefinder"
         };
         magazines[] = {
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -40,8 +38,7 @@ class CfgRespawnInventory
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "tf_rt1523g";
     };
-    class RFM
-    {
+    class RFM {
         displayName = "Rifleman";
         icon = "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa";
         weapons[] = {
@@ -76,8 +73,7 @@ class CfgRespawnInventory
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp";
     };
-    class LMG
-    {
+    class LMG {
         displayName = "Automatic Rifleman";
         icon = "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa";
         weapons[] = {
@@ -109,8 +105,7 @@ class CfgRespawnInventory
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp";
     };
-    class MED
-    {
+    class MED {
         displayName = "Medic";
         icon = "\a3\characters_f\data\ui\icon_medic_ca.paa";
         weapons[] = {
@@ -145,8 +140,7 @@ class CfgRespawnInventory
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_medic";
     };
-    class LAT
-    {
+    class LAT {
         displayName = "Rifleman Anti Tank";
         icon = "\a3\characters_f\data\ui\icon_expl_specialist_ca.paa";
         weapons[] = {
@@ -179,8 +173,7 @@ class CfgRespawnInventory
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_at";
     };
-    class ENG
-    {
+    class ENG {
         displayName = "Engineer";
         icon = "\a3\characters_f\data\ui\icon_repair_ca.paa";
         weapons[] = {
@@ -215,15 +208,14 @@ class CfgRespawnInventory
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_engineer";
     };
-    class MAM
-    {
+    class MAM {
         displayName = "Marksman";
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
         weapons[] = {
             "rhs_weap_m14ebrri_leu",
             "Throw",
             "Put",
-            "Binocular"
+            "Rangefinder"
         };
         magazines[] = {
             "rhsusf_20Rnd_762x51_m118_special_Mag",
@@ -251,8 +243,7 @@ class CfgRespawnInventory
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "";
     };
-    class PLT
-    {
+    class PLT {
         displayName = "Pilot";
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa";
         weapons[] = {

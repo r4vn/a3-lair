@@ -6,7 +6,7 @@ class Header {
 
 respawn = 3;
 
-respawnDelay = 20;
+respawnDelay = 15;
 respawnTemplatesWest[] = {
     "MenuInventory",
     "MenuPosition"

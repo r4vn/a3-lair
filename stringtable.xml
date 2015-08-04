@@ -54,6 +54,26 @@
 		<German>FAHRZEUG VERFÜGBAR</German>
 	</Key>
 
+	<Key ID="STR_SAD_deployRally">
+		<Original>Deploy Rally Point</Original>
+		<German>Setze Rally Point</German>
+	</Key>
+
+	<Key ID="STR_SAD_rallyMarker">
+		<Original>RP</Original>
+		<German>RP</German>
+	</Key>
+
+	<Key ID="STR_SAD_rallyNote">
+		<Original>RALLY POINT</Original>
+		<German>RALLY POINT</German>
+	</Key>
+
+	<Key ID="STR_SAD_rallyDeployNoteDesc">
+		<Original>New Rally Point Available</Original>
+		<German>Neuer Rally Point verfügbar</German>
+	</Key>
+
 	<Key ID="STR_SAD_kitOfficer">
 		<Original>Officer</Original>
 		<German>Offizier</German>

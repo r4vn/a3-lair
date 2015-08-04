@@ -1314,7 +1314,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			position[]={890.86652,3.8492687,1060.2501};
@@ -1342,16 +1342,9 @@ class Mission
 		class Item2
 		{
 			position[]={890.90607,3.7397983,1063.5099};
-			name="fob_sand";
+			name="respawn_west_fob_sand";
 			text="FOB Sand";
 			type="b_hq";
-		};
-		class Item3
-		{
-			position[]={915.27197,4.244205,1076.6995};
-			name="respawn_west_fob_sand";
-			type="Empty";
-			colorName="ColorWEST";
 		};
 	};
 };

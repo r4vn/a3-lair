@@ -47,3 +47,6 @@ SAD_INS_GROUPS = [
 ];
 
 #define SAD_BASE_MARKER_NAME "west_base"
+
+#define SAD_RALLY_VEHICLE "Land_BagBunker_Small_F"
+#define SAD_RALLY_VAR_PREFIX "rallyVehicle"

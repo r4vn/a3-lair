@@ -19,9 +19,9 @@ SAD_fnc_createNewTask = {
 
     _position = _this select 0;
 
-    _desc = localize "STR_taskDesc_SAD";
-    _descShort = localize "STR_taskDescShort_SAD";
-    _descHUD = localize "STR_taskTitle_SAD";
+    _desc = localize "STR_SAD_taskDesc";
+    _descShort = localize "STR_SAD_taskDescShort";
+    _descHUD = localize "STR_SAD_taskTitle";
 
     _task = player createSimpleTask [_descHUD];
     _task setSimpleTaskDescription [

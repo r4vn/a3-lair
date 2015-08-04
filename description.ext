@@ -1,5 +1,5 @@
-onLoadName=$STR_missionTitle_DustyLair;
-onLoadMission=$STR_briefingDescription_SAD;
+onLoadName=$STR_SAD_missionTitle;
+onLoadMission=$STR_SAD_briefingDescription;
 author="r4vn";
 
 enableDebugConsole = 1;

@@ -21,7 +21,7 @@
 
 	<Key ID="STR_SAD_taskTitle">
 		<Original>Destroy Cache</Original>
-		<German>Zerstöre Waffenlager</German>
+		<German>Waffenlager zerstören</German>
 	</Key>
 
 	<Key ID="STR_SAD_taskDesc">

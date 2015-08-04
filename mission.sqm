@@ -63,8 +63,8 @@ class Mission
 	randomSeed=9739285;
 	class Intel
 	{
-		briefingName="@STR_briefingName_DustyLair";
-		overviewText="@STR_briefingDescription_SAD";
+		briefingName="@STR_SAD_briefingName";
+		overviewText="@STR_SAD_briefingDescription";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;

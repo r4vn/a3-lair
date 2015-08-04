@@ -82,7 +82,7 @@ SAD_fnc_cacheDestroyed = {
     _cacheId = SAD_activeCaches find _cache;
     _marker = GET_MARKER_ID(_cacheId);
 
-    _cache hideObject true;
+    _cache hideObjectGlobal true;
 
     SAD_destroyedCaches = SAD_destroyedCaches + [_cache];
 

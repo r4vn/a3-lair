@@ -18,7 +18,7 @@ SAD_fnc_createInsurgents = {
 };
 
 SAD_fnc_spawnGroup = {
-    private["_position", "_side", "_group", "_groupConfig"];
+    private ["_position", "_side", "_group", "_groupConfig"];
 
     _position = _this select 0;
     _side = _this select 1;
@@ -32,7 +32,7 @@ SAD_fnc_spawnGroup = {
 };
 
 SAD_fnc_createGroupWaypoint = {
-    private["_group", "_position", "_waypoint"];
+    private ["_group", "_position", "_waypoint"];
 
     _group = _this select 0;
     _position = _this select 1;

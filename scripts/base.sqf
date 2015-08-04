@@ -3,7 +3,7 @@
 SAD_vehicleRespawns = [];
 
 SAD_fnc_createVehiclesRespawnMarker = {
-    private["_vehicle", "_marker"];
+    private ["_vehicle", "_marker"];
     scopeName "SAD_fnc_createVehiclesRespawnMarker";
 
     _vehicle = _this select 0;
@@ -14,13 +14,17 @@ SAD_fnc_createVehiclesRespawnMarker = {
 
     _marker = createMarker [format ["respawn_%1", vehicleVarName _vehicle],
             position _vehicle];
+    _marker setMarkerDir (getDir _vehicle);
     _marker setMarkerShape "Icon";
+
+    _vehicle respawnVehicle [-1];
+    addToRemainsCollector [_vehicle];
 
     SAD_vehicleRespawns = SAD_vehicleRespawns + [_marker];
 };
 
 SAD_fnc_createVehicleRespawns = {
-    private["_markerPosition", "_markerSize", "_radius", "_vehicles", "_types"];
+    private ["_markerPosition", "_markerSize", "_radius", "_vehicles", "_types"];
 
     _types = [
         "Car",

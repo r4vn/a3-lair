@@ -2,5 +2,7 @@ onLoadName=$STR_missionTitle_DustyLair;
 onLoadMission=$STR_briefingDescription_SAD;
 author="r4vn";
 
+enableDebugConsole = 1;
+
 #include "settings.hpp"
 #include "inventories.hpp"

@@ -18,11 +18,11 @@ SAD_fnc_findRandomCacheBuilding = {
         _cacheBuildings = nearestObjects [
             [_posX, _posY, 0],
             SAD_CACHE_BUILDINGS,
-            500
+            1000
         ];
     };
 
-    _cacheBuildings;
+    _cacheBuildings select 0;
 };
 
 SAD_fnc_checkCacheDistance = {
@@ -54,11 +54,9 @@ SAD_fnc_findNewCacheLocation = {
             "_cachePosition", "_isValidDistance"];
 
     _building = nil;
-    _buildings = [];
 
     while {isNil "_building"} do {
-        _buildings = call SAD_fnc_findRandomCacheBuilding;
-        _building = (_buildings select 0);
+        _building = call SAD_fnc_findRandomCacheBuilding;
         _buildingPosition = position _building;
 
         _isValidDistance = [_buildingPosition] call
@@ -69,7 +67,7 @@ SAD_fnc_findNewCacheLocation = {
         };
     };
 
-    _buildingId = SAD_CACHE_BUILDINGS find _building;
+    _buildingId = SAD_CACHE_BUILDINGS find (typeOf _building);
     _cachePosition = _building buildingPos (SAD_CACHE_BUILDING_POSITIONS select
             _buildingId);
 
@@ -103,16 +101,18 @@ SAD_fnc_cacheDestroyed = {
 };
 
 SAD_fnc_createNewCache = {
-    private ["_position", "_cache", "_markerPosition"];
+    private ["_positionTerrainLevel", "_position", "_cache", "_markerPosition"];
 
     if ((count SAD_activeCaches) < SAD_MAX_CACHES) then {
-        _position = call SAD_fnc_findNewCacheLocation;
+        _positionTerrainLevel = call SAD_fnc_findNewCacheLocation;
 
-        // Prevent destruction on spawn as _position is ATL
+        // Prevent destruction on spawn as position is ATL
         _cache = SAD_CACHE_VEHICLE createVehicle [-1000, -1000];
-        _cache setPosATL _position;
+        _cache setPosATL _positionTerrainLevel;
         _cache addEventHandler ["killed", "call SAD_fnc_cacheDestroyed"];
         SAD_activeCaches = SAD_activeCaches + [_cache];
+
+        _position = position _cache;
 
         [_cache] call SAD_fnc_createInsurgents;
 

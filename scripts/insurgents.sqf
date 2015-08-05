@@ -10,12 +10,9 @@ SAD_fnc_createInsurgents = {
     for "_i" from 0 to _groupCount do {
         _group = SAD_INS_GROUPS call BIS_fnc_selectRandom;
 
-        if (_i == 0) then {
-            _groupPosition = _cachePosition;
-        } else {
-            _groupPosition = [_cachePosition, 0, SAD_MAX_CACHE_MARKER_OFFSET /
-                    2] call SAD_fnc_randomizePosition2D;
-        };
+        _groupPosition = [_cachePosition, SAD_MIN_CACHE_MARKER_OFFSET,
+                SAD_MAX_CACHE_MARKER_OFFSET / 2] call
+                SAD_fnc_randomizePosition2D;
 
         [_groupPosition, east, _group] call SAD_fnc_spawnGroup;
     };

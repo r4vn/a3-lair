@@ -52,7 +52,7 @@ SAD_fnc_createCacheMarker = {
 
     _marker = createMarker [GET_MARKER_ID(count SAD_activeCaches - 1),
             _markerPosition];
-    _marker setMarkerShape "Ellipse";
+    _marker setMarkerShape "Rectangle";
     _marker setMarkerSize [SAD_MAX_CACHE_MARKER_OFFSET,
             SAD_MAX_CACHE_MARKER_OFFSET];
     _marker setMarkerBrush "DiagGrid";

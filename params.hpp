@@ -1,6 +1,7 @@
 class Params
 {
     #include "\a3\functions_f\Params\paramWeather.hpp"
+    #include "\a3\functions_f\Params\paramDaytimePeriod.hpp"
 
     class RespawnDelay
     {

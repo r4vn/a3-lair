@@ -1,6 +1,6 @@
 #define SAD_CACHE_VEHICLE "Box_FIA_Ammo_F"
 #define SAD_MAX_CACHES 10
-#define SAD_NEEDED_CACHES (paramsArray select 0)
+#define SAD_NEEDED_CACHES ("NeededCaches" call BIS_fnc_getParamValue)
 
 #define SAD_MIN_CACHE_DISTANCE 1000
 
@@ -43,7 +43,7 @@ SAD_CACHE_BUILDING_POSITIONS = [
     2
 ];
 
-#define SAD_MAX_INS_GROUP_COUNT (paramsArray select 1)
+#define SAD_MAX_INS_GROUP_COUNT ("MaxCacheGroups" call BIS_fnc_getParamValue)
 SAD_INS_GROUPS = [
     (configFile >> "CfgGroups" >>  "Indep" >> "rhs_faction_insurgents" >>
             "Infantry" >> "IRG_ReconSentry"),

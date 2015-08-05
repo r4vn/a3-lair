@@ -12,8 +12,6 @@
 
 #define SAD_MAP_SIZE 6000
 SAD_CACHE_BUILDINGS = [
-    "Land_jbad_House1",
-    "Land_jbad_House2",
     "Land_jbad_House3",
     "Land_jbad_House5",
     "Land_jbad_House6",
@@ -26,8 +24,23 @@ SAD_CACHE_BUILDINGS = [
     "Land_jbad_House_4_old",
     "Land_jbad_House_6_old",
     "Land_jbad_House_7_old",
-    "Land_jbad_House_8_old",
-    "Land_jbad_House_9_old"
+    "Land_jbad_House_8_old"
+];
+
+SAD_CACHE_BUILDING_POSITIONS = [
+    4,
+    2,
+    8,
+    5,
+    13,
+    3,
+    3,
+    7,
+    1,
+    6,
+    3,
+    5,
+    2
 ];
 
 #define SAD_MAX_INS_GROUP_COUNT (paramsArray select 1)

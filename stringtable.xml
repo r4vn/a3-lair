@@ -24,6 +24,16 @@
 		<German>Spieler</German>
 	</Key>
 
+	<Key ID="STR_SAD_respawnDelay">
+		<Original>Respawn Delay</Original>
+		<German>Wiedereinstiegsverzögerung</German>
+	</Key>
+
+	<Key ID="STR_SAD_respawnVehicleDelay">
+		<Original>Vehicle Respawn Delay</Original>
+		<German>Fahrzeugswiedereinstiegsverzögerung</German>
+	</Key>
+
 	<Key ID="STR_SAD_neededCaches">
 		<Original>Amount Caches</Original>
 		<German>Anzahl Waffenlager</German>

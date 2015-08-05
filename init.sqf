@@ -1,4 +1,5 @@
 #include "scripts\base.sqf"
+#include "scripts\map.sqf"
 #include "scripts\caches.sqf"
 #include "scripts\rallies.sqf"
 
@@ -19,5 +20,6 @@ if (isServer) then {
 };
 
 call SAD_fnc_init_base;
+call SAD_fnc_init_map;
 call SAD_fnc_init_caches;
 call SAD_fnc_init_rallies;

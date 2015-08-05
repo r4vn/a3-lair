@@ -8,13 +8,8 @@ SAD_fnc_checkDeployRallyAction = {
 SAD_fnc_deployRally = {
     private ["_caller", "_callerGroup", "_position", "_marker", "_rally",
             "_rallyVarName"];
-    scopeName "SAD_fnc_deployRally";
 
     _caller = _this select 0;
-
-    if (!isServer) then {
-        breakOut "SAD_fnc_deployRally";
-    };
 
     _callerGroup = groupId (group _caller);
     _rallyVarName = format ["%1%2", SAD_RALLY_VAR_PREFIX, _callerGroup];

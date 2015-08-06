@@ -3,7 +3,7 @@ SAD_fnc_createGroupIcon = {
 
     _group = group player;
 
-    if(leader _group != player) exitWith {};
+    //if(leader _group != player) exitWith {};
 
     _group setGroupIconParams [
         [0, 0.3, 0.6, 0.65],

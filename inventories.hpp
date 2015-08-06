@@ -190,11 +190,12 @@ class CfgRespawnInventory {
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "HandGrenade",
             "HandGrenade",
-            "SatchelCharge_Remote_Mag",
-            "SatchelCharge_Remote_Mag"
+            "DemoCharge_Remote_Mag",
+            "DemoCharge_Remote_Mag"
         };
         items[] = {
-            "FirstAidKit"
+            "FirstAidKit",
+            "ACE_M26_Clacker"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_repair",

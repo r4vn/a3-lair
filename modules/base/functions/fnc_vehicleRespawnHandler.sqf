@@ -2,6 +2,8 @@
  *
  */
 
+#include "script_macros.hpp"
+
 private ["_unit", "_vehicleName"];
 
 _unit = _this select 0;

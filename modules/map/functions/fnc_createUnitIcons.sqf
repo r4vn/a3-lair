@@ -2,7 +2,10 @@
  *
  */
 
+#include "script_macros.hpp"
+
 if(!isDedicated) then {
-    player addMPEventHandler ["MPRespawn",
-            "call SAD_fnc_createUnitMarkers"];
+    player addMPEventHandler ["MPRespawn", {
+        call FUNC("createUnitMarkers");
+    }];
 };

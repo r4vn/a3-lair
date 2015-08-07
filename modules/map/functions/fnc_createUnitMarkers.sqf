@@ -2,7 +2,14 @@
  *
  */
 
-private["_unit", "_units", "_side", "_unitName", "_marker"];
+#include "script_macros.hpp"
+
+private[
+    "_unit",
+    "_units",
+    "_side",
+    "_marker"
+];
 
 _unit = (_this select 0);
 _units = allUnits;

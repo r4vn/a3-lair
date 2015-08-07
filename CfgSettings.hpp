@@ -5,14 +5,15 @@ class Header {
 };
 
 respawn = 3;
+respawnOnStart = 1;
 
-respawnDelay = ("RespawnDelay" call BIS_fnc_getParamValue);
+respawnDelay = 5;
 respawnTemplatesWest[] = {
     "MenuInventory",
     "MenuPosition"
 };
 
-respawnVehicleDelay = ("RespawnVehicleDelay" call BIS_fnc_getParamValue);
+respawnVehicleDelay = 5;
 wreckManagerMode = 2;
 
 showHUD = 1;

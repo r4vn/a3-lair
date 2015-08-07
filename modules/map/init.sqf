@@ -2,8 +2,6 @@
  *
  */
 
-#include "..\main\defines.hpp"
+#include "functions\script_macros.hpp"
 
-setGroupIconsVisible [true,false];
-
-call SAD_fnc_createGroupIcons;
+call FUNC("createGroupIcons");

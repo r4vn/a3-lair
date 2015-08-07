@@ -8,3 +8,4 @@ enableDebugConsole = 1;
 #include "CfgParams.hpp"
 #include "CfgNotifications.hpp"
 #include "CfgInventories.hpp"
+#include "CfgModules.hpp"

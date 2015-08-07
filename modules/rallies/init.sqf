@@ -2,6 +2,8 @@
  *
  */
 
-#include "..\main\defines.hpp"
+#include "functions\script_macros.hpp"
 
-player addEventHandler ["respawn", "call SAD_fnc_registerDeployRallyAction"];
+player addEventHandler ["Respawn", {
+    call FUNC("registerDeployRallyAction");
+}];

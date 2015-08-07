@@ -1,7 +1,4 @@
-#include "scripts\base.sqf"
-#include "scripts\map.sqf"
-#include "scripts\caches.sqf"
-#include "scripts\rallies.sqf"
+#include "modules\main\functions\script_macros.hpp"
 
 [west, "SQL"] call BIS_fnc_addRespawnInventory;
 [west, "RFM"] call BIS_fnc_addRespawnInventory;
@@ -9,7 +6,7 @@
 [west, "ENG"] call BIS_fnc_addRespawnInventory;
 [west, "MED"] call BIS_fnc_addRespawnInventory;
 [west, "LAT"] call BIS_fnc_addRespawnInventory;
-[west, "MAM"] call BIS_fnc_addRespawnInventory;
+[west, "MAR"] call BIS_fnc_addRespawnInventory;
 [west, "PLT"] call BIS_fnc_addRespawnInventory;
 
 if (isServer) then {
@@ -19,7 +16,8 @@ if (isServer) then {
     ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 };
 
-call SAD_fnc_init_base;
-call SAD_fnc_init_map;
-call SAD_fnc_init_caches;
-call SAD_fnc_init_rallies;
+call INIT("main");
+call INIT("base");
+call INIT("map");
+call INIT("rallies");
+call INIT("caches");

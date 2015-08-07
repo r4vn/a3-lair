@@ -2,8 +2,8 @@
  *
  */
 
-#include "..\main\defines.hpp"
+#include "functions\script_macros.hpp"
 
 if (isServer) then {
-    call SAD_fnc_createVehicleRespawns;
+    call FUNC("createVehicleRespawns");
 };

@@ -44,6 +44,11 @@
 		<German>Maximale Anzahl von Waffenlager-Wiederstandsgruppen</German>
 	</Key>
 
+	<Key ID="STR_SAD_cacheTitle">
+		<Original>Cache</Original>
+		<German>Waffenlager</German>
+	</Key>
+
 	<Key ID="STR_SAD_taskTitle">
 		<Original>Destroy Cache</Original>
 		<German>Waffenlager zerstören</German>

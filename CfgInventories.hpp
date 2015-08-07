@@ -38,6 +38,7 @@ class CfgRespawnInventory {
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "tf_rt1523g";
     };
+
     class RFM {
         displayName = $STR_SAD_kitRifleman;
         icon = "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa";
@@ -73,6 +74,7 @@ class CfgRespawnInventory {
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp";
     };
+
     class LMG {
         displayName = $STR_SAD_kitAutomaticRifleman;
         icon = "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa";
@@ -105,6 +107,7 @@ class CfgRespawnInventory {
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp";
     };
+
     class MED {
         displayName = $STR_SAD_kitMedic;
         icon = "\a3\characters_f\data\ui\icon_medic_ca.paa";
@@ -140,6 +143,7 @@ class CfgRespawnInventory {
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_medic";
     };
+
     class LAT {
         displayName = $STR_SAD_kitRiflemanAntiTank;
         icon = "\a3\characters_f\data\ui\icon_expl_specialist_ca.paa";
@@ -173,6 +177,7 @@ class CfgRespawnInventory {
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_at";
     };
+
     class ENG {
         displayName = $STR_SAD_kitEngineer;
         icon = "\a3\characters_f\data\ui\icon_repair_ca.paa";
@@ -209,7 +214,8 @@ class CfgRespawnInventory {
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "rhsusf_assault_eagleaiii_ucp_engineer";
     };
-    class MAM {
+
+    class MAR {
         displayName = $STR_SAD_kitMarksman;
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
         weapons[] = {
@@ -244,6 +250,7 @@ class CfgRespawnInventory {
         uniformClass = "rhs_uniform_cu_ucp";
         backpack = "";
     };
+
     class PLT {
         displayName = $STR_SAD_kitPilot;
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa";

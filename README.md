@@ -10,7 +10,8 @@ This mission aims to deliver tactical search and destroy gameplay to a small gro
 
 ## Requirements
 
-- Arma 3
+Please make sure you always have the latest versions of the following addons installed before running the mission as this could have unforseen side effects.
+- [Arma 3 v1.49.131707 (Dev-Branch)](http://dev.arma3.com/dev-branch)
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - [ACE 3](http://ace3mod.com)
 - [RHS: Russian Federation armed forces](http://www.rhsmods.org/mod/1)

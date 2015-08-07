@@ -6,6 +6,6 @@
 
 if(!isDedicated) then {
     player addMPEventHandler ["MPRespawn", {
-        call FUNC("createUnitMarkers");
+        execVM FUNC_FILE("createUnitMarkers");
     }];
 };

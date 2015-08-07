@@ -5,34 +5,39 @@
 #include "script_macros.hpp"
 
 private[
-    "_unit",
     "_units",
     "_side",
+    "_name",
     "_marker"
 ];
 
-_unit = (_this select 0);
-_units = allUnits;
-_side = side _unit;
+_name = name player;
+_side = side player;
 
-{
-    _marker = createMarkerLocal [_marker, position _x;
-    _marker setMarkerShapeLocal "Icon";
-    _marker setMarkerTypeLocal "mil_dot";
-    _marker setmarkerDirLocal (getDir _x);
-
-    if(side _x == _side) then {
-        _marker setMarkerColorLocal "ColorWEST";
-    } else {
-        _marker setMarkerColorLocal "ColorEAST";
-    };
-} foreach _units;
-
-while {alive _unit} do {
+while {alive player} do {
     {
-        _marker setMarkerPosLocal (position _x);
-        _marker setMarkerDirLocal (getDir _x);
-    } foreach _units;
+        _marker = name _x;
 
-    uiSleep 0.2;
+        if (getMarkerColor _marker == "") then {
+            _marker = createMarkerLocal [name _x, getPos _x];
+            _marker setMarkerShapeLocal "Icon";
+            _marker setMarkerTypeLocal "mil_triangle_noShadow";
+            _marker setMarkerDirLocal (getDir _x);
+
+            if(side _x == _side) then {
+                if(name _x == _name) then {
+                    _marker setMarkerColorLocal "ColorYellow";
+                } else {
+                    _marker setMarkerColorLocal "ColorWEST";
+                };
+            } else {
+                _marker setMarkerColorLocal "ColorEAST";
+            };
+        };
+
+        _marker setMarkerPosLocal (getPos _x);
+        _marker setMarkerDirLocal (getDir _x);
+    } forEach allUnits;
+
+    uiSleep 2;
 };

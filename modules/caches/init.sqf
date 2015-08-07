@@ -4,6 +4,10 @@
 
 #include "functions\script_macros.hpp"
 
+private [
+    "_intelDuration"
+];
+
 // Public variables
 SAD_destroyedCachesCount = 0;
 publicVariable "SAD_destroyedCachesCount";
@@ -14,9 +18,11 @@ publicVariable "SAD_caches";
 SAD_tasks = [];
 publicVariable "SAD_tasks";
 
-if (isServer) then {
-    uiSleep 10;
+// Initializations
 
-    call FUNC("createNewCache");
+if (isServer) then {
+    _intelDuration = random (getNumber (MCFG >> "intelDuration"));
+
+    [_intelDuration] execVM FUNC_FILE("createNewCache");
 };
 

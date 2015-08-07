@@ -6,7 +6,8 @@
 
 private [
     "_cacheId",
-    "_cache"
+    "_cache",
+    "_intelDuration"
 ];
 
 _cache = _this select 0;
@@ -21,7 +22,9 @@ _cacheId setMarkerColor "ColorGrey";
 [_cacheId, "Succeeded", true] call BIS_fnc_taskSetState;
 
 if (SAD_destroyedCachesCount < NEEDED_CACHES_COUNT) then {
-    call FUNC("createNewCache");
+    _intelDuration = random (getNumber (MCFG >> "intelDuration"));
+
+    [_intelDuration] execVM FUNC_FILE("createNewCache");
 } else {
     [["end1", true, true], "BIS_fnc_endMission", west, true] call BIS_fnc_MP;
 };

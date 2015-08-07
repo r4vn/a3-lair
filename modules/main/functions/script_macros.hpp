@@ -3,6 +3,8 @@
 
 #define FUNC(name) (compile (preprocessFileLineNumbers (\
         format ["modules\%1\functions\fnc_%2.sqf", MODULE, name])))
+#define FUNC_FILE(name) (format ["modules\%1\functions\fnc_%2.sqf", MODULE,\
+        name]);
 
 #define MCFG (missionConfigFile >> format ["Cfg%1", MODULE])
 #define EMCFG(name) (missionConfigFile >> format ["Cfg%1", name])

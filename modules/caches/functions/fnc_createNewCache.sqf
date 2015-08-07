@@ -13,12 +13,21 @@ private [
     "_maxOffset",
     "_vehicle",
     "_vehicleVarPrefix",
-    "_maxCacheCount"
+    "_maxCacheCount",
+    "_delay"
 ];
+
+_delay = _this select 0;
 
 _maxCacheCount = getNumber (MCFG >> "maxCount");
 
 if ((count SAD_caches) < _maxCacheCount) then {
+    if (isNil "_delay") then {
+        _delay = 0;
+    };
+
+    uiSleep _delay;
+
     _positionTerrainLevel = call FUNC("findNewCacheLocation");
 
     _minOffset = getNumber (MCFG >> "Marker" >> "minOffset");

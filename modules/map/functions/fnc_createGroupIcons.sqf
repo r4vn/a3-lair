@@ -1,3 +1,7 @@
+/**
+ *
+ */
+
 SAD_fnc_createGroupIcons = {
     private ["_group", "_icon"];
 
@@ -9,10 +13,4 @@ SAD_fnc_createGroupIcons = {
         1,
         true
     ];
-};
-
-SAD_fnc_init_map = {
-    setGroupIconsVisible [true,false];
-
-    call SAD_fnc_createGroupIcons;
 };

@@ -1,9 +1,7 @@
-SAD_fnc_createGroupIcon = {
+SAD_fnc_createGroupIcons = {
     private ["_group", "_icon"];
 
     _group = group player;
-
-    //if(leader _group != player) exitWith {};
 
     _group setGroupIconParams [
         [0, 0.3, 0.6, 0.65],
@@ -16,5 +14,5 @@ SAD_fnc_createGroupIcon = {
 SAD_fnc_init_map = {
     setGroupIconsVisible [true,false];
 
-    call SAD_fnc_createGroupIcon;
+    call SAD_fnc_createGroupIcons;
 };

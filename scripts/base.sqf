@@ -33,7 +33,7 @@ SAD_fnc_createVehiclesRespawnMarker = {
     _marker setMarkerShape "Icon";
 
     _vehicle respawnVehicle [-1];
-    _vehicle addMPEventHandler ["mprespawn",
+    _vehicle addMPEventHandler ["MPRespawn",
             "call SAD_fnc_vehicleRespawnHandler"];
     addToRemainsCollector [_vehicle];
 
@@ -41,7 +41,8 @@ SAD_fnc_createVehiclesRespawnMarker = {
 };
 
 SAD_fnc_createVehicleRespawns = {
-    private ["_markerPosition", "_markerSize", "_radius", "_vehicles", "_types"];
+    private ["_markerPosition", "_markerSize", "_radius", "_vehicles",
+            "_types"];
 
     _types = [
         "Car",

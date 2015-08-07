@@ -2,6 +2,7 @@
 
 SAD_fnc_checkDeployRallyAction = {
     _target == _this && typeof (vehicle _this) == typeOf _this &&
+            leader (group _this) == _this &&
             vest _this == "rhsusf_iotv_ucp_squadleader";
 };
 
@@ -46,5 +47,6 @@ SAD_fnc_registerDeployRallyAction = {
 };
 
 SAD_fnc_init_rallies = {
-    player addEventHandler ["respawn", "call SAD_fnc_registerDeployRallyAction"];
+    player addEventHandler ["respawn",
+            "call SAD_fnc_registerDeployRallyAction"];
 };

@@ -32,7 +32,7 @@ for "_i" from 0 to _groupCount do {
     _groupCfg = GROUP_CFG(_groupCfgInfo select 0, _groupCfgInfo select 1);
 
     if (_i == 0) then {
-        _groupPosition = [_cachePosition, _minOffset, _minOffset] call
+        _groupPosition = [_cachePosition, _minOffset / 2, _minOffset / 2] call
                 SAD_fnc_randomizePosition2D;
     } else {
         _groupPosition = [_cachePosition, _minOffset, _maxOffset / 2] call

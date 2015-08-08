@@ -18,7 +18,7 @@ while {isNil "_building"} do {
     _buildingData = call FUNC("findRandomCacheBuilding");
     _building = _buildingData select 0;
     _buildingPos = _buildingData select 1;
-    _position = position _building;
+    _position = getPos _building;
 
     if (!([_position] call FUNC("checkCacheDistance"))) then {
         _building = nil;

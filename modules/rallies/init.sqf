@@ -5,5 +5,5 @@
 #include "functions\script_macros.hpp"
 
 player addEventHandler ["Respawn", {
-    call FUNC("registerDeployRallyAction");
+    call FUNC("registerRallyDeployAction");
 }];

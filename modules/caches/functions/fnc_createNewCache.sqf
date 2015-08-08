@@ -42,12 +42,12 @@ if ((count SAD_caches) < _maxCacheCount) then {
     _cache setVehicleVarName (format ["%1 %2", localize "STR_SAD_cacheTitle",
             (count SAD_caches) + 1]);
     _cache addEventHandler ["killed", {
-        call FUNC("cacheDestroyed");
+        call FUNC("handleCacheKilled");
     }];
 
     ARR_ADD(SAD_caches, _cache);
 
-    _position = position _cache;
+    _position = getPos _cache;
 
     _markerPosition = [_position, _minOffset, _maxOffset] call
             SAD_fnc_randomizePosition2D;

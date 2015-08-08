@@ -27,7 +27,7 @@ if (!isNil _rallyVarName) then {
     deleteMarker (format ["respawn_west_%1", _callerGroup]);
 };
 
-_position = (position _caller) findEmptyPosition [0, 50, _vehicleClass];
+_position = (getPos _caller) findEmptyPosition [0, 50, _vehicleClass];
 
 _marker = createMarker [format ["respawn_west_%1", _callerGroup],
         _position];

@@ -21,7 +21,7 @@ private [
 _markerPosition = _this select 0;
 _cache = _this select 1;
 
-_cachePosition = position _cache;
+_cachePosition = getPos _cache;
 _groupCount = random SAD_MAX_INS_GROUP_COUNT;
 _groups = getArray (MCFG >> "Insurgents" >> "groups");
 _minOffset = getNumber (MCFG >> "Marker" >> "minOffset");

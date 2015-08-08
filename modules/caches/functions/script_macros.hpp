@@ -1,6 +1,6 @@
 #define MODULE "caches"
 
-#include "\mpmissions\ace_rhs_dusty_lair.Kunduz\modules\main\functions\script_macros.hpp"
+#include "\mpmissions\ace_rhs_dusty_lair.kunduz\modules\main\functions\script_macros.hpp"
 
 #define NEEDED_CACHES_COUNT ("NeededCaches" call BIS_fnc_getParamValue)
 #define SAD_MAX_INS_GROUP_COUNT ("MaxCacheGroups" call BIS_fnc_getParamValue)

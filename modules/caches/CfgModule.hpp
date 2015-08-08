@@ -1,8 +1,8 @@
 class CfgCaches {
     vehicle = "Box_FIA_Ammo_F";
     vehicleVarPrefix = "cache"
-    maxCount = 10;
-    minSpacing = 1000;
+    maxCount = 6;
+    minSpacing = 500;
     intelDuration = 10;
     buildings[] = {
         {"Land_jbad_House3", 4},

@@ -18,8 +18,9 @@ publicVariable "SAD_caches";
 SAD_tasks = [];
 publicVariable "SAD_tasks";
 
-// Initializations
+SAD_fnc_checkCacheDistance = FUNC("checkCacheDistance");
 
+// Initializations
 if (isServer) then {
     _intelDuration = random (getNumber (MCFG >> "intelDuration"));
 

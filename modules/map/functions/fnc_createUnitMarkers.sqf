@@ -30,8 +30,6 @@ while {alive player} do {
                 } else {
                     _marker setMarkerColorLocal "ColorWEST";
                 };
-            } else {
-                _marker setMarkerColorLocal "ColorEAST";
             };
         };
 

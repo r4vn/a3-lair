@@ -9,8 +9,7 @@ private [
     "_buildingData",
     "_buildingPos",
     "_position",
-    "_cachePosition",
-    "_isValidDistance"
+    "_cachePosition"
 ];
 
 _building = nil;
@@ -21,9 +20,7 @@ while {isNil "_building"} do {
     _buildingPos = _buildingData select 1;
     _position = position _building;
 
-    _isValidDistance = [_position] call FUNC("checkCacheDistance");
-
-    if (!_isValidDistance) then {
+    if (!([_position] call FUNC("checkCacheDistance"))) then {
         _building = nil;
     };
 };

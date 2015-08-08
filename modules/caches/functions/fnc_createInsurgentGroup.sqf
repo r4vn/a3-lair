@@ -19,4 +19,4 @@ _position = _position findEmptyPosition [0, 50];
 
 _group = [_position, _side, _groupConfig] call BIS_fnc_spawnGroup;
 
-[_group, _position] call FUNC("createInsurgentGroupWaypoint");
+_group;

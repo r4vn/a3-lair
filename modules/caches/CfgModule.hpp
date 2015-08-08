@@ -21,7 +21,7 @@ class CfgCaches {
     };
 
     class Map {
-        size = 6000;
+        size = 5120;
     };
 
     class Marker {

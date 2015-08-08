@@ -49,12 +49,13 @@ if ((count SAD_caches) < _maxCacheCount) then {
 
     _position = position _cache;
 
-    [_cache] call FUNC("createInsurgents");
-
     _markerPosition = [_position, _minOffset, _maxOffset] call
             SAD_fnc_randomizePosition2D;
+
     [_markerPosition, _cache] call FUNC("createCacheMarker");
     [_markerPosition, _cache] call FUNC("createNewTask");
+
+    [_markerPosition, _cache] call FUNC("createInsurgents");
 } else {
     hint "Maximum cache amount exceeded.";
 };

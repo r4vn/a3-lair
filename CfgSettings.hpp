@@ -7,13 +7,13 @@ class Header {
 respawn = 3;
 respawnOnStart = 1;
 
-respawnDelay = 5;
+respawnDelay = 15;
 respawnTemplatesWest[] = {
     "MenuInventory",
     "MenuPosition"
 };
 
-respawnVehicleDelay = 5;
+respawnVehicleDelay = 60;
 wreckManagerMode = 2;
 
 showHUD = 1;

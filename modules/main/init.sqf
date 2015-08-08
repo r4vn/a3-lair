@@ -8,5 +8,3 @@
 
 // Public functions
 SAD_fnc_randomizePosition2D = FUNC("randomizePosition2D");
-
-

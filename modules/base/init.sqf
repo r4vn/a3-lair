@@ -6,4 +6,5 @@
 
 if (isServer) then {
     call FUNC("createVehicleRespawns");
+    call FUNC("initSupplies");
 };

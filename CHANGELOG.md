@@ -3,6 +3,8 @@ v 0.8.0 (unreleased)
 - added group icons
 - added weather and daytime mission parameters
 - added new FOB
+- added maintenance stations to base
+- added ammo crates to base
 - fixed cache area marker to match the actual area
 
 

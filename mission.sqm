@@ -2670,7 +2670,7 @@ class Mission
 		class Item183
 		{
 			position[]={536.17999,12.684278,796.41235};
-			azimut=-32.451954;
+			azimut=-32.452;
 			id=204;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
@@ -2679,7 +2679,7 @@ class Mission
 		class Item184
 		{
 			position[]={537.84863,12.59945,793.82111};
-			azimut=111.00299;
+			azimut=111.003;
 			id=205;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
@@ -2688,7 +2688,7 @@ class Mission
 		class Item185
 		{
 			position[]={534.56873,12.660143,793.07587};
-			azimut=-23.460196;
+			azimut=-23.460199;
 			id=206;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
@@ -2767,7 +2767,7 @@ class Mission
 		class Item194
 		{
 			position[]={495.37567,13.543478,775.43762};
-			azimut=-112.47717;
+			azimut=-112.477;
 			id=215;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
@@ -2776,7 +2776,7 @@ class Mission
 		class Item195
 		{
 			position[]={497.67941,13.44316,774.13483};
-			azimut=-32.24567;
+			azimut=-32.245701;
 			id=216;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";

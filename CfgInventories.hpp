@@ -21,10 +21,11 @@ class CfgRespawnInventory {
             "SmokeShell",
             "SmokeShell",
             "SmokeShellPurple",
-            "SmokeShellPurple"
+            "SmokeShellPurple",
+            "Laserbatteries"
         };
         items[] = {
-            "FirstAidKit"
+            "ACE_personalAidKit"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_squadleader",
@@ -60,7 +61,7 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "FirstAidKit"
+            "ACE_personalAidKit"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -93,7 +94,7 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "FirstAidKit"
+            "ACE_personalAidKit"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -129,7 +130,7 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "FirstAidKit"
+            "ACE_personalAidKit"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_medic",
@@ -159,11 +160,10 @@ class CfgRespawnInventory {
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
-            "rhs_mag_30Rnd_556x45_M855A1_Stanag",
-            "rhs_m136_mag"
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag"
         };
         items[] = {
-            "FirstAidKit"
+            "ACE_personalAidKit"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -175,7 +175,7 @@ class CfgRespawnInventory {
             "tf_rf7800str"
         };
         uniformClass = "rhs_uniform_cu_ucp";
-        backpack = "rhsusf_assault_eagleaiii_ucp_at";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
     };
 
     class ENG {
@@ -199,8 +199,8 @@ class CfgRespawnInventory {
             "DemoCharge_Remote_Mag"
         };
         items[] = {
-            "FirstAidKit",
-            "ACE_M26_Clacker"
+            "ACE_personalAidKit",
+            "ACE_Clacker"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_repair",
@@ -236,7 +236,7 @@ class CfgRespawnInventory {
             "rhs_mag_m67"
         };
         items[] = {
-            "FirstAidKit"
+            "ACE_personalAidKit"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -266,7 +266,7 @@ class CfgRespawnInventory {
             "SmokeShellRed"
         };
         items[] = {
-            "FirstAidKit"
+            "ACE_personalAidKit"
         };
         linkedItems[] = {
             "V_TacVest_blk",

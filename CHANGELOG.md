@@ -1,5 +1,5 @@
 v 0.8.0 (unreleased)
-- added player unit markers
+- added unit markers for west
 - added group icons
 - added weather and daytime mission parameters
 - added new FOB

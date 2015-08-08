@@ -37,5 +37,5 @@ while {alive player} do {
         _marker setMarkerDirLocal (getDir _x);
     } forEach allUnits;
 
-    uiSleep 1;
+    uiSleep 0.2;
 };

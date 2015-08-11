@@ -61,7 +61,7 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "ACE_personalAidKit"
+
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",

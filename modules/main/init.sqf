@@ -11,19 +11,20 @@
 #include "functions\script_macros.hpp"
 
 private [
-    "_kitConfigs"
+    "_respawnInventoryConfig"
 ];
 
 // Make public functions from this module accessible from other modules
 SAD_fnc_randomizePosition2D = FUNC("randomizePosition2D");
 
-// Get kits from configuration
-_kitConfigs = 'inheritsFrom _x == (missionConfigFile >> "CfgRespawnInventory")'
-        configClasses missionConfigFile;
+// Get kit configurations
+_respawnInventoryConfig = (missionConfigFile >> "CfgRespawnInventory");
+
 // Add each kit to respawn dialog
-{
-    [west, configName _x] call BIS_fnc_addRespawnInventory;
-} forEach _kitConfigs;
+for "_i" from 0 to (count _respawnInventoryConfig) - 1 do {
+    [west, configName (_respawnInventoryConfig select _i)] call
+            BIS_fnc_addRespawnInventory;
+};
 
 // Initialize DynamicGroups for both the server and client
 if (isServer) then {

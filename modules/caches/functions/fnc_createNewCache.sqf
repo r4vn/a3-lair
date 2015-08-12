@@ -4,6 +4,9 @@
  * Description:
  * Creates a new cache with its marker and insurgent groups after a given delay.
  *
+ * Note: Since this a computation heavy task and uses uiSleep, it needs to be
+ * executed in its own VM.
+ *
  * TODO: Maybe move marker and insurgent creation out of this function to make
  *       it more modular
  *
@@ -77,11 +80,11 @@ if ((count SAD_caches) < _maxCacheCount) then {
     _markerPosition = [_position, _minOffset, _maxOffset] call
             SAD_fnc_randomizePosition2D;
 
-    //
+    // Create cache marker, cache task and insurgent groups
     [_markerPosition, _cache] call FUNC("createCacheMarker");
     [_markerPosition, _cache] call FUNC("createNewTask");
-
     [_markerPosition, _cache] call FUNC("createInsurgents");
 } else {
+    // If maximum cache amount is exceeded create a small hint
     hint "Maximum cache amount exceeded.";
 };

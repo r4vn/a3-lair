@@ -12,4 +12,8 @@
 setGroupIconsVisible [true, true];
 
 // Create unit icons for blufor
-call FUNC("createUnitIcons");
+if(!isDedicated) then {
+    player addMPEventHandler ["MPRespawn", {
+        execVM FUNC_FILE("createUnitMarkers");
+    }];
+};

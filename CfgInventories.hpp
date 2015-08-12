@@ -25,7 +25,18 @@ class CfgRespawnInventory {
             "Laserbatteries"
         };
         items[] = {
-            "ACE_personalAidKit"
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_squadleader",
@@ -61,7 +72,18 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "ACE_personalAidKit"
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -94,7 +116,18 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "ACE_personalAidKit"
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -130,7 +163,37 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "ACE_personalAidKit"
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_medic",
@@ -163,7 +226,18 @@ class CfgRespawnInventory {
             "rhs_mag_30Rnd_556x45_M855A1_Stanag"
         };
         items[] = {
-            "ACE_personalAidKit"
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -199,7 +273,18 @@ class CfgRespawnInventory {
             "DemoCharge_Remote_Mag"
         };
         items[] = {
-            "ACE_personalAidKit",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
             "ACE_Clacker"
         };
         linkedItems[] = {
@@ -236,7 +321,18 @@ class CfgRespawnInventory {
             "rhs_mag_m67"
         };
         items[] = {
-            "ACE_personalAidKit"
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -266,7 +362,14 @@ class CfgRespawnInventory {
             "SmokeShellRed"
         };
         items[] = {
-            "ACE_personalAidKit"
+          "ACE_epinephrine",
+          "ACE_epinephrine",
+          "ACE_morphine",
+          "ACE_morphine",
+          "ACE_morphine",
+          "ACE_fieldDressing",
+          "ACE_fieldDressing",
+          "ACE_fieldDressing",
         };
         linkedItems[] = {
             "V_TacVest_blk",

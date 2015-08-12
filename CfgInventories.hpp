@@ -391,9 +391,10 @@ class CfgRespawnInventory {
         };
         uniformClass = "U_B_HeliPilotCoveralls";
         backpack = "";
+    };
 
         class SquadLeaderAlternative {
-            displayName = $STR_SAD_kitOfficer;
+            displayName = $STR_SAD_kitOfficerAlternative;
             icon = "\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa";
             weapons[] = {
                 "rhs_m4a1_acog",
@@ -445,7 +446,7 @@ class CfgRespawnInventory {
         };
 
         class RiflemanAlternative {
-            displayName = $STR_SAD_kitRifleman;
+            displayName = $STR_SAD_kitRiflemanAlternative;
             icon = "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa";
             weapons[] = {
                 "rhs_m4a1_grip_acog_usmc",
@@ -492,7 +493,7 @@ class CfgRespawnInventory {
         };
 
         class LightMachineGunnerAlternative {
-            displayName = $STR_SAD_kitAutomaticRifleman;
+            displayName = $STR_SAD_kitAutomaticRiflemanAlternative;
             icon = "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa";
             weapons[] = {
                 "rhs_weap_m240b_elcan",
@@ -536,7 +537,7 @@ class CfgRespawnInventory {
         };
 
         class MedicAlternative {
-            displayName = $STR_SAD_kitMedic;
+            displayName = $STR_SAD_kitMedicAlternative;
             icon = "\a3\characters_f\data\ui\icon_medic_ca.paa";
             weapons[] = {
                 "rhs_weap_mk18_eotech_usmc",
@@ -602,7 +603,7 @@ class CfgRespawnInventory {
         };
 
         class LightAntiTankAlternative {
-            displayName = $STR_SAD_kitRiflemanAntiTank;
+            displayName = $STR_SAD_kitRiflemanAntiTankAlternative;
             icon = "\a3\characters_f\data\ui\icon_expl_specialist_ca.paa";
             weapons[] = {
                 "rhs_weap_mk18_grip2_eotech",
@@ -646,24 +647,20 @@ class CfgRespawnInventory {
         };
 
         class EngineerAlternative {
-            displayName = $STR_SAD_kitEngineer;
+            displayName = $STR_SAD_kitEngineerAlternative;
             icon = "\a3\characters_f\data\ui\icon_repair_ca.paa";
             weapons[] = {
-                "M590_8RD",
+                "rhs_m4a1_bipod_acog_usmc",
                 "Throw",
                 "Put"
             };
             magazines[] = {
-                "rhsusf_8Rnd_Slug",
-                "rhsusf_8Rnd_Slug",
-                "rhsusf_8Rnd_Slug",
-                "rhsusf_8Rnd_Slug",
-                "rhsusf_8Rnd_Slug",
-                "rhsusf_8Rnd_00Buck",
-                "rhsusf_8Rnd_00Buck",
-                "rhsusf_8Rnd_HE",
-                "rhsusf_8Rnd_HE",
-                "rhsusf_8Rnd_HE",
+                "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+                "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+                "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+                "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+                "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+                "rhs_mag_30Rnd_556x45_M855A1_Stanag",
                 "HandGrenade",
                 "HandGrenade",
                 "DemoCharge_Remote_Mag",
@@ -698,7 +695,7 @@ class CfgRespawnInventory {
         };
 
         class MarksmanAlternative {
-            displayName = $STR_SAD_kitMarksman;
+            displayName = $STR_SAD_kitMarksmanAlternative;
             icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
             weapons[] = {
                 "rhs_weap_sr25_sup_marsoc",
@@ -745,7 +742,7 @@ class CfgRespawnInventory {
         };
 
         class PilotAlternative {
-            displayName = $STR_SAD_kitPilot;
+            displayName = $STR_SAD_kitPilotAlternative;
             icon = "\a3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa";
             weapons[] = {
                 "rhs_weap_m4",
@@ -778,6 +775,5 @@ class CfgRespawnInventory {
             };
             uniformClass = "U_B_HeliPilotCoveralls";
             backpack = "";
-        };    
-    };
+        };
 };

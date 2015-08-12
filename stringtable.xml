@@ -128,6 +128,45 @@
 		<Original>Pilot</Original>
 		<German>Pilot</German>
 	</Key>
+	<Key ID="STR_SAD_kitOfficerAlternative">
+		<Original>Officer alternative</Original>
+		<German>Offizier alternativ</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitRiflemanAlternative">
+		<Original>Rifleman alternative</Original>
+		<German>Schütze alternativ</German>
+	</Key>
+
+		<Key ID="STR_SAD_kitAutomaticRiflemanAlternative">
+		<Original>Automatic Rifleman alternative</Original>
+		<German>Automatikschütze alternativ</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitMedicAlternative">
+		<Original>Medic alternative</Original>
+		<German>Sanitäter alternativ</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitRiflemanAntiTankAlternative">
+		<Original>Rifleman Anti Tank alternative</Original>
+		<German>Panzerabwehrschütze alternativ</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitEngineerAlternative">
+		<Original>Engineer alternative</Original>
+		<German>Pionier alternativ</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitMarksmanAlternative">
+		<Original>Marksman alternative</Original>
+		<German>Präzisionsschütze alternativ</German>
+	</Key>
+
+	<Key ID="STR_SAD_kitPilotAlternative">
+		<Original>Pilot alternative</Original>
+		<German>Pilot alternativ</German>
+	</Key>
 
 </Container>
 

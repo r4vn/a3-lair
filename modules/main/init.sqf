@@ -29,5 +29,7 @@ _kitConfigs = 'inheritsFrom _x == (missionConfigFile >> "CfgRespawnInventory")'
 if (isServer) then {
     ["Initialize"] call BIS_fnc_dynamicGroups;
 } else {
-    ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+    player addEventHandler ["Respawn", {
+        ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+    }];
 };

@@ -18,7 +18,7 @@ while {alive player} do {
     {
         _marker = name _x;
 
-        if (getMarkerColor _marker == "") then {
+        if (_side == side _x && getMarkerColor _marker == "") then {
             _marker = createMarkerLocal [name _x, getPos _x];
             _marker setMarkerShapeLocal "Icon";
             _marker setMarkerTypeLocal "mil_triangle_noShadow";
@@ -31,6 +31,11 @@ while {alive player} do {
                     _marker setMarkerColorLocal "ColorWEST";
                 };
             };
+
+            // Add event handler for marker removal on unit death
+            _x addEventHandler ["killed", {
+                deleteMarkerLocal (name _this);
+            }];
         };
 
         _marker setMarkerPosLocal (getPos _x);

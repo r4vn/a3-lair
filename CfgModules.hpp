@@ -1,3 +1,10 @@
+/*
+ * Author: r4vn
+ *
+ * Description:
+ * This configuration loads the configuration files for each module.
+ */
+
 #include "modules\base\CfgModule.hpp"
 #include "modules\caches\CfgModule.hpp"
 #include "modules\map\CfgModule.hpp"

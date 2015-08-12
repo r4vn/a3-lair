@@ -1,5 +1,9 @@
-/**
+/*
+ * Author: r4vn
  *
+ * Description:
+ * This module offers essential and common functionalities used in other
+ * modules.
  */
 
 #define MODULE "main"

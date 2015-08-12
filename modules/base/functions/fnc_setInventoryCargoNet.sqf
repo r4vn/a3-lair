@@ -1,5 +1,10 @@
-/**
+/*
+ * Author: r4vn
  *
+ * Description:
+ * Clears and fills the inventory of a cargo net.
+ *
+ * TODO: Move this to module configuration
  */
 
 #include "script_macros.hpp"

@@ -1,3 +1,10 @@
+/*
+ * Author: r4vn
+ *
+ * Description:
+ * Common settings for the mission are defined in this configuration file.
+ */
+
 class Header {
     gameType = Coop;
     minPlayers = 2;

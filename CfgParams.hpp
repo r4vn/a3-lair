@@ -1,3 +1,11 @@
+/*
+ * Author: r4vn
+ *
+ * Description:
+ * This configuration holds all mission parameters. An inner class of Params
+ * is a single mission parameter.
+ */
+
 class Params
 {
     #ifndef WEATHER_DEFAULT

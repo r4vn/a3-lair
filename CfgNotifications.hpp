@@ -1,3 +1,11 @@
+/*
+ * Author: r4vn
+ *
+ * Description:
+ * All custom notification templates are defined in this configuration
+ * file. Each inner class of CfgNotifications represents a single template.
+ */
+
 class CfgNotifications {
     class VehicleRespawn {
         title = $STR_SAD_vehicleRespawn;

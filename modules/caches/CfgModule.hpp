@@ -1,9 +1,21 @@
+/*
+ * Author: r4vn
+ *
+ * Description:
+ * This is the module configuration for the caches module and is accessible via
+ * the MCFG macro.
+ */
+
 class CfgCaches {
     vehicle = "Box_FIA_Ammo_F";
-    vehicleVarPrefix = "cache"
+    vehicleVarPrefix = "cache";
     maxCount = 6;
     minSpacing = 500;
     intelDuration = 10;
+    // This array stores all buildings in which a cache can spawn.
+    // The first array entry of a building array is its class name and the
+    // second is the buildingPos representing the location above terrain level
+    // inside the building where the cache will be located.
     buildings[] = {
         {"Land_jbad_House3", 4},
         {"Land_jbad_House5", 2},
@@ -30,6 +42,10 @@ class CfgCaches {
     };
 
     class Insurgents {
+        // In this array all groups which can spawn at a cache are defined.
+        // The first entry in a insurgent group array is the category of the
+        // group and the second is the group name. The configuration path for
+        // the represented group is build using these two values.
         groups[] = {
             {"Infantry", "IRG_ReconSentry"},
             {"Infantry", "IRG_InfSentry"},

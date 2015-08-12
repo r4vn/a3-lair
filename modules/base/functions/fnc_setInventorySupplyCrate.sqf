@@ -1,5 +1,10 @@
-/**
+/*
+ * Author: r4vn
  *
+ * Description:
+ * Clears and fills the inventory of a supply crate.
+ *
+ * TODO: Move this to module configuration
  */
 
 #include "script_macros.hpp"

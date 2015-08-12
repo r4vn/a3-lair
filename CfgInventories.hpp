@@ -1,3 +1,12 @@
+/*
+ * Author: r4vn
+ *
+ * Description:
+ * All kits used in the mission are defined in this configuration file. Each
+ * inner class of CfgRespawnInventory represents a single kit. Locales should
+ * be used for the kit's display name.
+ */
+
 class CfgRespawnInventory {
     class SQL {
         displayName = $STR_SAD_kitOfficer;

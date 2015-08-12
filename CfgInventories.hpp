@@ -226,7 +226,18 @@ class CfgRespawnInventory {
             "rhs_mag_30Rnd_556x45_M855A1_Stanag"
         };
         items[] = {
-            "ACE_personalAidKit"
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",

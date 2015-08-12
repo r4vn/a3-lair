@@ -31,7 +31,7 @@ while {alive player} do {
 
         // Check if the unit is blufor and has a marker
         if (_side == side _x && getMarkerColor _marker == "") then {
-            // Create marker since its not present and set its appearence
+            // Create marker since its not present and set its appearance
             _marker = createMarkerLocal [name _x, getPos _x];
             _marker setMarkerShapeLocal "Icon";
             _marker setMarkerTypeLocal "mil_triangle_noShadow";

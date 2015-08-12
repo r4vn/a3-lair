@@ -46,6 +46,9 @@ class CfgRespawnInventory {
             "ACE_fieldDressing",
             "ACE_fieldDressing",
             "ACE_fieldDressing",
+            "ACE_IR_Strobe_Item",
+            "ACE_EarPlugs",
+            "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_squadleader",
@@ -93,6 +96,9 @@ class CfgRespawnInventory {
             "ACE_fieldDressing",
             "ACE_fieldDressing",
             "ACE_fieldDressing",
+            "ACE_IR_Strobe_Item",
+            "ACE_EarPlugs",
+            "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -137,6 +143,9 @@ class CfgRespawnInventory {
             "ACE_fieldDressing",
             "ACE_fieldDressing",
             "ACE_fieldDressing",
+            "ACE_IR_Strobe_Item",
+            "ACE_EarPlugs",
+            "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -203,6 +212,9 @@ class CfgRespawnInventory {
             "ACE_fieldDressing",
             "ACE_fieldDressing",
             "ACE_fieldDressing",
+            "ACE_IR_Strobe_Item",
+            "ACE_EarPlugs",
+            "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_medic",
@@ -247,6 +259,9 @@ class CfgRespawnInventory {
             "ACE_fieldDressing",
             "ACE_fieldDressing",
             "ACE_fieldDressing",
+            "ACE_IR_Strobe_Item",
+            "ACE_EarPlugs",
+            "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -294,7 +309,10 @@ class CfgRespawnInventory {
             "ACE_fieldDressing",
             "ACE_fieldDressing",
             "ACE_fieldDressing",
-            "ACE_Clacker"
+            "ACE_Clacker",
+            "ACE_IR_Strobe_Item",
+            "ACE_EarPlugs",
+            "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_repair",
@@ -342,6 +360,9 @@ class CfgRespawnInventory {
             "ACE_fieldDressing",
             "ACE_fieldDressing",
             "ACE_fieldDressing",
+            "ACE_IR_Strobe_Item",
+            "ACE_EarPlugs",
+            "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -379,6 +400,9 @@ class CfgRespawnInventory {
           "ACE_fieldDressing",
           "ACE_fieldDressing",
           "ACE_fieldDressing",
+          "ACE_IR_Strobe_Item",
+          "ACE_EarPlugs",
+          "ACE_NVG_Gen1",
         };
         linkedItems[] = {
             "V_TacVest_blk",
@@ -416,7 +440,10 @@ class CfgRespawnInventory {
                 "SmokeShell",
                 "SmokeShellPurple",
                 "SmokeShellPurple",
-                "Laserbatteries"
+                "Laserbatteries",
+                "ACE_IR_Strobe_Item",
+                "ACE_EarPlugs",
+                "ACE_NVG_Gen1",
             };
             items[] = {
                 "ACE_epinephrine",
@@ -478,6 +505,9 @@ class CfgRespawnInventory {
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
+                "ACE_IR_Strobe_Item",
+                "ACE_EarPlugs",
+                "ACE_NVG_Gen1",
             };
             linkedItems[] = {
                 "rhsusf_iotv_ucp_rifleman",
@@ -522,6 +552,9 @@ class CfgRespawnInventory {
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
+                "ACE_IR_Strobe_Item",
+                "ACE_EarPlugs",
+                "ACE_NVG_Gen1",
             };
             linkedItems[] = {
                 "rhsusf_iotv_ucp_rifleman",
@@ -588,6 +621,9 @@ class CfgRespawnInventory {
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
+                "ACE_IR_Strobe_Item",
+                "ACE_EarPlugs",
+                "ACE_NVG_Gen1",
             };
             linkedItems[] = {
                 "rhsusf_iotv_ucp_medic",
@@ -632,6 +668,9 @@ class CfgRespawnInventory {
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
+                "ACE_IR_Strobe_Item",
+                "ACE_EarPlugs",
+                "ACE_NVG_Gen1",
             };
             linkedItems[] = {
                 "rhsusf_iotv_ucp_rifleman",
@@ -679,7 +718,10 @@ class CfgRespawnInventory {
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
-                "ACE_Clacker"
+                "ACE_Clacker",
+                "ACE_IR_Strobe_Item",
+                "ACE_EarPlugs",
+                "ACE_NVG_Gen1",
             };
             linkedItems[] = {
                 "rhsusf_iotv_ucp_repair",
@@ -727,6 +769,9 @@ class CfgRespawnInventory {
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
                 "ACE_fieldDressing",
+                "ACE_IR_Strobe_Item",
+                "ACE_EarPlugs",
+                "ACE_NVG_Gen1",
             };
             linkedItems[] = {
                 "rhsusf_iotv_ucp_rifleman",
@@ -763,6 +808,9 @@ class CfgRespawnInventory {
               "ACE_fieldDressing",
               "ACE_fieldDressing",
               "ACE_fieldDressing",
+              "ACE_IR_Strobe_Item",
+              "ACE_EarPlugs",
+              "ACE_NVG_Gen1",
             };
             linkedItems[] = {
                 "V_TacVest_blk",

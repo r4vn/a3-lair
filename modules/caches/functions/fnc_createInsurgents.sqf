@@ -20,6 +20,7 @@ private [
     "_groupCount",
     "_group",
     "_groups",
+    "_minGroupCount",
     "_groupCfg",
     "_groupCfgInfo",
     "_groupPosition",
@@ -34,10 +35,16 @@ _cache = _this select 1;
 _cachePosition = getPos _cache;
 // Get a random group count
 _groupCount = random SAD_MAX_INS_GROUP_COUNT;
-// Get group configuration and offsets from the module configuration
+// Get group configuration, minimum group count and offsets from the module
+// configuration
 _groups = getArray (MCFG >> "Insurgents" >> "groups");
+_minGroupCount = getNumber (MCFG >> "Insurgents" >> "minGroupCount") - 1;
 _minOffset = getNumber (MCFG >> "Marker" >> "minOffset");
 _maxOffset = getNumber (MCFG >> "Marker" >> "maxOffset");
+
+if (_groupCount < _minGroupCount) then {
+    _groupCount = _minGroupCount;
+};
 
 // Loop groups
 for "_i" from 0 to _groupCount do {

@@ -42,6 +42,7 @@ class CfgCaches {
     };
 
     class Insurgents {
+        minGroupCount = 3;
         // In this array all groups which can spawn at a cache are defined.
         // The first entry in a insurgent group array is the category of the
         // group and the second is the group name. The configuration path for

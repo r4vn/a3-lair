@@ -9,6 +9,7 @@
 
 // Initialize modules
 call INIT("main");
+call INIT("kits");
 call INIT("base");
 call INIT("map");
 call INIT("rallies");

@@ -25,4 +25,4 @@ _target == _this &&
         // Is the unit leader of its group?
         leader (group _this) == _this &&
         // Does the unit have the squadleader kit?
-        vest _this == "rhsusf_iotv_ucp_squadleader";
+        _this getVariable [EGVAR_NAME("kits", "isSquadLeader"), false];

@@ -3,6 +3,10 @@ v1.0.0 (unreleased)
 - added ticket hud (#16)
 - added intelligence resource system (#17)
 
+v0.8.2 (unreleased)
+- fixed magazines of alternative automatic rifleman kit
+- removed bipod of alternative engineer kit
+
 v0.8.1
 - added a minimum of three insurgent groups per cache
 - added ieds

@@ -41,10 +41,6 @@ class CfgRespawnInventory {
             "Laserbatteries"
         };
         items[] = {
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_morphine",
             "ACE_morphine",
             "ACE_morphine",
             "ACE_fieldDressing",
@@ -102,10 +98,6 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_morphine",
             "ACE_morphine",
             "ACE_morphine",
             "ACE_fieldDressing",
@@ -158,10 +150,6 @@ class CfgRespawnInventory {
             "SmokeShell"
         };
         items[] = {
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_morphine",
             "ACE_morphine",
             "ACE_morphine",
             "ACE_fieldDressing",
@@ -303,10 +291,6 @@ class CfgRespawnInventory {
             "rhs_mag_30Rnd_556x45_M855A1_Stanag"
         };
         items[] = {
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_morphine",
             "ACE_morphine",
             "ACE_morphine",
             "ACE_fieldDressing",
@@ -363,10 +347,6 @@ class CfgRespawnInventory {
             "DemoCharge_Remote_Mag"
         };
         items[] = {
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_morphine",
             "ACE_morphine",
             "ACE_morphine",
             "ACE_fieldDressing",
@@ -423,10 +403,6 @@ class CfgRespawnInventory {
             "rhs_mag_m67"
         };
         items[] = {
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_epinephrine",
-            "ACE_morphine",
             "ACE_morphine",
             "ACE_morphine",
             "ACE_fieldDressing",
@@ -477,9 +453,6 @@ class CfgRespawnInventory {
             "SmokeShellRed"
         };
         items[] = {
-          "ACE_epinephrine",
-          "ACE_epinephrine",
-          "ACE_morphine",
           "ACE_morphine",
           "ACE_morphine",
           "ACE_fieldDressing",

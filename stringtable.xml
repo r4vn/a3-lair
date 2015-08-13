@@ -90,82 +90,82 @@
 	</Key>
 
 	<Key ID="STR_SAD_kitOfficer">
-		<Original>Officer</Original>
-		<German>Offizier</German>
+		<Original>[STD] Officer</Original>
+		<German>[STD] Offizier</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitRifleman">
-		<Original>Rifleman</Original>
-		<German>Schütze</German>
+		<Original>[STD] Rifleman</Original>
+		<German>[STD] Schütze</German>
 	</Key>
 
 		<Key ID="STR_SAD_kitAutomaticRifleman">
-		<Original>Automatic Rifleman</Original>
-		<German>Automatikschütze</German>
+		<Original>[STD] Automatic Rifleman</Original>
+		<German>[STD] Automatikschütze</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitMedic">
-		<Original>Medic</Original>
-		<German>Sanitäter</German>
+		<Original>[STD] Medic</Original>
+		<German>[STD] Sanitäter</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitRiflemanAntiTank">
-		<Original>Rifleman Anti Tank</Original>
-		<German>Panzerabwehrschütze</German>
+		<Original>[STD] Rifleman Anti Tank</Original>
+		<German>[STD] Panzerabwehrschütze</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitEngineer">
-		<Original>Engineer</Original>
-		<German>Pionier</German>
+		<Original>[STD] Engineer</Original>
+		<German>[STD] Pionier</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitMarksman">
-		<Original>Marksman</Original>
-		<German>Präzisionsschütze</German>
+		<Original>[STD] Marksman</Original>
+		<German>[STD] Präzisionsschütze</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitPilot">
-		<Original>Pilot</Original>
-		<German>Pilot</German>
+		<Original>[STD] Pilot</Original>
+		<German>[STD] Pilot</German>
 	</Key>
 	<Key ID="STR_SAD_kitOfficerAlternative">
-		<Original>Officer alternative</Original>
-		<German>Offizier alternativ</German>
+		<Original>[ALT] Officer</Original>
+		<German>[ALT] Offizier</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitRiflemanAlternative">
-		<Original>Rifleman alternative</Original>
-		<German>Schütze alternativ</German>
+		<Original>[ALT] Rifleman</Original>
+		<German>[ALT] Schütze</German>
 	</Key>
 
 		<Key ID="STR_SAD_kitAutomaticRiflemanAlternative">
-		<Original>Automatic Rifleman alternative</Original>
-		<German>Automatikschütze alternativ</German>
+		<Original>[ALT] Automatic Rifleman</Original>
+		<German>[ALT] Automatikschütze</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitMedicAlternative">
-		<Original>Medic alternative</Original>
-		<German>Sanitäter alternativ</German>
+		<Original>[ALT] Medic</Original>
+		<German>[ALT] Sanitäter</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitRiflemanAntiTankAlternative">
-		<Original>Rifleman Anti Tank alternative</Original>
-		<German>Panzerabwehrschütze alternativ</German>
+		<Original>[ALT] Rifleman Anti Tank</Original>
+		<German>[ALT] Panzerabwehrschütze</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitEngineerAlternative">
-		<Original>Engineer alternative</Original>
-		<German>Pionier alternativ</German>
+		<Original>[ALT] Engineer</Original>
+		<German>[ALT] Pionier</German>
 	</Key>
 
 	<Key ID="STR_SAD_kitMarksmanAlternative">
-		<Original>Marksman alternative</Original>
-		<German>Präzisionsschütze alternativ</German>
+		<Original>[ALT] Marksman</Original>
+		<German>[ALT] Präzisionsschütz/German>
 	</Key>
 
 	<Key ID="STR_SAD_kitPilotAlternative">
-		<Original>Pilot alternative</Original>
-		<German>Pilot alternativ</German>
+		<Original>[ALT] Pilot</Original>
+		<German>[ALT] Pilot</German>
 	</Key>
 
 </Container>

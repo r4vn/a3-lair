@@ -13,7 +13,6 @@ class CfgBase {
         class CargoNet {
             weapons[] = {
                 {"rhs_weap_m16a4_grip_compm4", 3},
-                {"rhs_weap_m16a4_grip_compm4", 3},
                 {"rhs_weap_m249_pip_elcan", 1},
                 {"rhs_weap_M136", 3},
                 {"Laserdesignator", 1},
@@ -40,7 +39,6 @@ class CfgBase {
         class SupplyCrate {
             weapons[] = {
                 {"rhs_weap_m16a4_grip_compm4", 2},
-                {"rhs_weap_m16a4_grip_compm4", 0},
                 {"rhs_weap_m249_pip_elcan", 0},
                 {"rhs_weap_M136", 2},
                 {"Laserdesignator", 1},

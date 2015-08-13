@@ -11,8 +11,8 @@
 
 private [
     "_marker",
-    "_markerPosition",
-    "_markerSize",
+    "_baseArea",
+    "_position",
     "_radius",
     "_vehicles",
     "_types"
@@ -27,21 +27,13 @@ _types = [
     "Ship"
 ];
 
-// Get the base marker and its dimensions
-_markerName = getText (MCFG >> "markerName");
-_markerPosition = getMarkerPos _markerName;
-_markerSize = getMarkerSize _markerName;
-
-// Select the larger of both axis as we can only use circles for the search
-// radius
-if (_markerSize select 0 < _markerSize select 1) then {
-    _radius = _markerSize select 1;
-} else {
-    _radius = _markerSize select 0;
-};
+// Get the base area
+_baseArea = call FUNC("getBaseArea");
+_position = _baseArea select 0;
+_radius = _baseArea select 1;
 
 // Get all vehicles of the specified types
-_vehicles = nearestObjects [_markerPosition, _types, _radius];
+_vehicles = nearestObjects [_position, _types, _radius];
 
 // Loop each vehicle
 {

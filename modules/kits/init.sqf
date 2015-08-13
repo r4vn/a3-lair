@@ -22,4 +22,11 @@ if(!isDedicated) then {
     player addEventHandler ["Respawn", {
         (_this select 0) execVM FUNC_FILE("checkKit");
     }];
+
+    // Check player for pilot kit on GetIn event
+    {
+        _x addEventHandler ["GetIn", {
+            _this call FUNC("handleGetInAircraft");
+        }];
+    } forEach vehicles;
 };

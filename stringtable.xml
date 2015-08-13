@@ -69,6 +69,11 @@
 		<German>FAHRZEUG VERFÜGBAR</German>
 	</Key>
 
+	<Key ID="STR_SAD_canNotUseVehicle">
+		<Original>You can not use this vehicle</Original>
+		<German>Du kannst dieses Fahrzeug nicht verwenden</German>
+	</Key>
+
 	<Key ID="STR_SAD_deployRally">
 		<Original>Deploy Rally Point</Original>
 		<German>Setze Rally Point</German>

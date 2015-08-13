@@ -3,7 +3,7 @@ v1.0.0 (unreleased)
 - added ticket hud (#16)
 - added intelligence resource system (#17)
 
-v0.8.1 (unreleased)
+v0.8.1
 - added a minimum of three insurgent groups per cache
 - added ieds
 - added helicopter usage limitations (#18)

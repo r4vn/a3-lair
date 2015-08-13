@@ -11,7 +11,7 @@ v0.8.1 (unreleased)
 - updated kits for night time
 - fixed medic kit not recognized by ace
 - fixed unit markers to not show enemy units
-- fixed unit markers to not be removed when unit dies
+- fixed unit markers to be removed when unit dies
 
 v0.8.0
 - added unit markers for west

@@ -194,6 +194,17 @@ class CfgRespawnInventory {
             "Throw",
             "Put"
         };
+        magazines[] = {
+            "rhsusf_50Rnd_762x51",
+            "rhsusf_50Rnd_762x51",
+            "rhsusf_50Rnd_762x51",
+            "rhsusf_50Rnd_762x51",
+            "rhsusf_50Rnd_762x51",
+            "HandGrenade",
+            "HandGrenade",
+            "SmokeShell",
+            "SmokeShell"
+        };
     };
 
     class Medic {
@@ -385,7 +396,7 @@ class CfgRespawnInventory {
     class EngineerAlternative: Engineer {
         displayName = $STR_SAD_kitEngineerAlternative;
         weapons[] = {
-            "rhs_m4a1_bipod_acog_usmc",
+            "rhs_m4a1_grip_acog3_usmc",
             "Throw",
             "Put"
         };

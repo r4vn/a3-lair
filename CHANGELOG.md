@@ -1,3 +1,18 @@
+v1.0.0 (unreleased)
+- added ticket system (#16)
+- added ticket hud (#16)
+- added intelligence resource system (#17)
+
+v0.8.1 (unreleased)
+- added a minimum of three insurgent groups per cache
+- added ieds
+- added helicopter usage limitations (#18)
+- added alternative kit loadouts
+- updated kits for night time
+- fixed medic kit not recognized by ace
+- fixed unit markers to not show enemy units
+- fixed unit markers to not be removed when unit dies
+
 v0.8.0
 - added unit markers for west
 - added group icons

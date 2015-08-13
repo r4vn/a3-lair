@@ -1,7 +1,7 @@
 v1.0.0 (unreleased)
-- added ticket system (#16)
-- added ticket hud (#16)
-- added intelligence resource system (#17)
+- added ticket system
+- added ticket hud
+- added intelligence resource system
 
 v0.8.2 (unreleased)
 - fixed magazines of alternative automatic rifleman kit
@@ -10,7 +10,7 @@ v0.8.2 (unreleased)
 v0.8.1
 - added a minimum of three insurgent groups per cache
 - added ieds
-- added helicopter usage limitations (#18)
+- added helicopter usage limitations
 - added alternative kit loadouts
 - updated kits for night time
 - fixed medic kit not recognized by ace

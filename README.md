@@ -30,19 +30,19 @@ Please make sure you always have the latest versions of the following addons ins
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 - RHS: Russian Federation armed forces <br/>
   [`Website`](http://www.rhsmods.org/mod/1)
-  <span style="color: grey"><code>Workshop</code></span>
+  <code style="color: grey">Workshop</code>
 - RHS: United States armed forces <br/>
   [`Website`](http://www.rhsmods.org/mod/2)
-  <span style="color: grey"><code>Workshop</code></span>
+  <code style="color: grey">Workshop</code>
 - Task Force Arrowhead Radio <br/>
   [`Website`](http://radio.task-force.ru/en)
-  <span style="color: grey"><code>Workshop</code></span>
+  <code style="color: grey">Workshop</code>
 - Kunduz, Afghanistan <br/>
-  <span style="color: grey"><code>Website</code></span>
+  <span ><code style="color: grey">Website</code>
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=421620913)
 - Mission Enhanced Little Bird <br/>
   [`Website`](http://www.armaholic.com/page.php?id=28856)
-  <span style="color: grey"><code>Workshop</code></span>
+  <code style="color: grey">Workshop</code>
 
 ## Installation
 

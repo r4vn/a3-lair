@@ -22,6 +22,8 @@ _vehicle = _this select 0;
 _position = _this select 1;
 _unit = _this select 2;
 
+// Do nothing when unit is not player aka unit is remote
+if (_unit != player) exitWith {};
 // Do nothing when vehicle is not an air unit
 if (!(_vehicle isKindOf "Air")) exitWith {};
 

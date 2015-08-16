@@ -19,9 +19,16 @@ respawnTemplatesWest[] = {
     "MenuInventory",
     "MenuPosition"
 };
+corpseManagerMode = 1;
+corpseLimit = 15;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 300;
 
-respawnVehicleDelay = 60;
-wreckManagerMode = 2;
+respawnVehicleDelay = 300;
+wreckManagerMode = 1;
+wreckLimit = 15;
+wreckRemovalMinTime = 300;
+wreckRemovalMaxTime = 300;
 
 showHUD = 1;
 showGroupIndicator = 1;

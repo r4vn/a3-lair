@@ -51,6 +51,4 @@ _vehicles = nearestObjects [_position, _types, _radius];
     _x addMPEventHandler ["MPRespawn", {
         call FUNC("handlevehicleRespawn");
     }];
-
-    addToRemainsCollector [_x];
 } forEach _vehicles;

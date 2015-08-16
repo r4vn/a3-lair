@@ -38,7 +38,7 @@ Please make sure you always have the latest versions of the following addons ins
   [`Website`](http://radio.task-force.ru/en)
   <code style="color: grey">Workshop</code>
 - Kunduz, Afghanistan <br/>
-  <span ><code style="color: grey">Website</code>
+  <code style="color: grey">Website</code>
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=421620913)
 - Mission Enhanced Little Bird <br/>
   [`Website`](http://www.armaholic.com/page.php?id=28856)

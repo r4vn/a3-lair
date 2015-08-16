@@ -69,10 +69,25 @@
 		<German>FAHRZEUG VERFÜGBAR</German>
 	</Key>
 
-	<Key ID="STR_SAD_canNotUseVehicle">
-		<Original>You can not use this vehicle</Original>
-		<German>Du kannst dieses Fahrzeug nicht verwenden</German>
+    <Key ID="STR_SAD_kitSystem">
+        <Original>Kit System</Original>
+        <German>Ausrüstungssystem</German>
+    </Key>
+
+	<Key ID="STR_SAD_operatingAircrafts">
+		<Original>Operating Aircrafts</Original>
+		<German>Luftfahrzeuge operieren</German>
 	</Key>
+
+    <Key ID="STR_SAD_pilotKitNeeded">
+        <Original>You need a pilot kit in order to operate air vehicles.</Original>
+        <German>Du benötigst eine Pilotenausrüstung, um ein Luftfahrzeug zu operieren.</German>
+    </Key>
+
+    <Key ID="STR_SAD_requestKits">
+        <Original>To request a specialized kit, select it in the respawn dialog.</Original>
+        <German>Um eine Spezialausrüstung anzufordern, wähle sie im Respawn Dialog aus.</German>
+    </Key>
 
 	<Key ID="STR_SAD_deployRally">
 		<Original>Deploy Rally Point</Original>

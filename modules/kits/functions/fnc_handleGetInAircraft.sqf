@@ -32,6 +32,6 @@ if (_position == "gunner" || _position == "driver") then {
         // Push unit out vehicle if it tries to enter the driver or gunner seat
         // and does not have a pilot kit
         moveOut _unit;
-        hint localize "STR_SAD_canNotUseVehicle";
+        [["KitSystem", "OperatingAircrafts"], 5] call BIS_fnc_advHint;
     };
 };

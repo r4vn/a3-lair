@@ -32,15 +32,15 @@ _vehicle call FUNC("clearInventoryGlobal");
 
 // Add weapons
 {
-    _vehicle addWeaponCargo [_x select 0, _x select 1];
+    _vehicle addWeaponCargoGlobal [_x select 0, _x select 1];
 } forEach _weapons;
 
 // Add magazines
 {
-    _vehicle addMagazineCargo [_x select 0, _x select 1];
+    _vehicle addMagazineCargoGlobal [_x select 0, _x select 1];
 } forEach _magazines;
 
 // Add items
 {
-    _vehicle addItemCargo [_x select 0, _x select 1];
+    _vehicle addItemCargoGlobal [_x select 0, _x select 1];
 } forEach _items;

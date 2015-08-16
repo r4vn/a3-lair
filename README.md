@@ -1,7 +1,7 @@
 # ACE RHS [S&D-8]: Dusty Lair
 
 ![release](https://img.shields.io/badge/release-v0.8.1-blue.svg)
-![arma](https://img.shields.io/badge/arma-v1.48-lightgrey.svg)
+![arma 3](https://img.shields.io/badge/arma-v1.50-lightgrey.svg)
 
 An Arma 3 cooperative search and destroy multiplayer mission.
 
@@ -11,10 +11,17 @@ An Arma 3 cooperative search and destroy multiplayer mission.
 This mission aims to deliver tactical search and destroy gameplay to a small group of players.
 
 
+### Features
+- Randomly generated caches
+- Randomly generated insurgents
+- Specialized kit roles
+- Rally Points
+- BI's Dynamic Groups
+
+
 ## Requirements
 
 Please make sure you always have the latest versions of the following addons installed before running the mission as this could have unforseen side effects.
-- Arma 3
 - CBA_A3 <br/>
   [`Website`](http://dev.withsix.com/projects/cba-a3)
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
@@ -23,19 +30,19 @@ Please make sure you always have the latest versions of the following addons ins
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 - RHS: Russian Federation armed forces <br/>
   [`Website`](http://www.rhsmods.org/mod/1)
-  ~~`Workshop`~~ 
+  <span style="color: grey">`Workshop`</span>
 - RHS: United States armed forces <br/>
   [`Website`](http://www.rhsmods.org/mod/2)
-  ~~`Workshop`~~ 
+  <span style="color: grey">`Workshop`</span>
 - Task Force Arrowhead Radio <br/>
   [`Website`](http://radio.task-force.ru/en)
-  ~~`Workshop`~~ 
+  <span style="color: grey">`Workshop`</span>
 - Kunduz, Afghanistan <br/>
-  ~~`Website`~~
+  <span style="color: grey">`Website`</span>
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=421620913)
 - Mission Enhanced Little Bird <br/>
   [`Website`](http://www.armaholic.com/page.php?id=28856)
-  ~~`Workshop`~~
+  <span style="color: grey">`Workshop`</span>
 
 ## Installation
 

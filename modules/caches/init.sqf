@@ -5,8 +5,6 @@
  * Initializes the caches module. This module handles cache creation/destruction
  * and spawning insurgents.
  *
- * TODO: Check whether SAD_caches is still needed or another simpler
- *       implementation is available
  * TODO: Use some player related resource in order to spawn/reveal new caches.
  */
 
@@ -16,18 +14,13 @@ private [
     "_intelDuration"
 ];
 
-// Public variables
-
-// Stores the amount of destroyed caches
-SAD_destroyedCachesCount = 0;
-publicVariable "SAD_destroyedCachesCount";
-
-// Stores all created cache vehicles
-SAD_caches = [];
-publicVariable "SAD_caches";
-
 // Initializations
 if (isServer) then {
+    // Stores the amount of destroyed caches
+    missionNamespace setVariable [GVAR_NAME("createdCachesCount"), 0, true];
+    // Stores the amount of destroyed caches
+    missionNamespace setVariable [GVAR_NAME("destroyedCachesCount"), 0, true];
+
     // Select a random intelligence time at which the cache will be unveiled.
     _intelDuration = random (getNumber (MCFG >> "intelDuration"));
 

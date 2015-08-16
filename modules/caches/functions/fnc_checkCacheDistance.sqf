@@ -18,24 +18,29 @@
 private [
     "_return",
     "_mapSize",
-    "_cachePosition",
+    "_newCachePosition",
     "_distance",
-    "_cachesCount",
+    "_vehicleVarPrefix",
+    "_cache",
+    "_createdCachesCount",
     "_minSpacing"
 ];
 
-_cachePosition = _this select 0;
+_newCachePosition = _this select 0;
 
 // Get the map size and the spacing from the module configuration
 _mapSize = getNumber (MCFG >> "Map" >> "size");
 _minSpacing = getNumber (MCFG >> "minSpacing");
+// Get the cache var prefix
+_vehicleVarPrefix = getText (MCFG >> "vehicleVarPrefix");
 // Get the count of already spawned caches
-_cachesCount = count SAD_caches;
+_createdCachesCount = missionNamespace getVariable [
+        GVAR_NAME("createdCachesCount"), 0];
 
-if (_cachePosition select 0 > _mapSize - _minSpacing ||
-        _cachePosition select 0 < _minSpacing ||
-        _cachePosition select 1 > _mapSize - _minSpacing ||
-        _cachePosition select 1 < _minSpacing) then {
+if (_newCachePosition select 0 > _mapSize - _minSpacing ||
+        _newCachePosition select 0 < _minSpacing ||
+        _newCachePosition select 1 > _mapSize - _minSpacing ||
+        _newCachePosition select 1 < _minSpacing) then {
     // Return false if the psoition is near the map border and does not match
     // the spacing from it
     _return = false;
@@ -44,9 +49,15 @@ if (_cachePosition select 0 > _mapSize - _minSpacing ||
     _return = true;
 
     // Loop over all caches and check the distance to position
-    for "_i" from 0 to _cachesCount - 1 do {
+    for "_i" from 1 to _createdCachesCount do {
+        // Get the current cache from this iteration
+        _cache = missionNamespace getVariable [format ["%1 %2",
+                _vehicleVarPrefix, _i], nil];
+
+        if (isNil "_cache") exitWith {};
+
         // Get the distance between the iteration's cache location and position
-        _distance = (SAD_caches select _i) distance _cachePosition;
+        _distance = _cache distance _newCachePosition;
 
         // If the distance does not fulfill the spacing return false
         if (_distance < _minSpacing) exitWith {

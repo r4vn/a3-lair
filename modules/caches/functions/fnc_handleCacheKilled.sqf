@@ -17,6 +17,7 @@
 #include "script_macros.hpp"
 
 private [
+    "_destroyedCachesCount",
     "_cacheId",
     "_cache",
     "_intelDuration"
@@ -29,14 +30,18 @@ _cacheId = vehicleVarName _cache;
 // Hide the cache to prevent visual glitching
 _cache hideObjectGlobal true;
 // Increase the amount of destroyed caches
-INCREASE(SAD_destroyedCachesCount);
+_destroyedCachesCount = missionNamespace getVariable [
+        GVAR_NAME("destroyedCachesCount"), 0];
+INCREASE(_destroyedCachesCount);
+missionNamespace setVariable [GVAR_NAME("destroyedCachesCount"),
+        _destroyedCachesCount, true];
 
 // Update the cache area marker and task state to reflect the destroyed cache
 _cacheId setMarkerColor "ColorGrey";
 [_cacheId, "Succeeded", true] call BIS_fnc_taskSetState;
 
 // Check whether all needed caches have been destroyed
-if (SAD_destroyedCachesCount < NEEDED_CACHES_COUNT) then {
+if (_destroyedCachesCount < NEEDED_CACHES_COUNT) then {
     // If there are still caches remaining generate random intelligence duration
     // and schedule new cache creation
     _intelDuration = random (getNumber (MCFG >> "intelDuration"));

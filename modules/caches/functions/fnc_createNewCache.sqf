@@ -7,9 +7,6 @@
  * Note: Since this a computation heavy task and uses uiSleep, it needs to be
  * executed in its own VM.
  *
- * TODO: Maybe move marker and insurgent creation out of this function to make
- *       it more modular
- *
  * Parameter(s):
  *     0: <number> (Optional) Delay after which the cache should be created.
  *                 When none is specified zero is used as delay.
@@ -18,6 +15,7 @@
 #include "script_macros.hpp"
 
 private [
+    "_createdCachesCount",
     "_positionTerrainLevel",
     "_position",
     "_cache",
@@ -32,12 +30,15 @@ private [
 
 _delay = _this select 0;
 
+// Get the currently created caches count
+_createdCachesCount = missionNamespace getVariable [
+        GVAR_NAME("createdCachesCount"), 0];
 // Get the maximum count of caches spawnable on the map
 _maxCacheCount = getNumber (MCFG >> "maxCount");
 
 // Don't create a cache if there is no more space on the map aka maximum count
 // of caches exceeded
-if ((count SAD_caches) < _maxCacheCount) then {
+if (_createdCachesCount < _maxCacheCount) then {
     if (isNil "_delay") then {
         // If no delay given set it to zero
         _delay = 0;
@@ -56,6 +57,10 @@ if ((count SAD_caches) < _maxCacheCount) then {
 
     // Get a new cache location
     _positionTerrainLevel = call FUNC("findNewCacheLocation");
+    // Increase created caches count by one
+    INCREASE(_createdCachesCount);
+    missionNamespace setVariable [GVAR_NAME("createdCachesCount"),
+            _createdCachesCount, true];
 
     // Spawn the cache somewhere outside the map to prevent destruction on spawn
     // as position is ATL
@@ -64,14 +69,11 @@ if ((count SAD_caches) < _maxCacheCount) then {
     _cache setPosATL _positionTerrainLevel;
     // Set the variable name for the cache vehicles
     _cache setVehicleVarName (format ["%1 %2", localize "STR_SAD_cacheTitle",
-            (count SAD_caches) + 1]);
+            _createdCachesCount]);
     // Add destruction handler for the cache
     _cache addEventHandler ["killed", {
         call FUNC("handleCacheKilled");
     }];
-
-    // Add the cache to the cache array
-    ARR_ADD(SAD_caches, _cache);
 
     // Get the position of the cache (not ATL)
     _position = getPos _cache;

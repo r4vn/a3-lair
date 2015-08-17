@@ -1,6 +1,6 @@
 # ACE RHS [S&D-8]: Dusty Lair
 
-![release](https://img.shields.io/badge/release-v0.8.1-blue.svg)
+![release](https://img.shields.io/badge/release-v0.8.2-blue.svg)
 ![arma 3](https://img.shields.io/badge/arma_3-v1.50-lightgrey.svg)
 
 An Arma 3 cooperative search and destroy multiplayer mission.

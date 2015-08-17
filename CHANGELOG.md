@@ -3,7 +3,7 @@ v1.0.0 (unreleased)
 - added ticket hud
 - added intelligence resource system
 
-v0.8.2 (unreleased)
+v0.8.2
 - fixed second cache naming on dedicated
 - fixed second cache area marker not showing up on dedicated
 - fixed pilot not being able to enter air vehicles when multiple players are on server

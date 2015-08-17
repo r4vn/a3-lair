@@ -34,7 +34,7 @@ _maxOffset = _this select 3;
 for "_i" from 0 to 3 do {
     // Randomize the waypoint location
     _wpPosition = [_position, _minOffset, _maxOffset] call
-            SAD_fnc_randomizePosition2D;
+            EFUNC("main", "randomizePosition2D");
 
     // Add the waypoint to the group
     _waypoint = _group addWaypoint [_wpPosition, 0];

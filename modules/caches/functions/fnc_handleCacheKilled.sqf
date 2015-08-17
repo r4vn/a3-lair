@@ -40,6 +40,9 @@ missionNamespace setVariable [GVAR_NAME("destroyedCachesCount"),
 _cacheId setMarkerColor "ColorGrey";
 [_cacheId, "Succeeded", true] call BIS_fnc_taskSetState;
 
+// Create a new custom event for cache destruction
+["CacheDestruction", [_cache]] call CBA_fnc_globalEvent;
+
 // Check whether all needed caches have been destroyed
 if (_destroyedCachesCount < NEEDED_CACHES_COUNT) then {
     // If there are still caches remaining generate random intelligence duration

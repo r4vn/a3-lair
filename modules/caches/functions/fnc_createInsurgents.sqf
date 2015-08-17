@@ -56,11 +56,11 @@ for "_i" from 0 to _groupCount do {
     if (_i == 0) then {
         // If its the first group, choose a location near the cache
         _groupPosition = [_cachePosition, _minOffset / 2, _minOffset / 2] call
-                SAD_fnc_randomizePosition2D;
+                EFUNC("main", "randomizePosition2D");
     } else {
         // For every other group choose a random location within the cache area
         _groupPosition = [_cachePosition, _minOffset, _maxOffset / 2] call
-                SAD_fnc_randomizePosition2D;
+                EFUNC("main", "randomizePosition2D");
     };
 
     // Spawn the insurgent group

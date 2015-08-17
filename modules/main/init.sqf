@@ -14,10 +14,9 @@ private [
     "_respawnInventoryConfig"
 ];
 
-// Make public functions from this module accessible from other modules
-SAD_fnc_randomizePosition2D = FUNC("randomizePosition2D");
-
 // ACE settings
+ace_map_BFT_Enabled = true;
+ace_map_BFT_HideAiGroups = true;
 ace_hearing_EnableCombatDeafness = true;
 ace_hearing_EarplugsVolume = 0.9;
 ace_hearing_UnconsciousnessVolume = 0.7;

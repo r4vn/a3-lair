@@ -80,7 +80,7 @@ if (_createdCachesCount < _maxCacheCount) then {
 
     // Randomize the cache area marker position
     _markerPosition = [_position, _minOffset, _maxOffset] call
-            SAD_fnc_randomizePosition2D;
+            EFUNC("main", "randomizePosition2D");
 
     // Create cache marker, cache task and insurgent groups
     [_markerPosition, _cache] call FUNC("createCacheMarker");

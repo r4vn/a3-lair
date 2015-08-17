@@ -22,6 +22,8 @@
 // Macro to get code of a private module function
 #define FUNC(name) (compile (preprocessFileLineNumbers (\
         format ["modules\%1\functions\fnc_%2.sqf", MODULE, name])))
+#define EFUNC(mod, name) (compile (preprocessFileLineNumbers (\
+        format ["modules\%1\functions\fnc_%2.sqf", mod, name])))
 // Macro to get file name of private module function
 #define FUNC_FILE(name) (format ["modules\%1\functions\fnc_%2.sqf", MODULE,\
         name]);

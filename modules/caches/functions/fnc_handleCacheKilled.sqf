@@ -41,7 +41,8 @@ _cacheId setMarkerColor "ColorGrey";
 [_cacheId, "Succeeded", true] call BIS_fnc_taskSetState;
 
 // Create a new custom event for cache destruction
-["CacheDestruction", [_cache]] call CBA_fnc_globalEvent;
+["CacheDestruction", [_cache, _destroyedCachesCount, NEEDED_CACHES_COUNT]] call
+        CBA_fnc_globalEvent;
 
 // Check whether all needed caches have been destroyed
 if (_destroyedCachesCount < NEEDED_CACHES_COUNT) then {

@@ -18,14 +18,19 @@ uiSleep 2;
 // Show resource
 cutRsc ["MissionHud", "PLAIN", 1, false];
 
-_cacheCount = 6;
+_cacheCount = "NeededCaches" call BIS_fnc_getParamValue;
 _ticketCount = missionNamespace getVariable [GVAR_NAME("bluforTicketCount"), 0];
 
-(SAD_tickets_missionHud select 0) displayCtrl 1100 ctrlSetText str _cacheCount;
-(SAD_tickets_missionHud select 0) displayCtrl 1101 ctrlSetText str _ticketCount;
+(SAD_tickets_missionHud select 0) displayCtrl 1100 ctrlSetText str _ticketCount;
+(SAD_tickets_missionHud select 0) displayCtrl 1101 ctrlSetText str _cacheCount;
 
-// Register update handler
+// Register update handlers
 ["BluforTicketUpdate", {
-    (SAD_tickets_missionHud select 0) displayCtrl 1101 ctrlSetText str (_this
+    (SAD_tickets_missionHud select 0) displayCtrl 1100 ctrlSetText str (_this
             select 0);
+}] call CBA_fnc_addEventHandler;
+
+["CacheDestruction", {
+    (SAD_tickets_missionHud select 0) displayCtrl 1101 ctrlSetText str ((_this
+                select 2) - (_this select 1));
 }] call CBA_fnc_addEventHandler;

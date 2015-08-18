@@ -26,44 +26,64 @@ class RscTitles {
         fadeOut = 0;
         onLoad = "SAD_tickets_missionHud = _this;";
 
-        class controls {
-            #define INDICATOR_WIDTH 0.058
-            #define INDICATOR_HEIGHT 0.05
-            #define MARGIN 0.025
-            #define PADDING 0.015
-            #define POS_X (safeZoneX + safeZoneW - INDICATOR_WIDTH - MARGIN)
-            #define POS_Y(n) (safeZoneY + (safeZoneH / 3) + n * \
-                    INDICATOR_HEIGHT + (n - 1) * PADDING)
-            #define FONT "PuristaBold"
+        #define SIZE 0.05 * safezoneW
+        #define MARGIN 0.01 * safezoneW
+        #define POS_X(n) safeZoneX + n * SIZE * 0.75
+        #define POS_Y safeZoneY + safeZoneH - SIZE - MARGIN
+        #define FONT "PuristaBold"
 
-            class BluforTicketsIndicator {
-                idc = 1101;
-                type = 0;
-                style = 114;
-                x = POS_X;
-                y = POS_Y(1);
-                w = INDICATOR_WIDTH;
-                h = INDICATOR_HEIGHT;
-                font = FONT;
-                sizeEx = 0.03;
-                colorText[] = {255, 255, 255, 1};
-                colorBackground[] = {0, 0, 255, 0.5};
-                text = "---";
+        class RscIndicator {
+            idc = -1;
+            type = 0;
+            style = 2;
+            x = 0;
+            y = 0;
+            w = 0;
+            h = 0;
+            font = FONT;
+            sizeEx = 0.04;
+            colorText[] = {255, 255, 255, 1};
+            colorBackground[] = {0, 0, 0, 0};
+            text = "-";
+        };
+
+        class controls {
+            class BluforTicketsBackground: RscIndicator {
+                idc = 1110;
+                style = 2096;
+                x = POS_X(0);
+                y = POS_Y;
+                w = SIZE;
+                h = SIZE;
+                colorText[] = {0, 0.29412, 0.59608, 0.75};
+                text = "\a3\ui_f\data\gui\Rsc\RscDisplayMultiplayerSetup\flag_bluefor_ca.paa";
             };
 
-            class InsurgentCacheIndicator {
+            class BluforTicketsIndicator: RscIndicator {
                 idc = 1100;
-                type = 0;
-                style = 114;
-                x = POS_X;
-                y = POS_Y(2);
-                w = INDICATOR_WIDTH;
-                h = INDICATOR_HEIGHT;
-                font = FONT;
-                sizeEx = 0.03;
-                colorText[] = {255, 255, 255, 1};
-                colorBackground[] = {255, 0, 0, 0.5};
-                text = "---";
+                x = POS_X(0);
+                y = POS_Y;
+                w = SIZE;
+                h = SIZE;
+            };
+
+            class InsurgentCacheBackground: RscIndicator {
+                idc = 1111;
+                style = 2096;
+                x = POS_X(1);
+                y = POS_Y;
+                w = SIZE;
+                h = SIZE;
+                colorText[] = {0.50196, 0, 0, 0.75};
+                text = "\a3\ui_f\data\gui\Rsc\RscDisplayMultiplayerSetup\flag_opfor_ca.paa";
+            };
+
+            class InsurgentCacheIndicator: RscIndicator {
+                idc = 1101;
+                x = POS_X(1);
+                y = POS_Y;
+                w = SIZE;
+                h = SIZE;
             };
         };
     };

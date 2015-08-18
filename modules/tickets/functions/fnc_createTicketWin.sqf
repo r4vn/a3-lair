@@ -21,7 +21,7 @@ _ticketWin = _this select 0;
 // Get current ticket count
 _ticketCount = missionNamespace getVariable [GVAR_NAME("bluforTicketCount"), 0];
 // Calculate new ticket count
-_newTicketCount = _ticketCount - _ticketWin;
+_newTicketCount = _ticketCount + _ticketWin;
 
 // Set new ticket count
 missionNamespace setVariable [GVAR_NAME("bluforTicketCount"), _newTicketCount,

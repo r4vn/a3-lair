@@ -74,6 +74,8 @@ if (_createdCachesCount < _maxCacheCount) then {
     _cache addEventHandler ["killed", {
         call FUNC("handleCacheKilled");
     }];
+    // Create a new custom event for cache creation
+    ["CacheCreated", [_cache]] call CBA_fnc_globalEvent;
 
     // Get the position of the cache (not ATL)
     _position = getPos _cache;

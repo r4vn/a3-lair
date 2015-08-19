@@ -11,3 +11,4 @@
 #include "modules\map\CfgModule.hpp"
 #include "modules\rallies\CfgModule.hpp"
 #include "modules\tickets\CfgModule.hpp"
+#include "modules\ieds\CfgModule.hpp"

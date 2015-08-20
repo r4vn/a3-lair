@@ -22,6 +22,12 @@ if (isServer) then {
                 FUNC("createTicketWin");
     }] call CBA_fnc_addEventHandler;
 
+    // Register civilian killed ticket loss
+    ["CivilianKilled", {
+        [getNumber (MCFG >> "ticketLossCivilianKilled")] call
+                FUNC("createTicketLoss");
+    }] call CBA_fnc_addEventHandler;
+
     // Create ticket bleed per minute
     execVM FUNC_FILE("scheduleTicketBleed");
     // Create handler for mission failure

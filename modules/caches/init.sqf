@@ -4,8 +4,6 @@
  * Description:
  * Initializes the caches module. This module handles cache creation/destruction
  * and spawning insurgents.
- *
- * TODO: Use some player related resource in order to spawn/reveal new caches.
  */
 
 #include "functions\script_macros.hpp"

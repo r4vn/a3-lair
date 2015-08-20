@@ -74,8 +74,6 @@ if (_createdCachesCount < _maxCacheCount) then {
     _cache addEventHandler ["killed", {
         call FUNC("handleCacheKilled");
     }];
-    // Create a new custom event for cache creation
-    ["CacheCreated", [_cache]] call CBA_fnc_globalEvent;
 
     // Get the position of the cache (not ATL)
     _position = getPos _cache;
@@ -84,10 +82,12 @@ if (_createdCachesCount < _maxCacheCount) then {
     _markerPosition = [_position, _minOffset, _maxOffset] call
             EFUNC("main", "randomizePosition2D");
 
+    // Create a new custom event for cache creation
+    ["CacheCreated", [_cache, _markerPosition]] call CBA_fnc_globalEvent;
+
     // Create cache marker, cache task and insurgent groups
     [_markerPosition, _cache] call FUNC("createCacheMarker");
     [_markerPosition, _cache] call FUNC("createNewTask");
-    [_markerPosition, _cache] call FUNC("createInsurgents");
 } else {
     // If maximum cache amount is exceeded create a small hint
     hint "Maximum cache amount exceeded.";

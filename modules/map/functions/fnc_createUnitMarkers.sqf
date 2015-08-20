@@ -21,6 +21,7 @@ private[
 // Get the name and side of player
 _name = name player;
 _side = side player;
+_debug = true;
 
 // Keep creating/updating/deleting unit markers as long as player is alive
 while {alive player} do {
@@ -30,7 +31,7 @@ while {alive player} do {
         _marker = name _x;
 
         // Check if the unit is blufor and has a marker
-        if (_side == side _x && getMarkerColor _marker == "") then {
+        if ((_side == side _x || _debug) && getMarkerColor _marker == "") then {
             // Create marker since its not present and set its appearance
             _marker = createMarkerLocal [name _x, getPos _x];
             _marker setMarkerShapeLocal "Icon";
@@ -43,6 +44,15 @@ while {alive player} do {
             } else {
                 // Otherwise use the sandard blufor color
                 _marker setMarkerColorLocal "ColorWEST";
+
+                if (_debug && side _x == civilian) then {
+                    _marker setMarkerColorLocal "ColorCIV";
+                };
+
+                if (_debug && (side _x == east ||
+                        side _x == independent)) then {
+                    _marker setMarkerColorLocal "ColorEAST";
+                };
             };
 
             // Add event handler for marker removal on unit death
@@ -51,9 +61,11 @@ while {alive player} do {
             }];
         };
 
-        // Update marker position and direction for the current unit
-        _marker setMarkerPosLocal (getPos _x);
-        _marker setMarkerDirLocal (getDir _x);
+        if (getMarkerColor _marker != "") then {
+            // Update marker position and direction for the current unit
+            _marker setMarkerPosLocal (getPos _x);
+            _marker setMarkerDirLocal (getDir _x);
+        };
     } forEach allUnits;
 
     // After updating all markers wait for a specific period of time before

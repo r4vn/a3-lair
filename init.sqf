@@ -14,5 +14,6 @@ call INIT("base");
 call INIT("map");
 call INIT("rallies");
 call INIT("caches");
+call INIT("ai");
 call INIT("tickets");
 call INIT("ieds");

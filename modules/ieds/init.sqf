@@ -8,7 +8,7 @@
 #include "functions\script_macros.hpp"
 
 if (isServer) then {
-    // Register cache destruction ticket win
+    // Register cache creation handler for creating ieds
     ["CacheCreated", {
         [_this select 0] execVM FUNC_FILE("createRandomIeds");
     }] call CBA_fnc_addEventHandler;

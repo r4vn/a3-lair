@@ -1,7 +1,9 @@
-v1.0.0 (unreleased)
+v1.0.0-beta (unreleased)
 - added ticket system
-- added ticket hud
-- added intelligence resource system
+- added mission hud
+- added civilians
+- added intelligence system
+- updated ieds to randomly spawn in 1km2 area around cache
 
 v0.8.2
 - fixed second cache naming on dedicated

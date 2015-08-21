@@ -52,6 +52,10 @@ class CfgRespawnInventory {
             "ACE_IR_Strobe_Item",
             "ACE_EarPlugs",
             "ACE_NVG_Gen1",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_squadleader",
@@ -109,6 +113,10 @@ class CfgRespawnInventory {
             "ACE_IR_Strobe_Item",
             "ACE_EarPlugs",
             "ACE_NVG_Gen1",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -161,6 +169,10 @@ class CfgRespawnInventory {
             "ACE_IR_Strobe_Item",
             "ACE_EarPlugs",
             "ACE_NVG_Gen1",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -250,6 +262,10 @@ class CfgRespawnInventory {
             "ACE_IR_Strobe_Item",
             "ACE_EarPlugs",
             "ACE_NVG_Gen1",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_medic",
@@ -302,6 +318,10 @@ class CfgRespawnInventory {
             "ACE_IR_Strobe_Item",
             "ACE_EarPlugs",
             "ACE_NVG_Gen1",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",
@@ -359,6 +379,10 @@ class CfgRespawnInventory {
             "ACE_IR_Strobe_Item",
             "ACE_EarPlugs",
             "ACE_NVG_Gen1",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_repair",
@@ -414,6 +438,10 @@ class CfgRespawnInventory {
             "ACE_IR_Strobe_Item",
             "ACE_EarPlugs",
             "ACE_NVG_Gen1",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_CableTie"
         };
         linkedItems[] = {
             "rhsusf_iotv_ucp_rifleman",

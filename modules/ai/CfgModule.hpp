@@ -9,6 +9,8 @@
 class CfgAi {
     minWaypointCount = 3;
     maxWaypointCount = 10;
+    hqVarName = "hq_west";
+    questioningDistance = 5;
 
     class Insurgents {
         minGroupCount = 3;

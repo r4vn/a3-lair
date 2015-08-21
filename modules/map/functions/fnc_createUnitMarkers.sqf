@@ -56,7 +56,7 @@ while {alive player} do {
             };
 
             // Add event handler for marker removal on unit death
-            _x addEventHandler ["killed", {
+            _x addEventHandler ["Killed", {
                 deleteMarkerLocal (name (_this select 0));
             }];
         };

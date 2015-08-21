@@ -11,7 +11,8 @@ class CfgCaches {
     vehicleVarPrefix = "cache";
     maxCount = 6;
     minSpacing = 500;
-    intelDuration = 10;
+    // Must not exceed minimum count of intelligence sources
+    neededIntelligencePerCache = 1.25;
     // This array stores all buildings in which a cache can spawn.
     // The first array entry of a building array is its class name and the
     // second is the buildingPos representing the location above terrain level

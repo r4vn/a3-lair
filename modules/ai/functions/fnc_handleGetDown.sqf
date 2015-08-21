@@ -18,15 +18,28 @@ private [
     "_position",
     "_waypoint",
     "_unit",
-    "_group"
+    "_group",
+    "_isAlive"
 ];
 
 _unit = _this select 0;
 
 _group = group _unit;
+_isAlive = true;
 
-waitUntil {unitPos _unit == "DOWN"};
+// Wait until unit is prone or dead/deleted
+waitUntil {
+    if (isNil "_unit" || !alive _unit) exitWith {
+        _isAlive = false;
+    };
 
+    unitPos _unit == "DOWN";
+};
+
+// Only add waypoint if unit is alive
+if (!_isAlive) exitWith {};
+
+// Add hold waypoint at the unit's current location, so it doesn't move
 _waypoint = _group addWaypoint [getPos _unit, 0];
 _waypoint setWaypointType "HOLD";
 _group setCurrentWaypoint _waypoint;

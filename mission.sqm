@@ -2898,6 +2898,7 @@ class Mission
             side="EMPTY";
             vehicle="Land_Cargo_HQ_V3_F";
             skill=0.60000002;
+            text = "hq_west";
         };
         class Item177
         {

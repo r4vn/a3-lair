@@ -45,12 +45,7 @@ _cacheId setMarkerColor "ColorGrey";
         CBA_fnc_globalEvent;
 
 // Check whether all needed caches have been destroyed
-if (_destroyedCachesCount < NEEDED_CACHES_COUNT) then {
-    // If there are still caches remaining generate random intelligence duration
-    // and schedule new cache creation
-    _intelDuration = random (getNumber (MCFG >> "intelDuration"));
-    [_intelDuration] execVM FUNC_FILE("createNewCache");
-} else {
+if (_destroyedCachesCount >= NEEDED_CACHES_COUNT) then {
     // End the mission if all caches have been destroyed and set it as
     // successful
     [["end1", true, true], "BIS_fnc_endMission", west, true] call BIS_fnc_MP;

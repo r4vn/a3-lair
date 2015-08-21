@@ -17,6 +17,7 @@ private [
 // ACE settings
 ace_map_BFT_Enabled = true;
 ace_map_BFT_HideAiGroups = true;
+ace_captives_allowHandcuffOwnSide = false;
 ace_hearing_EnableCombatDeafness = true;
 ace_hearing_EarplugsVolume = 0.9;
 ace_hearing_UnconsciousnessVolume = 0.7;

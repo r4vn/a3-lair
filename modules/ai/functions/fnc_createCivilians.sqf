@@ -31,7 +31,7 @@ _cache = _this select 0;
 _markerPosition = _this select 1;
 
 // Base unit count on maximum insurgent groups, make it four times the amount
-_unitCount = random (("MaxCacheGroups" call BIS_fnc_getParamValue) * 4);
+_unitCount = random (("MaxCacheGroups" call BIS_fnc_getParamValue) * 2.5);
 // Get unit configurations
 _units = getArray (MCFG >> "Civilians" >> "units");
 // Base minimum unit count on insurgent minimum, make it twice the amount
@@ -42,10 +42,17 @@ _maxOffset = getNumber (EMCFG("caches") >> "Marker" >> "maxOffset");
 // Get limits for waypoint amount
 _minWaypointCount = (getNumber (MCFG >> "minWaypointCount")) - 1;
 _maxWaypointCount = getNumber (MCFG >> "maxWaypointCount");
+// Get configuration name of collaborators
+_collaborator = getText (MCFG >> "collaborator");
 
+// Ensure minimum unit count
 if (_unitCount < _minUnitCount) then {
     _unitCount = _minUnitCount;
 };
+
+// Expose civilian amount
+missionNamespace setVariable [GVAR_NAME("intelligenceSources"), floor
+        _unitCount + 1, true];
 
 // Loop units
 for "_i" from 0 to _unitCount do {
@@ -61,10 +68,12 @@ for "_i" from 0 to _unitCount do {
             FUNC("createUnit");
     // Make sure the unit stops moving when told to get down
     [_unit] execVM FUNC_FILE("handleGetDown");
+    // Add questioning at hq to the unit
+    [_unit] execVM FUNC_FILE("handleQuestioning");
 
-    // Register killed evnet handler for ticket loss
+    // Register killed event handler
     _unit addEventHandler ["Killed", {
-        ["CivilianKilled", _this] call CBA_fnc_globalEvent;
+        [_this select 0] call FUNC("handleCivilianKilled");
     }];
 
     // Randomize waypoint amount

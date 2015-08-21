@@ -29,7 +29,7 @@ class RscTitles {
         #define SIZE 0.05 * safezoneW
         #define MARGIN 0.01 * safezoneW
         #define POS_X(n) safeZoneX + n * SIZE * 0.75
-        #define POS_Y safeZoneY + safeZoneH - SIZE - MARGIN
+        #define POS_Y safeZoneY + MARGIN
         #define FONT "PuristaBold"
 
         class RscIndicator {

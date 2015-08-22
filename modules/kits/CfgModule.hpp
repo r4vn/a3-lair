@@ -283,7 +283,7 @@ class CfgRespawnInventory {
     class MedicAlternative: Medic {
         displayName = $STR_SAD_kitMedicAlternative;
         weapons[] = {
-            "rhs_weap_mk18_eotech_usmc",
+            "rhs_m4a1_grip_acog3",
             "Throw",
             "Put"
         };
@@ -339,7 +339,7 @@ class CfgRespawnInventory {
     class RiflemanAntiTankAlternative: RiflemanAntiTank {
         displayName = $STR_SAD_kitRiflemanAntiTankAlternative;
         weapons[] = {
-            "rhs_weap_mk18_grip2_eotech",
+            "rhs_m4a1_grip_acog3",
             "rhs_weap_M136",
             "Throw",
             "Put"
@@ -459,7 +459,7 @@ class CfgRespawnInventory {
     class MarksmanAlternative: Marksman {
         displayName = $STR_SAD_kitMarksmanAlternative;
         weapons[] = {
-            "rhs_weap_sr25_sup_marsoc",
+            "rhs_weap_sr25_usmc",
             "Throw",
             "Put",
             "Rangefinder"

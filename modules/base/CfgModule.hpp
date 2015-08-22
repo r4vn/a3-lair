@@ -21,6 +21,9 @@ class CfgBase {
             magazines[] = {
                 {"rhs_mag_30Rnd_556x45_M855A1_Stanag", 30},
                 {"rhsusf_100Rnd_556x45_soft_pouch", 6},
+                {"rhsusf_50Rnd_762x51", 10},
+                {"rhsusf_20Rnd_762x51_m118_special_Mag", 10},
+                {"rhsusf_mag_7x45acp_MHP", 3},
                 {"Laserbatteries", 2},
                 {"HandGrenade", 10},
                 {"SmokeShell", 20},
@@ -32,7 +35,8 @@ class CfgBase {
                 {"ACE_fieldDressing", 20},
                 {"ACE_morphine", 20},
                 {"ACE_epinephrine", 20},
-                {"ToolKit", 2};
+                {"ToolKit", 2},
+                {"ACE_CableTie", 100};
             };
         };
 
@@ -47,6 +51,9 @@ class CfgBase {
             magazines[] = {
                 {"rhs_mag_30Rnd_556x45_M855A1_Stanag", 10},
                 {"rhsusf_100Rnd_556x45_soft_pouch", 5},
+                {"rhsusf_50Rnd_762x51", 3},
+                {"rhsusf_20Rnd_762x51_m118_special_Mag", 5},
+                {"rhsusf_mag_7x45acp_MHP", 3},
                 {"Laserbatteries", 2},
                 {"HandGrenade", 5},
                 {"SmokeShell", 5},
@@ -58,7 +65,8 @@ class CfgBase {
                 {"ACE_fieldDressing", 10},
                 {"ACE_morphine", 8},
                 {"ACE_epinephrine", 8},
-                {"ToolKit", 2};
+                {"ToolKit", 2},
+                {"ACE_CableTie", 25};
             };
         };
     };

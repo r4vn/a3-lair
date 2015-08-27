@@ -1,49 +1,34 @@
-# ACE RHS [S&D-8]: Dusty Lair
+# Lair
 
-![release](https://img.shields.io/badge/release-v0.8.2-blue.svg)
+![latest](https://img.shields.io/badge/latest-v0.8.2-blue.svg)
 ![arma 3](https://img.shields.io/badge/arma_3-v1.50-lightgrey.svg)
 
-An Arma 3 cooperative search and destroy multiplayer mission.
+An Arma 3 cooperative search and destroy multiplayer game mode.
 
 
 ## Description
 
-This mission aims to deliver tactical search and destroy gameplay to a small group of players.
+This game mode aims to deliver tactical search and destroy gameplay with random task generation resulting in unique round gameplay.
 
 
-### Features
-- Randomly generated caches
-- Randomly generated insurgents
-- Specialized kit roles
+Features:
+- Ticket Based Success Criterion
+- Random Caches
+- Random AI Population at Caches
+- Random IEDs
+- Civilian Based Intelligience
+- Specialized Kit Roles
+- ACE Standard Medic System
 - Rally Points
 - BI's Dynamic Groups
 
 
 ## Requirements
 
-Please make sure you always have the latest versions of the following addons installed before running the mission as this could have unforseen side effects.
+Make sure your mission for this game mode requires the following addons, as they are a critical part of Lair.
 - CBA_A3 <br/>
   [`Website`](http://dev.withsix.com/projects/cba-a3)
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - ACE3 <br/>
   [`Website`](http://ace3mod.com)
   [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
-- RHS: Russian Federation armed forces <br/>
-  [`Website`](http://www.rhsmods.org/mod/1)
-  <code style="color: grey">Workshop</code>
-- RHS: United States armed forces <br/>
-  [`Website`](http://www.rhsmods.org/mod/2)
-  <code style="color: grey">Workshop</code>
-- Task Force Arrowhead Radio <br/>
-  [`Website`](http://radio.task-force.ru/en)
-  <code style="color: grey">Workshop</code>
-- Kunduz, Afghanistan <br/>
-  <code style="color: grey">Website</code>
-  [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=421620913)
-- Mission Enhanced Little Bird <br/>
-  [`Website`](http://www.armaholic.com/page.php?id=28856)
-  <code style="color: grey">Workshop</code>
-
-## Installation
-
-Extract the supplied files into the Arma 3 multiplayer folder "Arma3/MPMissions".

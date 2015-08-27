@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="eX">
+<Project name="Lair">
 <Package name="Missions">
 
-<Container name="DustyLair">
+<Container name="LairLocales">
 
 	<Key ID="STR_SAD_missionTitle">
-		<Original>Dusty Lair</Original>
-		<German>Dusty Lair</German>
+		<Original>{{TERRAIN_NAME}} Lair</Original>
+		<German>{{TERRAIN_NAME}} Lair</German>
 	</Key>
 
 	<Key ID="STR_SAD_briefingName">
-		<Original>ACE RHS [S&amp;D-8]: Dusty Lair</Original>
-		<German>ACE RHS [S&amp;D-8]: Dusty Lair</German>
+		<Original>ACE {{REQUIRED_MODS}} [S&amp;D-{{MAX_PLAYERS}}]: {{TERRAIN_NAME}} Lair</Original>
+		<German>ACE {{REQUIRED_MODS}} [S&amp;D-{{MAX_PLAYERS}}]: {{TERRAIN_NAME}} Lair</German>
 	</Key>
 
 	<Key ID="STR_SAD_briefingDescription">

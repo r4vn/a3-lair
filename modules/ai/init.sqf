@@ -6,7 +6,7 @@
  *
  */
 
-#include "functions\script_macros.hpp"
+#include "script_macros.hpp"
 
 private [
     "_intelDuration"

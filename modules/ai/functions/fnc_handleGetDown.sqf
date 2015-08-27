@@ -12,7 +12,7 @@
  * <unit> Returns the created unit.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_position",

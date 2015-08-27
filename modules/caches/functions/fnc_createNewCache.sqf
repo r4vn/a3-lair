@@ -12,7 +12,7 @@
  *                 When none is specified zero is used as delay.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_createdCachesCount",

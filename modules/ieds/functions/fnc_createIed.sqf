@@ -9,7 +9,7 @@
  *     1: <boolean> If true, no actual ied will be created
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_position",

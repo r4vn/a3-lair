@@ -8,7 +8,7 @@
  *     0: <object> The unit (stored in _this)
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_isSquadLeader",

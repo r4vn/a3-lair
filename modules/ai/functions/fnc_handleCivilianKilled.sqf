@@ -5,7 +5,7 @@
  * Handles death of a civilian.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_intelligenceSources",

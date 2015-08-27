@@ -6,15 +6,11 @@
  * schedules creation of a new cache or ends the mission if all needed caches
  * has been destroyed.
  *
- * TODO: Add mission failure if west runs out of tickets
- * TODO: Add a small amount of tickets to west side if cache is destroyed
- * TODO: Update cache indicator on client hud
- *
  * Parameter(s):
  *     0: <object> The cache which was destroyed
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_destroyedCachesCount",

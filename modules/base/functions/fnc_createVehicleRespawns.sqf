@@ -7,7 +7,7 @@
  * TODO: Move the retrival of base marker to its own function
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_marker",

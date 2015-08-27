@@ -6,7 +6,7 @@
  * tickets, managing ticket bleed and the corresponding part of user interface.
  */
 
-#include "functions\script_macros.hpp"
+#include "script_macros.hpp"
 
 if (isServer) then {
     // Stores & initializes the blufor tickets

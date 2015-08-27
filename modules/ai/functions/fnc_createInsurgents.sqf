@@ -9,7 +9,7 @@
  *     1: <array> The position of the cache marker
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_cache",

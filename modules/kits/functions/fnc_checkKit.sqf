@@ -10,7 +10,7 @@
  *     0: <object> The unit (stored in _this)
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 // Keep checking while the unit is alive
 while {alive _this} do {

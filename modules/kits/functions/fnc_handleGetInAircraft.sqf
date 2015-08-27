@@ -10,7 +10,7 @@
  *     2: <object> The unit which entered the vehicle
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_vehicle",

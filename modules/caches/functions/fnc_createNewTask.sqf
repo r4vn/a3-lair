@@ -9,7 +9,7 @@
  *     1: <object> The cache to which the task belongs
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_taskId",

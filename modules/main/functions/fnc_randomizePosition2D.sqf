@@ -15,7 +15,7 @@
  * <array> Randomized position of origin
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private  [
     "_originalPosition",

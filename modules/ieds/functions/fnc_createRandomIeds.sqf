@@ -8,7 +8,7 @@
  *     0: <object> A cache which should be mined
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_position",

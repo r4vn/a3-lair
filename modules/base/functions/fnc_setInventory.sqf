@@ -9,7 +9,7 @@
  *     1: <config> The inventory's contents
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_vehicle",

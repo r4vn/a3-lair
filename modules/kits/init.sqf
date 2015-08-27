@@ -6,7 +6,7 @@
  * action limitations according to the unit's kit.
  */
 
-#include "functions\script_macros.hpp"
+#include "script_macros.hpp"
 
 // Get kit configurations
 _respawnInventoryConfig = (missionConfigFile >> "CfgRespawnInventory");

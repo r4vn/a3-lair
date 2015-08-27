@@ -5,7 +5,7 @@
  * Initializes the ieds module. Randomly spawns mines on roads.
  */
 
-#include "functions\script_macros.hpp"
+#include "script_macros.hpp"
 
 if (isServer) then {
     // Register cache creation handler for creating ieds

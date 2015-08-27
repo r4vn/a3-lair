@@ -11,7 +11,7 @@
  * 1: <number> The base radius
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_markerName",

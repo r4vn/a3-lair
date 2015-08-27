@@ -6,7 +6,7 @@
  * rally points for groups/squads.
  */
 
-#include "functions\script_macros.hpp"
+#include "script_macros.hpp"
 
 // On each player respawn register the deploy rally action again since the
 // registration will be lost on respawn

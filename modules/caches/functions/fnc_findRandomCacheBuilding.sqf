@@ -11,7 +11,7 @@
  * 1: <number> The buildingPos inside the building
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_buildings",

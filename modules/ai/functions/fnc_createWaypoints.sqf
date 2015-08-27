@@ -15,7 +15,7 @@
  * <string> Returns the created marker.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_group",

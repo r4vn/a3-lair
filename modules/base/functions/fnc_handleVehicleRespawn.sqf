@@ -9,7 +9,7 @@
  *     0: <object> The vehicle
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_vehicle",

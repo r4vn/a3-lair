@@ -5,7 +5,7 @@
  * Creates ticket bleeding each minute.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_ticketCount",

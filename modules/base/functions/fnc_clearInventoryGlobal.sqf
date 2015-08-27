@@ -8,7 +8,7 @@
  *     0: <object> The vehicle (stored in _this)
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 clearWeaponCargoGlobal _this;
 clearMagazineCargoGlobal _this;

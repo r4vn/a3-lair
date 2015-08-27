@@ -9,7 +9,7 @@
  *     0: <number> Amount of information
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_addedIntelligence",

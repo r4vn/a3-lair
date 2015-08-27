@@ -16,7 +16,7 @@
  *           otherwise false.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 // Is the target the unit itself?
 _target == _this &&

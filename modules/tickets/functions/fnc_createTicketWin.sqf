@@ -8,7 +8,7 @@
  *     0: <number> The ticket win
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_ticketCount",

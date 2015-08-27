@@ -16,7 +16,7 @@
  *     0: <object> Caller of the action
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_caller",

@@ -8,7 +8,7 @@
  * <array> Position of the cache inside a building above terrain level.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_building",

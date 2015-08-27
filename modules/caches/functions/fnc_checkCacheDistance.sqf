@@ -13,7 +13,7 @@
  *           otherwise false.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_return",

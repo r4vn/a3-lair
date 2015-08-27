@@ -7,7 +7,7 @@
  * available in the base.
  */
 
-#include "functions\script_macros.hpp"
+#include "script_macros.hpp"
 
 if (isServer) then {
     call FUNC("createVehicleRespawns");

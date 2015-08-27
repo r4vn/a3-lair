@@ -6,7 +6,7 @@
  * and spawning insurgents.
  */
 
-#include "functions\script_macros.hpp"
+#include "script_macros.hpp"
 
 // Initializations
 if (isServer) then {

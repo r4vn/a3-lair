@@ -5,7 +5,7 @@
  * Initializes modules for the mission.
  */
 
-#include "modules\main\functions\script_macros.hpp"
+#include "modules\main\script_macros.hpp"
 
 // Initialize modules
 call INIT("main");

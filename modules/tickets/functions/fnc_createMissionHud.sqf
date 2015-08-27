@@ -5,7 +5,7 @@
  * Initializes the mission hud.
  */
 
-#include "script_macros.hpp"
+#include "..\script_macros.hpp"
 
 private [
     "_cacheCount",

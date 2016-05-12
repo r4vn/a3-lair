@@ -17,3 +17,6 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
+[*PBOPREFIX*]
+insert_final_newline = false
+

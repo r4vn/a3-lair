@@ -7,6 +7,7 @@ v1.0.0-alpha (unreleased)
 - updated ieds to randomly spawn in 1km2 area around cache
 - fixed mission hud position
 - fixed unit marker deletion
+- fixed task locales
 
 v0.8.2
 - fixed second cache naming on dedicated

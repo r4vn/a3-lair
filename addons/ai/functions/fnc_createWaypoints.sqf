@@ -22,30 +22,31 @@ private [
     "_count",
     "_position",
     "_waypoint",
-    "_maxWaypointOffset"
+    "_areaSize",
+    "_behaviour",
+    "_combatMode"
 ];
 
 _group = _this select 0;
 _count = _this select 1;
 _position = _this select 2;
-_minOffset = _this select 3;
-_maxOffset = _this select 4;
+_areaSize = _this select 3;
+_behaviour = _this select 4;
+_combatMode = _this select 5;
 
 // Create waypoints
-for "_i" from 0 to _count - 1 do {
-    // Randomize the waypoint location
-    _wpPosition = [_position, _minOffset, _maxOffset] call
-            EFUNC("main", "randomizePosition2D");
-
+for "_i" from 1 to _count do {
     // Add the waypoint to the group and set speed
-    _waypoint = _group addWaypoint [_wpPosition, 0];
+    _waypoint = _group addWaypoint [_position, _areaSize];
+    _waypoint setWaypointBehaviour _behaviour;
+    _waypoint setWaypointCombatMode _combatMode;
     _waypoint setWaypointSpeed "LIMITED";
 
-    if (_i == _count - 1) then {
+    if (_i == _count) then {
         // When it's the last waypoint set its type to cycle
-        _waypoint setWaypointType "Cycle";
+        _waypoint setWaypointType "CYCLE";
     } else {
         // For every other waypoint set the type to move
-        _waypoint setWaypointType "Move";
+        _waypoint setWaypointType "MOVE";
     };
 };

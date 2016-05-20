@@ -20,8 +20,9 @@ private [
     "_groups",
     "_minGroupCount",
     "_groupCfg",
-    "_groupMCfg",
+    "_groupMissionCfg",
     "_groupPosition",
+    "_areaSize",
     "_minOffset",
     "_maxOffset",
     "_side",
@@ -40,40 +41,43 @@ _cachePosition = getPos _cache;
 // Get a random group count
 _groupCount = random ("MaxCacheGroups" call BIS_fnc_getParamValue);
 // Get group configuration, minimum group count
-_groups = getArray (MCFG >> "Insurgents" >> "groups");
-_minGroupCount = (getNumber (MCFG >> "Insurgents" >> "minGroupCount")) - 1;
+_groups = getArray (MISSION_CONFIG >> "Insurgents" >> "groups");
+_minGroupCount = ("MinCacheGroups" call BIS_fnc_getParamValue) - 1;
 // Get offsets from the marker position for spawning area
-_minOffset = getNumber (EMCFG("caches") >> "Marker" >> "minOffset");
-_maxOffset = getNumber (EMCFG("caches") >> "Marker" >> "maxOffset");
+_areaSize = getNumber (EXT_MISSION_CONFIG("caches") >> "areaSize");
 // Get information for the configuration path of groups
-_side = getText (MCFG >> "Insurgents" >> "side");
-_faction = getText (MCFG >> "Insurgents" >> "faction");
+_side = getText (MISSION_CONFIG >> "Insurgents" >> "side");
+_faction = getText (MISSION_CONFIG >> "Insurgents" >> "faction");
 // Get amount of guards spawning near the cache
-_guardCount = getNumber (MCFG >> "Insurgents" >> "guardCount");
+_guardCount = getNumber (MISSION_CONFIG >> "Insurgents" >> "guardCount");
 // Get limits for waypoint amount
-_minWaypointCount = (getNumber (MCFG >> "minWaypointCount")) - 1;
-_maxWaypointCount = getNumber (MCFG >> "maxWaypointCount");
+_minWaypointCount = getNumber (ADDON_CONFIG >> "minWaypointCount");
+_maxWaypointCount = getNumber (ADDON_CONFIG >> "maxWaypointCount");
+_minOffset = _areaSize / 8;
+_maxOffset = _areaSize / 2;
+
+LOG("Creating insurgents " + str _side + ", " + str _faction);
 
 if (_groupCount < _minGroupCount) then {
     _groupCount = _minGroupCount;
 };
 
 // Loop groups
-for "_i" from 0 to _groupCount do {
+for "_i" from 1 to _groupCount do {
     // Select a random group configuration
-    _groupMCfg = _groups call BIS_fnc_selectRandom;
+    _groupMissionCfg = _groups call BIS_fnc_selectRandom;
     // Get the group configuration
     _groupCfg = (configFile >> "CfgGroups" >> _side >> _faction >>
-            (_groupMCfg select 0) >> (_groupMCfg select 1));
+            (_groupMissionCfg select 0) >> (_groupMissionCfg select 1));
 
     if (_i < _guardCount) then {
         // If guards still need to be created, choose a location near the cache
-        _groupPosition = [_cachePosition, _minOffset / 4, _minOffset / 2] call
-                EFUNC("main", "randomizePosition2D");
+        _groupPosition = [_cachePosition, _minOffset, _minOffset * 1.5] call
+                lair_fnc_randomizePosition2D;
     } else {
         // For every other group choose a random location within the cache area
         _groupPosition = [_markerPosition, _minOffset, _maxOffset] call
-                EFUNC("main", "randomizePosition2D");
+                lair_fnc_randomizePosition2D;
     };
 
     // Spawn the insurgent group
@@ -89,11 +93,13 @@ for "_i" from 0 to _groupCount do {
 
     if (_i < _guardCount) then {
         // For guard groups use a smaller waypoint area
-        [_group, _waypointCount + 1, _cachePosition, _minOffset, _minOffset]
+        [_group, _waypointCount, _markerPosition, _minOffset, "SAFE", "RED"]
                 call FUNC("createWaypoints");
     } else {
         // All other groups can have waypoints in the whole cache marker area
-        [_group, _waypointCount + 1, _markerPosition, _minOffset, _maxOffset]
+        [_group, _waypointCount, _markerPosition, _areaSize, "SAFE", "RED"]
                 call FUNC("createWaypoints");
     };
 };
+
+LOG("Insurgents created");

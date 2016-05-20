@@ -8,15 +8,12 @@
 #include "..\script_component.hpp"
 
 private [
-    "_intelligenceSources",
-    "_neededIntelligence"
+    "_intelligenceSources"
 ];
-
+/*
 // Get current civilian count
 _intelligenceSources = missionNamespace getVariable [
         GVAR_NAME("intelligenceSources"), 0];
-_neededIntelligence = getNumber (EMCFG("caches") >>
-        "neededIntelligencePerCache");
 
 // Decrease since one has been killed
 _intelligenceSources = _intelligenceSources - 1;
@@ -25,8 +22,8 @@ missionNamespace setVariable [GVAR_NAME("intelligenceSources"),
 
 if (_intelligenceSources <= 0) {
     // No sources remaining to complete mission, meaning it failed
-    [["end1", false, true], "BIS_fnc_endMission", west, true] call BIS_fnc_MP;
+    ["end1", false, true] remoteExec ["BIS_fnc_endMission", 0, true];
 };
-
+*/
 // Delegate event
-["CivilianKilled", _this] call CBA_fnc_globalEvent;
+["LairCivilianKilled", _this] call CBA_fnc_globalEvent;

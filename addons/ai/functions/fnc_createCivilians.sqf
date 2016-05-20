@@ -20,6 +20,7 @@ private [
     "_minUnitCount",
     "_unitName",
     "_unitPosition",
+    "_areaSize",
     "_minOffset",
     "_maxOffset",
     "_waypointCount",
@@ -30,20 +31,22 @@ private [
 _cache = _this select 0;
 _markerPosition = _this select 1;
 
+LOG("Creating civilians");
+
 // Base unit count on maximum insurgent groups, make it four times the amount
 _unitCount = random (("MaxCacheGroups" call BIS_fnc_getParamValue) * 2.5);
 // Get unit configurations
-_units = getArray (MCFG >> "Civilians" >> "units");
+_units = getArray (MISSION_CONFIG >> "Civilians" >> "units");
 // Base minimum unit count on insurgent minimum, make it twice the amount
-_minUnitCount = ((getNumber (MCFG >> "Insurgents" >> "minGroupCount")) * 2) - 1;
+_minUnitCount = ((getNumber (MISSION_CONFIG >> "Insurgents" >> "minGroupCount"))
+        * 2) - 1;
 // Get offsets from the marker position for spawning area
-_minOffset = getNumber (EMCFG("caches") >> "Marker" >> "minOffset");
-_maxOffset = getNumber (EMCFG("caches") >> "Marker" >> "maxOffset");
+_areaSize = getNumber (EXT_MISSION_CONFIG("caches") >> "areaSize");
 // Get limits for waypoint amount
-_minWaypointCount = (getNumber (MCFG >> "minWaypointCount")) - 1;
-_maxWaypointCount = getNumber (MCFG >> "maxWaypointCount");
-// Get configuration name of collaborators
-_collaborator = getText (MCFG >> "collaborator");
+_minWaypointCount = getNumber (ADDON_CONFIG >> "minWaypointCount");
+_maxWaypointCount = getNumber (ADDON_CONFIG >> "maxWaypointCount");
+_minOffset = _areaSize / 8;
+_maxOffset = _areaSize / 2;
 
 // Ensure minimum unit count
 if (_unitCount < _minUnitCount) then {
@@ -61,15 +64,15 @@ for "_i" from 0 to _unitCount do {
 
     // Choose a random location within the cache area
     _unitPosition = [_markerPosition, _minOffset, _maxOffset] call
-            EFUNC("main", "randomizePosition2D");
+            lair_fnc_randomizePosition2D;
 
     // Spawn the insurgent unit
     _unit = [_unitName, _unitPosition, createGroup civilian] call
             FUNC("createUnit");
     // Make sure the unit stops moving when told to get down
-    [_unit] execVM FUNC_FILE("handleGetDown");
+    // [_unit] execVM FUNC_FILE("handleGetDown");
     // Add questioning at hq to the unit
-    [_unit] execVM FUNC_FILE("handleQuestioning");
+    // [_unit] execVM FUNC_FILE("handleQuestioning");
 
     // Register killed event handler
     _unit addEventHandler ["Killed", {
@@ -85,6 +88,8 @@ for "_i" from 0 to _unitCount do {
     };
 
     // Create random waypoints in the whole cache marker area
-    [group _unit, _waypointCount + 1, _markerPosition, _minOffset, _maxOffset]
-            call FUNC("createWaypoints");
+    [group _unit, _waypointCount, _markerPosition, _areaSize, "CARELESS",
+            "BLUE"] call FUNC("createWaypoints");
 };
+
+LOG("Civilians created");

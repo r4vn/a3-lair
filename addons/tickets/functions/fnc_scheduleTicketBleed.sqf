@@ -9,29 +9,20 @@
 
 private [
     "_ticketCount",
-    "_bleedPerMinute",
-    "_newTicketCount"
+    "_bleedPerMinute"
 ];
 
-_bleedPerMinute = getNumber (MCFG >> "ticketBleed");
+_bleedPerMinute = getNumber (MISSION_CONFIG >> "ticketBleed");
 
 // Initial ticket bleed timeout
 uiSleep 60;
 
 while {
-    _ticketCount = missionNamespace getVariable [GVAR_NAME("bluforTicketCount"),
-            0];
+    _ticketCount = missionNamespace getVariable
+            [GVAR_NAME("ticketCount"), 0];
     _ticketCount > 0
 } do {
-    // Calculate new ticket count
-    _newTicketCount = _ticketCount - _bleedPerMinute;
-
-    // Remove ticket bleed from ticket count
-    missionNamespace setVariable [GVAR_NAME("bluforTicketCount"),
-            _newTicketCount, true];
-
-    // Create a new custom event
-    ["BluforTicketUpdate", [_newTicketCount]] call CBA_fnc_globalEvent;
+    [_bleedPerMinute] call FUNC("createTicketLoss");
 
     // Wait for 60s
     uiSleep 60;

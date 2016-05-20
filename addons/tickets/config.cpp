@@ -1,11 +1,14 @@
-#include "script_macros.hpp"
+#include "script_component.hpp"
 
 class CfgPatches {
     class ADDON {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"CBA_common"};
+        requiredAddons[] = {
+            "lair_main",
+            "lair_base"
+        };
         version = VERSION;
         author[] = {"r4vn"};
         authorUrl = "https://github.com/r4vn/";
@@ -13,3 +16,4 @@ class CfgPatches {
 };
 
 #include "CfgComponent.hpp"
+#include "CfgFunctions.hpp"

@@ -26,7 +26,7 @@ _types = [
 ];
 
 // Get the base area
-_baseArea = call EFUNC("base", "getBaseArea");
+_baseArea = call lair_fnc_getBaseArea;
 _position = _baseArea select 0;
 _radius = _baseArea select 1;
 
@@ -36,6 +36,7 @@ _vehicles = nearestObjects [_position, _types, _radius];
 // Register handlers for vehicles ticket loss
 {
     _x addEventHandler ["Killed", {
-        [getNumber (MCFG >> "ticketLossVehicleDestruction")] call FUNC("createTicketLoss");
+        [getNumber (MISSION_CONFIG >> "ticketLossVehicleKilled")]
+                call FUNC("createTicketLoss");
     }];
 } forEach _vehicles;

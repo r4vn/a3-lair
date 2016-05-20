@@ -8,7 +8,7 @@
 #include "..\script_component.hpp"
 
 waitUntil {
-    (missionNamespace getVariable [GVAR_NAME("bluforTicketCount"), 0]) <= 0;
+    (missionNamespace getVariable [GVAR_NAME("ticketCount"), 0]) <= 0;
 };
 
-[["end1", false, true], "BIS_fnc_endMission", west, true] call BIS_fnc_MP;
+["end1", false, true] remoteExec ["BIS_fnc_endMission", 0, true];

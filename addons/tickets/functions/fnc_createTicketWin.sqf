@@ -19,13 +19,13 @@ private [
 _ticketWin = _this select 0;
 
 // Get current ticket count
-_ticketCount = missionNamespace getVariable [GVAR_NAME("bluforTicketCount"), 0];
+_ticketCount = missionNamespace getVariable [GVAR_NAME("ticketCount"), 0];
 // Calculate new ticket count
 _newTicketCount = _ticketCount + _ticketWin;
 
 // Set new ticket count
-missionNamespace setVariable [GVAR_NAME("bluforTicketCount"), _newTicketCount,
+missionNamespace setVariable [GVAR_NAME("ticketCount"), _newTicketCount,
         true];
 
 // Create a new custom event
-["BluforTicketUpdate", [_newTicketCount]] call CBA_fnc_globalEvent;
+["LairTicketsUpdated", [_newTicketCount]] call CBA_fnc_globalEvent;

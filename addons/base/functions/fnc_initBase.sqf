@@ -2,14 +2,16 @@
  * Author: r4vn
  *
  * Description:
- * Initializes the base module. This module is repsonsible for creating vehicle
+ * Initializes the base. This module is repsonsible for creating vehicle
  * respawn points in the missions main base. It also prepares the supplies
  * available in the base.
  */
 
-#include "script_macros.hpp"
+#include "..\script_component.hpp"
 
-if (isServer) then {
+["LairInit", {
+    LOG("Initializing base");
+
     call FUNC("createVehicleRespawns");
     call FUNC("initSupplies");
-};
+}] call CBA_fnc_addEventHandler;

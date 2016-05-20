@@ -20,17 +20,13 @@ private [
     "_radius"
 ];
 
+LOG("Getting base marker");
+
 // Get the base marker and its dimensions
-_markerName = getText (MCFG >> "markerName");
+_markerName = getText (ADDON_CONFIG >> "markerName");
 _markerPosition = getMarkerPos _markerName;
 _markerSize = getMarkerSize _markerName;
 
-// Select the larger of both axis as we can only use circles for the search
-// radius
-if (_markerSize select 0 < _markerSize select 1) then {
-    _radius = _markerSize select 1;
-} else {
-    _radius = _markerSize select 0;
-};
+_radius = (_markerSize select 0) max (_markerSize select 1);
 
 [_markerPosition, _radius];

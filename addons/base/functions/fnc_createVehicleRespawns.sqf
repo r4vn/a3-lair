@@ -35,6 +35,8 @@ _radius = _baseArea select 1;
 // Get all vehicles of the specified types
 _vehicles = nearestObjects [_position, _types, _radius];
 
+LOG("Creating vehicle respawns");
+
 // Loop each vehicle
 {
     // Create respawn marker and set the direction to the initial one from the
@@ -47,8 +49,28 @@ _vehicles = nearestObjects [_position, _types, _radius];
     // Use respawn delay defined in CfgSettings
     _x respawnVehicle [-1];
     // Register vehicle respawn event handler which will ensure the direction
-    // of th erespawned vehicle and create a notification
+    // of the respawned vehicle and create a notification
     _x addMPEventHandler ["MPRespawn", {
-        call FUNC("handlevehicleRespawn");
+        private [
+            "_vehicle",
+            "_vehicleName"
+        ];
+
+        _vehicle = _this select 0;
+
+        LOG("Vehicle respawned");
+
+        // Get the vehicle's display name from vehicles configuration
+        _vehicleName = getText (configFile >> "CfgVehicles" >>
+                (typeof _vehicle) >> "displayName");
+
+        // Create respawn notification and send it to all players
+        ["VehicleRespawn", [_vehicleName]] remoteExec [
+                "BIS_fnc_showNotification", 0, false];
+
+        // Set vehicle's direction to its initial one which is stored the
+        // marker's direction
+        _vehicle setDir (markerDir (format ["respawn_%1",
+                vehicleVarName _vehicle]));
     }];
 } forEach _vehicles;

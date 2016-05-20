@@ -22,6 +22,8 @@ private [
 _vehicle = _this select 0;
 _contents = _this select 1;
 
+LOG('Setting inventory of supply');
+
 // Get inventory contents from configuration
 _weapons = getArray (_contents >> "weapons");
 _magazines = getArray (_contents >> "magazines");

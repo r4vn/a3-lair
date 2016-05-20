@@ -19,12 +19,15 @@ _baseArea = call FUNC("getBaseArea");
 _position = _baseArea select 0;
 _radius = _baseArea select 1;
 
+LOG("Setting up supplies at base");
+
 // Set inventory for each cargo net
 {
-    [_x, MCFG >> "Supplies" >> "CargoNet"] call FUNC("setInventory");
+    [_x, MISSION_CONFIG >> "Supplies" >> "CargoNet"] call FUNC("setInventory");
 } forEach (nearestObjects [_position, ["B_CargoNet_01_ammo_F"], _radius]);
 
 // Set inventory for each supply crate
 {
-    [_x, MCFG >> "Supplies" >> "SupplyCrate"] call FUNC("setInventory");
+    [_x, MISSION_CONFIG >> "Supplies" >> "SupplyCrate"] call
+            FUNC("setInventory");
 } forEach (nearestObjects [_position, ["B_supplyCrate_F"], _radius]);

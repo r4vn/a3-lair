@@ -16,41 +16,50 @@
 private [
     "_buildings",
     "_buildingData",
+    "_building",
+    "_buildingPos",
     "_cacheBuildings",
     "_posX",
     "_posY",
     "_combatAreaPos",
-    "_combatAreaSize"
+    "_combatAreaSize",
+    "_return"
 ];
+
+LOG("Searching a suitable building for cache");
 
 // Initialize the cache buildings variable with an empty array
 _cacheBuildings = [];
+_return = nil;
 
 // Get the combat area size and cache building types/class names plus the buildingPos
-_combatAreaPos = getMarkerPos (getText (COMPONENT_CONFIG >>
+_combatAreaPos = getMarkerPos (getText (ADDON_CONFIG >>
         "combatAreaMarkerName"));
-_combatAreaSize = getMarkerSize (getText (COMPONENT_CONFIG >>
+_combatAreaSize = getMarkerSize (getText (ADDON_CONFIG >>
         "combatAreaMarkerName"));
+_posX = _combatAreaPos select 0;
+_posY = _combatAreaPos select 1;
+_radius = (_combatAreaSize select 0) max random (_combatAreaSize select 1);
 
-_buildings = getArray (COMPONENT_CONFIG >> "buildings");
+LOG("Selecting random building class");
+_buildings = getArray (MISSION_CONFIG >> "buildings");
 _buildingData = _buildings call BIS_fnc_selectRandom;
 
-// Keep searching if no buildings found
-while {count _cacheBuildings == 0} do {
-    // Randomize search location
-    _posX = (_combatAreaPos select 0) + random (_combatAreaSize select 0);
-    _posY = (_combatAreaPos select 1) + random (_combatAreaSize select 1);
+_cacheBuildings = nearestObjects [
+    [_posX, _posY, 0],
+    [_buildingData select 0],
+    _radius
+];
 
-    // Get cache buildings around the random location within a 1000m radius
-    _cacheBuildings = nearestObjects [
-        [_posX, _posY, 0],
-        [_buildingData select 0],
-        1000
-    ];
+_building = _cacheBuildings call BIS_fnc_selectRandom;
+_buildingPos = _buildingData select 1;
+
+if (count _cacheBuildings == 0) then {
+    LOG("No building found");
+} else {
+    LOG("Building found");
+    _return = [_building, _buildingPos];
 };
 
 // Return the building and the cache location inside it
-[
-    _cacheBuildings select 0,
-    _buildingData select 1
-];
+_return;

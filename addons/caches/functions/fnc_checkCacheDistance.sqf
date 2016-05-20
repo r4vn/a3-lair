@@ -27,7 +27,7 @@ private [
     "_vehicleVarPrefix",
     "_cache",
     "_createdCachesCount",
-    "_minSpacing"
+    "_areaSize"
 ];
 
 _newCachePosition = _this select 0;
@@ -36,21 +36,23 @@ _newCachePositionX = _newCachePosition select 0;
 _newCachePositionY = _newCachePosition select 1;
 
 // Get the combatArea size and the spacing from the module configuration
-_combatAreaSize = getMarkerSize (getText (COMPONENT_CONFIG >>
+_combatAreaSize = getMarkerSize (getText (ADDON_CONFIG >>
         "combatAreaMarkerName"));
 _combatAreaSizeX = _combatAreaSize select 0;
 _combatAreaSizeY = _combatAreaSize select 1;
-_minSpacing = getNumber (COMPONENT_CONFIG >> "minSpacing");
+_areaSize = getNumber (MISSION_CONFIG >> "areaSize");
 // Get the cache var prefix
-_vehicleVarPrefix = getText (COMPONENT_CONFIG >> "vehicleVarPrefix");
+_vehicleVarPrefix = getText (ADDON_CONFIG >> "vehicleVarPrefix");
 // Get the count of already spawned caches
 _createdCachesCount = missionNamespace getVariable [
         GVAR_NAME("createdCachesCount"), 0];
 
-if (_newCachePositionX > _combatAreaSizeX - _minSpacing ||
-        _newCachePositionX < _minSpacing ||
-        _newCachePositionY > _combatAreaSizeY - _minSpacing ||
-        _newCachePositionY < _minSpacing) then {
+LOG("Checking distance to other caches and combat area border");
+
+if (_newCachePositionX > _combatAreaSizeX - _areaSize ||
+        _newCachePositionX < _areaSize ||
+        _newCachePositionY > _combatAreaSizeY - _areaSize ||
+        _newCachePositionY < _areaSize) then {
     // Return false if the psoition is near the map border and does not match
     // the spacing from it
     _return = false;
@@ -70,11 +72,13 @@ if (_newCachePositionX > _combatAreaSizeX - _minSpacing ||
         _distance = _cache distance _newCachePosition;
 
         // If the distance does not fulfill the spacing return false
-        if (_distance < _minSpacing) exitWith {
+        if (_distance < _areaSize) exitWith {
             _return = false;
         };
     };
 };
+
+LOG("Distance check result: " + str _return);
 
 // The value to return from this function
 _return;

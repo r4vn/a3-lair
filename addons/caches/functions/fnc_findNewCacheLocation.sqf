@@ -18,25 +18,32 @@ private [
     "_cachePosition"
 ];
 
+LOG("Searching a new cache location");
+
+_cachePosition = nil;
 _building = nil;
 
-// Keep searching for a location if no building is found yet
-while {isNil "_building"} do {
+for "_i" from 1 to 15 do {
     // Get a random cache building and the cache buildingPos inside the building
     _buildingData = call FUNC("findRandomCacheBuilding");
-    _building = _buildingData select 0;
-    _buildingPos = _buildingData select 1;
-    // Get the position of the building (not ATL!)
-    _position = getPos _building;
 
-    // Check whether the new location matches the spacing requirements
-    if (!([_position] call FUNC("checkCacheDistance"))) then {
-        // If it does not match it set the building to nil
-        _building = nil;
+    if (!isNil "_buildingData") then {
+        _building = _buildingData select 0;
+        _buildingPos = _buildingData select 1;
+        // Get the position of the building (not ATL!)
+        _position = getPos _building;
+
+        // Check whether the new location matches the spacing requirements
+        if ([_position] call FUNC("checkCacheDistance"))  exitWith {};
     };
 };
 
-// Get the position inside the building
-_cachePosition = _building buildingPos _buildingPos;
-// and return it
+if (isNil "_building") then {
+    LOG("No location found");
+} else {
+    LOG("New cache location found");
+    // Get the position inside the building
+    _cachePosition = _building buildingPos _buildingPos;
+};
+
 _cachePosition;

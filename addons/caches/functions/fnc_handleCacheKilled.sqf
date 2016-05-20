@@ -21,6 +21,8 @@ private [
 
 _cache = _this select 0;
 
+LOG("Cache destroyed");
+
 // Get the name of the cache
 _cacheId = vehicleVarName _cache;
 // Hide the cache to prevent visual glitching
@@ -28,21 +30,24 @@ _cache hideObjectGlobal true;
 // Increase the amount of destroyed caches
 _destroyedCachesCount = missionNamespace getVariable [
         GVAR_NAME("destroyedCachesCount"), 0];
-INCREASE(_destroyedCachesCount);
+_destroyedCachesCount = _destroyedCachesCount + 1;
 missionNamespace setVariable [GVAR_NAME("destroyedCachesCount"),
         _destroyedCachesCount, true];
 
+LOG("Updating task state");
 // Update the cache area marker and task state to reflect the destroyed cache
 _cacheId setMarkerColor "ColorGrey";
-[_cacheId, "Succeeded", true] call BIS_fnc_taskSetState;
+[_cacheId, "Succeeded", true] remoteExec ["BIS_fnc_taskSetState", 0, true];
 
 // Create a new custom event for cache destruction
-["CacheDestruction", [_cache, _destroyedCachesCount, NEEDED_CACHES_COUNT]] call
-        CBA_fnc_globalEvent;
+["LairCacheKilled", [_cache, _destroyedCachesCount, NEEDED_CACHES_COUNT]]
+        call CBA_fnc_globalEvent;
 
 // Check whether all needed caches have been destroyed
 if (_destroyedCachesCount >= NEEDED_CACHES_COUNT) then {
     // End the mission if all caches have been destroyed and set it as
     // successful
-    [["end1", true, true], "BIS_fnc_endMission", west, true] call BIS_fnc_MP;
+    ["end1", true, true] remoteExec ["BIS_fnc_endMission", 0, true];
 };
+
+[(15 + (random 30))] execVM FUNC_FILE("createNewCache");

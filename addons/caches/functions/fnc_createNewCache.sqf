@@ -20,7 +20,7 @@ private [
     "_position",
     "_cache",
     "_markerPosition",
-    "_minOffset",
+    "_areaSize",
     "_maxOffset",
     "_vehicle",
     "_vehicleVarPrefix",
@@ -34,11 +34,13 @@ _delay = _this select 0;
 _createdCachesCount = missionNamespace getVariable [
         GVAR_NAME("createdCachesCount"), 0];
 // Get the maximum count of caches spawnable on the map
-_maxCacheCount = getNumber (COMPONENT_CONFIG >> "maxCount");
+_maxCacheCount = getNumber (MISSION_CONFIG >> "maxCount");
 
 // Don't create a cache if there is no more space on the map aka maximum count
 // of caches exceeded
 if (_createdCachesCount < _maxCacheCount) then {
+    LOG("Creating new cache");
+
     if (isNil "_delay") then {
         // If no delay given set it to zero
         _delay = 0;
@@ -47,13 +49,11 @@ if (_createdCachesCount < _maxCacheCount) then {
     // Delay the cache spawn
     uiSleep _delay;
 
-    // Get the offset for the marker
-    _minOffset = getNumber (COMPONENT_CONFIG >> "Marker" >> "minOffset");
-    _maxOffset = getNumber (COMPONENT_CONFIG >> "Marker" >> "maxOffset");
+    _areaSize = getNumber (MISSION_CONFIG >> "areaSize");
 
     // Get vehicle class and its variable prefix
-    _vehicle = getText (COMPONENT_CONFIG >> "vehicle");
-    _vehicleVarPrefix = getText (COMPONENT_CONFIG >> "vehicleVarPrefix");
+    _vehicle = getText (ADDON_CONFIG >> "vehicle");
+    _vehicleVarPrefix = getText (ADDON_CONFIG >> "vehicleVarPrefix");
 
     // Get a new cache location
     _positionTerrainLevel = call FUNC("findNewCacheLocation");
@@ -65,13 +65,18 @@ if (_createdCachesCount < _maxCacheCount) then {
     // Spawn the cache somewhere outside the map to prevent destruction on spawn
     // as position is ATL
     _cache = _vehicle createVehicle [-1000, -1000];
+
+    // Clear the contents of the cache
+    clearWeaponCargo _cache;
+    clearMagazineCargo _cache;
+
     // Move the cache to its actual location inside the cache building
     _cache setPosATL _positionTerrainLevel;
     // Set the variable name for the cache vehicles
-    _cache setVehicleVarName (format ["%1 %2", localize "str_lair_cacheTitle",
-            _createdCachesCount]);
+    _cache setVehicleVarName (format ["%1 %2", localize
+            STRING_NAME("cacheTitle"), _createdCachesCount]);
     // Add destruction handler for the cache
-    _cache addEventHandler ["killed", {
+    _cache addEventHandler ["Killed", {
         call FUNC("handleCacheKilled");
     }];
 
@@ -79,12 +84,13 @@ if (_createdCachesCount < _maxCacheCount) then {
     _position = getPos _cache;
 
     // Randomize the cache area marker position
-    _markerPosition = [_position, _minOffset, _maxOffset] call
+    _markerPosition = [_position, _areaSize / 4, _areaSize] call
             lair_fnc_randomizePosition2D;
 
     // Create a new custom event for cache creation
-    // ["LairCacheCreated", [_cache, _markerPosition]] call CBA_fnc_globalEvent;
+    ["LairCacheCreated", [_cache, _markerPosition]] call CBA_fnc_globalEvent;
 } else {
+    LOG("Creating new cache");
     // If maximum cache amount is exceeded create a small hint
     hint "Maximum cache amount exceeded.";
 };

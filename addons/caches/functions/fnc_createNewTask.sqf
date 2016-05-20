@@ -23,10 +23,12 @@ private [
 _cache = _this select 0;
 _position = _this select 1;
 
+LOG("Creating new task");
+
 // Get localization of task title and description
-_desc = localize "STR_SAD_taskDesc";
-_descShort = localize "STR_SAD_taskDescShort";
-_descHUD = localize "STR_SAD_taskTitle";
+_desc = localize STRING_NAME("taskDesc");
+_descShort = localize STRING_NAME("taskDescShort");
+_descHUD = localize STRING_NAME("taskTitle");
 
 // Create a new notification
 [
@@ -37,4 +39,4 @@ _descHUD = localize "STR_SAD_taskTitle";
     true,
     0,
     true
-] call BIS_fnc_taskCreate;
+] remoteExec ["BIS_fnc_taskCreate", 0, true];

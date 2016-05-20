@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Lair">
+    <Package name="Addons">
+        <Container name="Caches">
+            <Key ID="STR_lair_neededCaches">
+                <Original>Amount Caches</Original>
+                <German>Anzahl Waffenlager</German>
+            </Key>
+            <Key ID="STR_lair_maxCacheGroups">
+                <Original>Maximum Amount of Cache Insurgent Groups</Original>
+                <German>Maximale Anzahl von Waffenlager-Wiederstandsgruppen</German>
+            </Key>
+            <Key ID="STR_lair_cacheTitle">
+                <Original>Cache</Original>
+                <German>Waffenlager</German>
+            </Key>
+            <Key ID="STR_lair_taskTitle">
+                <Original>DeSTRoy Cache</Original>
+                <German>Waffenlager zerstören</German>
+            </Key>
+            <Key ID="STR_lair_taskDesc">
+                <Original>A new weapon cache has been revealed. Search and destroy it.</Original>
+                <German>Ein neues Waffenlager wurde entdeckt. Suche und zerstöre es.</German>
+            </Key>
+            <Key ID="STR_lair_taskDescShort">
+                <Original>Destroy Cache</Original>
+                <German>Zerstöre Waffenlager</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>

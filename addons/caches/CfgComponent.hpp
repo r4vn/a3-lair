@@ -9,8 +9,6 @@ class CfgCaches {
     vehicle = "Box_FIA_Ammo_F";
     vehicleVarPrefix = "cache";
     combatAreaMarkerName = "lair_combat_area";
-    maxCount = 6;
-    minSpacing = 500;
     // Must not exceed minimum count of intelligence sources
     neededIntelligencePerCache = 1.25;
     // This array stores all buildings in which a cache can spawn.
@@ -23,11 +21,6 @@ class CfgCaches {
     //     {"another_house_class_name", 1};
     // };
     buildings[] = {};
-
-    class Marker {
-        minOffset = 50;
-        maxOffset = 200;
-    };
 
     class Insurgents {
         minGroupCount = 3;

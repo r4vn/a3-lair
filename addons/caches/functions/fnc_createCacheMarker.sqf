@@ -24,8 +24,10 @@ private [
 _cache = _this select 0;
 _markerPosition = _this select 1;
 
+LOG("Creating new cache marker");
+
 // Gwt the marker size which equals the maximum offset from the cache's position
-_markerSize = getNumber (MCFG >> "Marker" >> "maxOffset");
+_markerSize = getNumber (MISSION_CONFIG >> "areaSize");
 
 // Create marker and set its visuals
 _marker = createMarker [vehicleVarName _cache, _markerPosition];

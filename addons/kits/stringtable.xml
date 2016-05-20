@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Lair">
+    <Package name="Addons">
+        <Container name="Kits">
+            <Key ID="str_lair_kitSystem">
+                <Original>Kit System</Original>
+                <German>Ausrüstungssystem</German>
+            </Key>
+            <Key ID="str_lair_operatingAircrafts">
+                <Original>Operating Aircrafts</Original>
+                <German>Luftfahrzeuge operieren</German>
+            </Key>
+            <Key ID="str_lair_pilotKitNeeded">
+                <Original>You need a pilot kit in order to operate air vehicles.</Original>
+                <German>Du benötigst eine Pilotenausrüstung, um ein Luftfahrzeug zu operieren.</German>
+            </Key>
+            <Key ID="str_lair_requestKits">
+                <Original>To request a specialized kit, select it in the respawn dialog.</Original>
+                <German>Um eine Spezialausrüstung anzufordern, wähle sie im Respawn Dialog aus.</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>

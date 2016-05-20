@@ -26,14 +26,16 @@ private [
     "_marker",
     "_rally",
     "_rallyVarPrefix",
-    "_rallyVarName"
+    "_rallyVarName",
+    "_animation"
 ];
 
 _caller = _this select 0;
 
 _callerGroup = groupId (group _caller);
-_vehicleClass = getText (MCFG >> "vehicle");
-_rallyVarPrefix = getText (MCFG >> "vehicleVarPrefix");
+_vehicleClass = getText (MISSION_CONFIG >> "vehicle");
+_animation = getText (MISSION_CONFIG >> "animation");
+_rallyVarPrefix = getText (ADDON_CONFIG >> "vehicleVarPrefix");
 _rallyVarName = format ["%1%2", _rallyVarPrefix, _callerGroup];
 
 // Check whether the group already has a rally point and delete it if so
@@ -55,16 +57,19 @@ _marker = createMarker [format ["respawn_west_%1", _callerGroup],
 _marker setMarkerShape "Icon";
 _marker setMarkerType "mil_join";
 _marker setMarkerColor "ColorWEST";
-_marker setMarkerText format ["%1 %2", localize "STR_SAD_rallyMarker",
+_marker setMarkerText format ["%1 %2", localize STRING_NAME("rallyMarker"),
         groupId (group _caller)];
 
 // Spawn the actual rally point vehicle and set its direction to caller's one
 _rally = _vehicleClass createVehicle _position;
 _rally setDir direction _caller;
+if (!isNil "_animation") then {
+    [_rally] call compile(_animation);
+};
 
 // Save the rally point in its variable
 missionNamespace setVariable [_rallyVarName, _rally];
 
 // Notify other players that a new rally point is available
-[["Rally", [localize "STR_SAD_rallyDeployNoteDesc"]],
-        "BIS_fnc_showNotification", west, false] call BIS_fnc_MP;
+["Rally", [localize STRING_NAME("rallyDeployNoteDesc")]] remoteExec
+        ["BIS_fnc_showNotification", -2, false];

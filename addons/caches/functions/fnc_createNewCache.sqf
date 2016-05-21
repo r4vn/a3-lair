@@ -16,7 +16,9 @@
 
 private [
     "_createdCachesCount",
+    "_cacheLocationData",
     "_positionTerrainLevel",
+    "_buildingName",
     "_position",
     "_cache",
     "_markerPosition",
@@ -56,7 +58,9 @@ if (_createdCachesCount < _maxCacheCount) then {
     _vehicleVarPrefix = getText (ADDON_CONFIG >> "vehicleVarPrefix");
 
     // Get a new cache location
-    _positionTerrainLevel = call FUNC("findNewCacheLocation");
+    _cacheLocationData = call FUNC("findNewCacheLocation");
+    _positionTerrainLevel = _cacheLocationData select 0;
+    _buildingName = _cacheLocationData select 1;
     // Increase created caches count by one
     _createdCachesCount = _createdCachesCount + 1;
     missionNamespace setVariable [GVAR_NAME("createdCachesCount"),
@@ -88,7 +92,8 @@ if (_createdCachesCount < _maxCacheCount) then {
             lair_fnc_randomizePosition2D;
 
     // Create a new custom event for cache creation
-    ["LairCacheCreated", [_cache, _markerPosition]] call CBA_fnc_globalEvent;
+    ["LairCacheCreated", [_cache, _markerPosition, _buildingName]]
+            call CBA_fnc_globalEvent;
 } else {
     LOG("Creating new cache");
     // If maximum cache amount is exceeded create a small hint

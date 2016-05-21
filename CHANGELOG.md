@@ -4,6 +4,7 @@ v0.9.0 (unreleased)
 - added mission hud
 - added civilians
 - added intelligence system
+- added building description to cache task
 - updated mission to a server mod
 - updated all modules to server side addons
 - updated rally points to be only spawnable by its squad

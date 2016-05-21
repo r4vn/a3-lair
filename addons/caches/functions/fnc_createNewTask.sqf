@@ -12,31 +12,51 @@
 #include "..\script_component.hpp"
 
 private [
-    "_taskId",
+    "_cache",
     "_position",
-    "_task",
-    "_desc",
-    "_descShort",
-    "_descHUD"
+    "_buildingName",
+    "_localeDesc",
+    "_localeTitle",
+    "_localeBuilding",
+    "_vehicleName"
 ];
 
 _cache = _this select 0;
 _position = _this select 1;
+_buildingName = _this select 2;
 
-LOG("Creating new task");
+LOG("Creating new task at " + (str (_position select 0)) + " " +
+    (str (_position select 1)));
 
-// Get localization of task title and description
-_desc = localize STRING_NAME("taskDesc");
-_descShort = localize STRING_NAME("taskDescShort");
-_descHUD = localize STRING_NAME("taskTitle");
+_vehicleName = vehicleVarName _cache;
+_localeDesc = STRING_NAME("taskDesc");
+_localeTitle = STRING_NAME("taskTitle");
+_localeBuilding = STRING_NAME(_buildingName);
 
-// Create a new notification
+// Create a new task on every client
 [
-    west,
-    vehicleVarName _cache,
-    [_desc, _descHUD, vehicleVarName _cache],
-    _position,
-    true,
-    0,
-    true
-] remoteExec ["BIS_fnc_taskCreate", 0, true];
+    [
+        _vehicleName,
+        _localeDesc,
+        _localeTitle,
+        _position,
+        _localeBuilding
+    ],
+    {
+        [
+            west,
+            _this select 0,
+            [
+                format[localize (_this select 1), localize (_this select 4)],
+                localize (_this select 2),
+                _this select 0
+            ],
+            _this select 3,
+            true,
+            0,
+            true,
+            "destroy",
+            true
+        ] call BIS_fnc_taskCreate;
+    }
+] remoteExec ["call", -2, true];

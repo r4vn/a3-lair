@@ -41,9 +41,10 @@ for "_i" from 1 to 15 do {
 if (isNil "_building") then {
     LOG("No location found");
 } else {
-    LOG("New cache location found");
     // Get the position inside the building
     _cachePosition = _building buildingPos _buildingPos;
+    LOG("New cache location found " + (str (_cachePosition select 0)) + ", " +
+            (str (_cachePosition select 1)) + ", " + (str (typeOf _building)));
 };
 
-_cachePosition;
+[_cachePosition, typeOf _building];

@@ -26,6 +26,6 @@
 #define FUNC(name) (compile (preprocessFileLineNumbers (\
         format ["%1\functions\fnc_%2.sqf", ADDON_PATH, name])))
 // Macro to get file name of private function
-#define FUNC_FILE(name) (format ["%1\functions\fnc_%2.sqf", ADDON_PATH, name]);
+#define FUNC_FILE(name) (format ["%1\functions\fnc_%2.sqf", ADDON_PATH, name])
 
 #define STRING_NAME(name) (format ["STR_%1_%2", #PREFIX, name])

@@ -43,10 +43,6 @@ private [
                 FUNC("createTicketLoss");
     }] call CBA_fnc_addEventHandler;
 
-    ["LairPlayerRespawned", {
-        FUNC("createMissionHud") remoteExec ["call", _this select 0, false];
-    }] call CBA_fnc_addEventHandler;
-
     // Create ticket bleed per minute
     execVM FUNC_FILE("scheduleTicketBleed");
     // Create handler for mission failure

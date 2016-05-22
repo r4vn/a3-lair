@@ -6,5 +6,5 @@
  */
 
 class CfgRallies {
-    vehicleVarPrefix = "rally";
+    rallyVarName = "rally";
 };

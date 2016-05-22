@@ -20,56 +20,77 @@
 
 private [
     "_caller",
-    "_callerGroup",
+    "_group",
     "_vehicleClass",
     "_position",
     "_marker",
-    "_rally",
+    "_vehicle",
     "_rallyVarPrefix",
     "_rallyVarName",
-    "_animation"
+    "_animation",
+    "_respawn"
 ];
 
 _caller = _this select 0;
 
-_callerGroup = groupId (group _caller);
+LOG("Rally requested by " + str (name _caller));
+
+_rallyVarName = getText (ADDON_CONFIG >> "rallyVarName");
 _vehicleClass = getText (MISSION_CONFIG >> "vehicle");
 _animation = getText (MISSION_CONFIG >> "animation");
-_rallyVarPrefix = getText (ADDON_CONFIG >> "vehicleVarPrefix");
-_rallyVarName = format ["%1%2", _rallyVarPrefix, _callerGroup];
+_group = group _caller;
+
+_rallyData = _group getVariable ["rally", nil];
 
 // Check whether the group already has a rally point and delete it if so
-if (!isNil _rallyVarName) then {
-    // Delete the old rally point vehicle
-    deleteVehicle (missionNamespace getVariable [_rallyVarName, nil]);
+if (!isNil "_rallyData") then {
+    // Delete respawn location
+    (_rallyData select 0) call BIS_fnc_removeRespawnPosition;
     // Delete the old rally point marker
-    deleteMarker (format ["respawn_west_%1", _callerGroup]);
+    deleteMarker (_rallyData select 1);
+    // Delete the old rally point vehicle
+    deleteVehicle (_rallyData select 2);
 };
 
-// Find an empty position near the squadleader aka the caller which have to
-// be in a 50m radius and have enough space for the vehicle to spawn
-_position = (getPos _caller) findEmptyPosition [0, 50, _vehicleClass];
+// Find an empty position near the squad leader
+_position = (getPos _caller) vectorAdd ((vectorDir _caller) vectorMultiply 2);
+_position = _position findEmptyPosition [0, 3, _vehicleClass];
 
-// Create respawn marker at the position of the rally point vehicle
-_marker = createMarker [format ["respawn_west_%1", _callerGroup],
-        _position];
-// Set the visuals for the marker
-_marker setMarkerShape "Icon";
-_marker setMarkerType "mil_join";
-_marker setMarkerColor "ColorWEST";
-_marker setMarkerText format ["%1 %2", localize STRING_NAME("rallyMarker"),
-        groupId (group _caller)];
+if (count _position < 1) then {
+    LOG("No empty position for rally found");
 
-// Spawn the actual rally point vehicle and set its direction to caller's one
-_rally = _vehicleClass createVehicle _position;
-_rally setDir direction _caller;
-if (!isNil "_animation") then {
-    [_rally] call compile(_animation);
+    [[STRING_NAME("noEmptyPosition")], {
+        private ["_layer"];
+
+        _layer = (_this select 0) cutText [localize (_this select 0),
+                "PLAIN DOWN", 0.3, false];
+        layer cutFadeOut 0.3
+    }] remoteExec ["call", _caller, false];
+} else {
+    _respawn = [_group, _position] call BIS_fnc_addRespawnPosition;
+
+    // Create respawn marker at the position of the rally point vehicle
+    _marker = createMarker [format ["%1_west_%2", _rallyVarName,
+            groupId _group], _position];
+    // Set the visuals for the marker
+    _marker setMarkerShape "Icon";
+    _marker setMarkerType "mil_marker";
+    _marker setMarkerColor "ColorWEST";
+    _marker setMarkerText groupId _group;
+
+    // Spawn rally point vehicle and set its direction to caller's one
+    _vehicle = _vehicleClass createVehicle _position;
+    _vehicle setDir direction _caller;
+
+    if (!isNil "_animation") then {
+        [_vehicle] call compile(_animation);
+    };
+
+    // Save the rally point in its variable
+    _group setVariable ["rally", [_respawn, _marker, _vehicle]];
+
+    // Notify other players that a new rally point is available
+    [[STRING_NAME("rallyDeployNoteDesc")], {
+        ["Rally", [localize (_this select 0)]] call BIS_fnc_showNotification;
+    }] remoteExec ["call", _group, false];
 };
-
-// Save the rally point in its variable
-missionNamespace setVariable [_rallyVarName, _rally];
-
-// Notify other players that a new rally point is available
-["Rally", [localize STRING_NAME("rallyDeployNoteDesc")]] remoteExec
-        ["BIS_fnc_showNotification", -2, false];

@@ -8,7 +8,10 @@
 
 #include "..\script_component.hpp"
 
-["LairRallyRequested", {
-    _this call FUNC("createRally");
-}] call CBA_fnc_addEventHandler;
+["LairInit", {
+    LOG("Initializing rallies");
 
+    ["LairRallyRequested", {
+        _this call FUNC("createRally");
+    }] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;

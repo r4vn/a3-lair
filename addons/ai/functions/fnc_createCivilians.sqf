@@ -13,7 +13,7 @@
 
 private [
     "_cache",
-    "_markerPosition",
+    "_position",
     "_unitCount",
     "_unit",
     "_units",
@@ -29,19 +29,20 @@ private [
 ];
 
 _cache = _this select 0;
-_markerPosition = _this select 1;
 
 LOG("Creating civilians");
 
+// Get the position of the cache
+_position = getPos _cache;
 // Base unit count on maximum insurgent groups, make it four times the amount
-_unitCount = random (("MaxCacheGroups" call BIS_fnc_getParamValue) * 2.5);
+_unitCount = (random (("MaxCacheGroups" call BIS_fnc_getParamValue) * 2.5)) + 1;
 // Get unit configurations
 _units = getArray (MISSION_CONFIG >> "Civilians" >> "units");
 // Base minimum unit count on insurgent minimum, make it twice the amount
 _minUnitCount = ((getNumber (MISSION_CONFIG >> "Insurgents" >> "minGroupCount"))
         * 2) - 1;
 // Get offsets from the marker position for spawning area
-_areaSize = getNumber (EXT_MISSION_CONFIG("caches") >> "areaSize");
+_areaSize = getNumber (MISSION_CONFIG >> "areaSize");
 // Get limits for waypoint amount
 _minWaypointCount = getNumber (ADDON_CONFIG >> "minWaypointCount");
 _maxWaypointCount = getNumber (ADDON_CONFIG >> "maxWaypointCount");
@@ -63,7 +64,7 @@ for "_i" from 0 to _unitCount do {
     _unitName = _units call BIS_fnc_selectRandom;
 
     // Choose a random location within the cache area
-    _unitPosition = [_markerPosition, _minOffset, _maxOffset] call
+    _unitPosition = [_position, _minOffset, _maxOffset] call
             lair_fnc_randomizePosition2D;
 
     // Spawn the insurgent unit
@@ -80,7 +81,7 @@ for "_i" from 0 to _unitCount do {
     }];
 
     // Randomize waypoint amount
-    _waypointCount =  random _maxWaypointCount;
+    _waypointCount =  (random _maxWaypointCount) + 1;
 
     // Set lower limit of waypoint amount if below
     if (_waypointCount < _minWaypointCount) then {
@@ -88,7 +89,7 @@ for "_i" from 0 to _unitCount do {
     };
 
     // Create random waypoints in the whole cache marker area
-    [group _unit, _waypointCount, _markerPosition, _areaSize, "CARELESS",
+    [group _unit, _waypointCount, _position, _areaSize, "CARELESS",
             "BLUE"] call FUNC("createWaypoints");
 };
 

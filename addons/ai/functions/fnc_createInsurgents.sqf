@@ -13,8 +13,7 @@
 
 private [
     "_cache",
-    "_cachePosition",
-    "_markerPosition",
+    "_position",
     "_groupCount",
     "_group",
     "_groups",
@@ -34,17 +33,16 @@ private [
 ];
 
 _cache = _this select 0;
-_markerPosition = _this select 1;
 
 // Get the position of the cache
-_cachePosition = getPos _cache;
+_position = getPos _cache;
 // Get a random group count
-_groupCount = random ("MaxCacheGroups" call BIS_fnc_getParamValue);
+_groupCount = (random ("MaxCacheGroups" call BIS_fnc_getParamValue)) + 1;
 // Get group configuration, minimum group count
 _groups = getArray (MISSION_CONFIG >> "Insurgents" >> "groups");
 _minGroupCount = ("MinCacheGroups" call BIS_fnc_getParamValue) - 1;
 // Get offsets from the marker position for spawning area
-_areaSize = getNumber (EXT_MISSION_CONFIG("caches") >> "areaSize");
+_areaSize = getNumber (MISSION_CONFIG >> "areaSize");
 // Get information for the configuration path of groups
 _side = getText (MISSION_CONFIG >> "Insurgents" >> "side");
 _faction = getText (MISSION_CONFIG >> "Insurgents" >> "faction");
@@ -72,11 +70,11 @@ for "_i" from 1 to _groupCount do {
 
     if (_i < _guardCount) then {
         // If guards still need to be created, choose a location near the cache
-        _groupPosition = [_cachePosition, _minOffset, _minOffset * 1.5] call
+        _groupPosition = [_position, _minOffset, _minOffset * 1.5] call
                 lair_fnc_randomizePosition2D;
     } else {
         // For every other group choose a random location within the cache area
-        _groupPosition = [_markerPosition, _minOffset, _maxOffset] call
+        _groupPosition = [_position, _minOffset, _maxOffset] call
                 lair_fnc_randomizePosition2D;
     };
 
@@ -84,7 +82,7 @@ for "_i" from 1 to _groupCount do {
     _group = [_groupCfg, _groupPosition, east] call FUNC("createGroup");
 
     // Randomize waypoint amount
-    _waypointCount =  random _maxWaypointCount;
+    _waypointCount =  (random _maxWaypointCount) + 1;
 
     // Set lower limit of waypoint amount if below
     if (_waypointCount < _minWaypointCount) then {
@@ -93,11 +91,11 @@ for "_i" from 1 to _groupCount do {
 
     if (_i < _guardCount) then {
         // For guard groups use a smaller waypoint area
-        [_group, _waypointCount, _markerPosition, _minOffset, "SAFE", "RED"]
+        [_group, _waypointCount, _position, 10, "SAFE", "RED"]
                 call FUNC("createWaypoints");
     } else {
         // All other groups can have waypoints in the whole cache marker area
-        [_group, _waypointCount, _markerPosition, _areaSize, "SAFE", "RED"]
+        [_group, _waypointCount, _position, _areaSize, "SAFE", "RED"]
                 call FUNC("createWaypoints");
     };
 };

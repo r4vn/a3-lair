@@ -1,15 +1,14 @@
 # Lair
 
-![latest](https://img.shields.io/badge/latest-v0.8.2-blue.svg)
-![arma 3](https://img.shields.io/badge/arma_3-v1.50-lightgrey.svg)
+[![Arma 3](https://img.shields.io/badge/a3-v1.58-blue.svg)](https://dev.arma3.com/)
+[![Latest Release](https://img.shields.io/github/release/r4vn/a3-lair.svg?maxAge=2592000)](https://github.com/r4vn/a3-lair/releases)
 
-An Arma 3 cooperative search and destroy multiplayer game mode.
+An Arma 3 server modification for providing the basics of a cooperative search and destroy multiplayer game mode.
 
 
 ## Description
 
 This game mode aims to deliver tactical search and destroy gameplay with random task generation resulting in unique round gameplay.
-
 
 Features:
 - Ticket Based Success Criterion
@@ -18,17 +17,10 @@ Features:
 - Random IEDs
 - Civilian Based Intelligience
 - Specialized Kit Roles
-- ACE Standard Medic System
 - Rally Points
 - BI's Dynamic Groups
 
 
 ## Requirements
 
-Make sure your mission for this game mode requires the following addons, as they are a critical part of Lair.
-- CBA_A3 <br/>
-  [`Website`](http://dev.withsix.com/projects/cba-a3)
-  [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-- ACE3 <br/>
-  [`Website`](http://ace3mod.com)
-  [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+Lair requires only *CBA_A3* [`Website`](http://dev.withsix.com/projects/cba-a3) [`Workshop`](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997) to run.  

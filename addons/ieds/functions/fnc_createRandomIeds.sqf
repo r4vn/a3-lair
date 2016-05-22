@@ -15,7 +15,7 @@ private [
     "_cache",
     "_minIedCount",
     "_maxIedCount",
-    "_radius",
+    "_area",
     "_iedCount",
     "_roads",
     "_road",
@@ -27,12 +27,12 @@ private [
 _cache = _this select 0;
 
 // Get minimum and maximum values for ied count
-_minIedCount = getNumber (MCFG >> "minIedCount");
-_maxIedCount = getNumber (MCFG >> "maxIedCount");
+_minIedCount = getNumber (MISSION_CONFIG >> "minCount");
+_maxIedCount = getNumber (MISSION_CONFIG >> "maxCount");
 // Get spawn radius
-_radius = getNumber (MCFG >> "radius");
+_area = getNumber (MISSION_CONFIG >> "areaSize");
 // Get probability for a fake ied
-_fakeProbility = getNumber (MCFG >> "_fakeProbility");
+_fakeProbility = getNumber (MISSION_CONFIG >> "fakeProbility");
 
 // Randomize ied count
 _iedCount = (random _maxIedCount) + 1;
@@ -46,14 +46,12 @@ if (_iedCount < _minIedCount) then {
 _fakeIedCount = floor (_fakeProbility * _iedCount);
 
 // Get nearby roads
-_roads = (getPos _cache) nearRoads _radius;
+_roads = (getPos _cache) nearRoads _area;
 
 // Loop ieds
-for "_i" from 0 to _iedCount - 1 do {
+for "_i" from 1 to _iedCount do {
     // Get a random road segment in radius
     _road = _roads call BIS_fnc_selectRandom;
-
-    DEBUG_r = _road;
 
     // Set if current ied is a fake
     if (_i <= _fakeIedCount) then {

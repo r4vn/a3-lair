@@ -29,14 +29,13 @@ if (isNil "_isFake") then {
     _isFake = false;
 };
 
-_vehicle = getText (MCFG >> "vehicle");
-_magazine = getText (MCFG >> "magazine");
-_trigger = getText (MCFG >> "trigger");
-_indicatorVehicle = getText (MCFG >> "indicatorVehicle");
+_vehicle = getText (MISSION_CONFIG >> "vehicle");
+_magazine = getText (MISSION_CONFIG >> "magazine");
+_trigger = getText (MISSION_CONFIG >> "trigger");
+_indicatorVehicle = getText (MISSION_CONFIG >> "indicatorVehicle");
 
 if (!_isFake) then {
-    _ied = _vehicle createVehicle _position;
-    [_ied, _magazine, _trigger] call ACE_Explosives_fnc_selectTrigger;
+    createMine [_vehicle, _position, [], 0];
 };
 
 _indicator = _indicatorVehicle createVehicle _position;

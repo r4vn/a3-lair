@@ -6,7 +6,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "lair_main"
+            "lair_main",
+            "lair_base"
         };
         version = VERSION;
         author[] = {"r4vn"};

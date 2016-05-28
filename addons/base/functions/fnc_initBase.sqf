@@ -13,5 +13,5 @@
     LOG("Initializing base");
 
     call FUNC("createVehicleRespawns");
-    call FUNC("initSupplies");
+    call FUNC("setupSupplies");
 }] call CBA_fnc_addEventHandler;

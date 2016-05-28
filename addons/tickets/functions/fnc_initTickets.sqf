@@ -44,7 +44,7 @@ private [
     }] call CBA_fnc_addEventHandler;
 
     // Create ticket bleed per minute
-    execVM FUNC_FILE("scheduleTicketBleed");
+    execVM FUNC_PATH("scheduleTicketBleed");
     // Create handler for mission failure
-    execVM FUNC_FILE("scheduleOutOfTickets");
+    execVM FUNC_PATH("scheduleOutOfTickets");
 }] call CBA_fnc_addEventHandler;

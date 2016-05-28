@@ -71,9 +71,9 @@ for "_i" from 0 to _unitCount do {
     _unit = [_unitName, _unitPosition, createGroup civilian] call
             FUNC("createUnit");
     // Make sure the unit stops moving when told to get down
-    // [_unit] execVM FUNC_FILE("handleGetDown");
+    // [_unit] execVM FUNC_PATH("handleGetDown");
     // Add questioning at hq to the unit
-    // [_unit] execVM FUNC_FILE("handleQuestioning");
+    // [_unit] execVM FUNC_PATH("handleQuestioning");
 
     // Register killed event handler
     _unit addEventHandler ["Killed", {

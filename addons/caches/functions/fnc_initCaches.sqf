@@ -43,6 +43,6 @@ private [
     */
 
     // Create a inital caches
-    [_firstCacheDelay] execVM FUNC_FILE("createNewCache");
+    [_firstCacheDelay] execVM FUNC_PATH("createNewCache");
     // [_secondCacheDelay] execVM FUNC_FILE("createNewCache");
 }] call CBA_fnc_addEventHandler;

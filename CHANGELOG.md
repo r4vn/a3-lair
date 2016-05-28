@@ -1,16 +1,15 @@
+v1.0.0 (unreleased)
+- added intelligence system
+
 v0.9.0 (unreleased)
 - added logging
 - added ticket system
-- added mission hud
 - added civilians
-- added intelligence system
 - added building description to cache task
-- updated mission to a server mod
-- updated all modules to server side addons
+- updated mission to a server modification
 - updated rally points to be only spawnable by its squad
 - updated ticket system to calculate ticket count based on caches
 - updated ieds to randomly spawn in 1km2 area around cache
-- fixed unit marker deletion
 - fixed task locales
 
 v0.8.2
